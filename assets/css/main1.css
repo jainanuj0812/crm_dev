@@ -1,0 +1,43 @@
+#loginLogo{
+	width: 90%;
+	height: 25%;
+	margin: auto auto;
+	
+}
+
+hr
+{
+	margin-top: 5px;
+	border-top: 1px solid;
+	margin-left: 2px;
+	margin-right: 2px;
+
+}
+
+.loginInput{
+	background-color: transparent;
+	outline: 0;
+	border: 0px none;	
+   -webkit-box-shadow: none !important;
+  	box-shadow: none !important;
+}
+
+.inner-addon { 
+   position: relative; 
+}
+
+/* style icon */
+.inner-addon .glyphicon {
+ position: absolute;
+ 
+ pointer-events: none;
+}
+
+/* align icon */
+.left-addon .glyphicon  { left:  0px;}
+.right-addon .glyphicon { right: 0px;}
+
+
+/* add padding  */
+.left-addon input  { padding-left:  18%; }
+.right-addon input { padding-right: 6%; }
