@@ -5,8 +5,6 @@
 	
 }
 
-
-
 .inner-addon { 
    position: relative; 
 }
@@ -14,7 +12,7 @@
 /* style icon */
 .inner-addon .glyphicon {
  position: absolute;
- 
+ padding: 1.5%;
  pointer-events: none;
 }
 
