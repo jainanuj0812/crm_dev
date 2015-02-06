@@ -1,0 +1,33 @@
+#logo{
+	width: 13%;
+	height: 100%;
+	position: absolute;
+}
+
+#menuDiv{
+	padding:0;
+	margin-top:0px;
+	width: 40%;
+	height: 100%;
+	background: AliceBlue;
+	color:white;
+	display:none;
+}
+
+.inner-addon { 
+    position: relative; 
+}
+
+/* style icon */
+.inner-addon .glyphicon {
+  position: absolute;
+  padding: 10px;
+  pointer-events: none;
+}
+
+/* style icon */
+.inner-addon .icon-large {
+  position: absolute;
+  padding: 10px;
+  pointer-events: none;
+}
