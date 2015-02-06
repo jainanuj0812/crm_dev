@@ -5,22 +5,7 @@
 	
 }
 
-hr
-{
-	margin-top: 5px;
-	border-top: 1px solid;
-	margin-left: 2px;
-	margin-right: 2px;
 
-}
-
-.loginInput{
-	background-color: transparent;
-	outline: 0;
-	border: 0px none;	
-   -webkit-box-shadow: none !important;
-  	box-shadow: none !important;
-}
 
 .inner-addon { 
    position: relative; 
