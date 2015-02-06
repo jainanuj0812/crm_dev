@@ -1,0 +1,120 @@
+<html>
+	<head>
+	    <meta name="viewport" content="width=device-width , initial-scale=1">
+		<#-- Style Sheets--> 
+			<#list sri.getThemeValues("STRT_STYLESHEET") as styleSheetLocation>
+    			<link rel="stylesheet" href="${sri.buildUrl(styleSheetLocation).url}" type="text/css">
+			</#list>
+		<#-- JavaScript-->
+			<#list sri.getThemeValues("STRT_SCRIPT") as scriptLocation>
+		 	   <script language="javascript" src="${sri.buildUrl(scriptLocation).url}" type="text/javascript"></script>
+			</#list>
+	</head>
+	
+	<body>
+
+		<div class="container">
+			<form method="#" action="#" accept="image/gif,image/jpeg" class="form-horizontal col-xs-8 col-xs-offset-2 col-sm-6 col-sm-offset-3 col-md-8 col-md-offset-2 col-lg-8 col-lg-offset-2">
+				<fieldset>
+					<div class="row">
+						<legend>New Opportunity</legend>
+		
+						<div class="row">
+							<div class="col-xs-12 col-sm-12 col-md-5 col-lg-5">
+								<div class="form-group">
+									<div class="inner-addon left-addon">
+										<i class="glyphicon glyphicon-user"></i>
+										<input id="accountName" placeholder="account name" class="loginInput form-control"><hr>
+									</div>	
+								</div>
+							</div>
+
+							<div class="col-xs-12 col-sm-12 col-md-5 col-lg-5 col-md-offset-2 col-lg-offset-2">
+								<div class="form-group">
+									<div class="inner-addon left-addon">
+										<i class="glyphicon glyphicon-user"></i>
+										<input id="assignedTo" placeholder="assigned to" class="loginInput form-control"><hr>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<div class="row">
+							<div class="col-xs-12 col-sm-12 col-md-5 col-lg-5">
+								<div class="form-group">
+									<div class="inner-addon left-addon">
+										<span class="glyphicon glyphicon-envelope"></span>
+											<input type="text" id="nextStep" placeholder="next step" class="loginInput form-control"><hr>
+									</div>
+								</div>
+							</div>
+
+							<div class="col-xs-12 col-sm-12 col-md-5 col-md-offset-2 col-lg-5 col-lg-offset-2">
+								<div class="form-group">
+									<div class="inner-addon left-addon">
+										<span class="glyphicon glyphicon-home"></span>
+										<select class="loginInput form-control" id="companyType">
+	        								<option>1</option>
+									        <option>2</option>
+									        <option>3</option>
+									        <option>4</option>
+   										</select><hr>
+									</div>
+								</div>
+							</div>
+						</div>
+        				<div class="row">
+							<div class="col-xs-12 col-sm-12 col-md-5 col-lg-5">
+								<div class="row">
+									<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+										<div class="form-group ">
+											<div class="inner-addon left-addon">
+												<span class="glyphicon glyphicon-home"></span>
+												<select class="loginInput form-control" id="companyType">
+	        										<option>1</option>
+											        <option>2</option>
+											        <option>3</option>
+											        <option>4</option>
+      											</select><hr>
+											</div>										
+										</div>
+									</div>
+									
+									<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+										<div class="form-group ">
+											<div class="inner-addon left-addon">
+												<span class="glyphicon glyphicon-usd"></span>
+												<input id="currency"  placeholder="currency" class="form-control loginInput"><hr>
+											</div>
+										</div>
+									</div>			
+								</div>
+							</div>
+
+							<div class="col-xs-12 col-sm-12 col-md-5 col-md-offset-2 col-lg-5 col-lg-offset-2">
+								<div class="row">
+									<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+										<div class="form-group">					
+											<label>Comment :</label>
+											<textarea class="form-control" type="textarea" id="comment" placeholder="comment" rows="3" style="border: 1px solid;"></textarea>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+		
+	    			<div class="row">
+        				<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+ 							<div class="btn-group">
+        						<button id="save" class="btn btn-success btn-md" onclick="#" title="save"><i class="glyphicon glyphicon-ok hidden-md hidden-lg"></i><span class="glyphicon glyphicon-save hidden-xs hidden-sm">save</span></button>
+        						<button id="reset" type="reset" class="btn btn-warning btn-md" onclick="#" title="reset"><i class="glyphicon glyphicon-repeat hidden-md hidden-lg"></i><span class="glyphicon glyphicon-repeat hidden-xs hidden-sm">reset</span></button>
+        						<button id="cancel" class="btn btn-danger btn-md" onclick="#" title="cancel"><i class="glyphicon glyphicon-remove hidden-md hidden-lg"></i><span class="glyphicon glyphicon-remove hidden-xs hidden-sm">cancel</span></button>
+        					</div>
+        				</div>
+        			</div>
+				</fieldset>
+			</form>
+		</div>
+	</body>
+</html>
