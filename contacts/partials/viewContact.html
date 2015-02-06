@@ -1,0 +1,142 @@
+<div class="container">
+<form method="#" action="#" accept="image/gif,image/jpeg" class="form-horizontal col-xs-8 col-xs-offset-2 col-sm-6 col-sm-offset-3 col-md-8 col-md-offset-2 col-lg-8 col-lg-offset-2">
+	<div class="row">
+		<fieldset>
+		<legend>Contact details</legend>
+		<div class="row">
+			<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+				<div class="row">
+					<div class="col-xs-11 col-xs-offset-1 col-md-11 col-md-offset-1 col-lg-11 col-lg-offset-1">
+						<div class="fileinput fileinput-new" data-provides="fileinput"> 
+	                    	<div class="fileinput-preview thumbnail" data-trigger="fileinput" style="width: 150px; height: 170px;" >
+	                    	</div> 
+                        	<div style="display:inline;"> 
+	                    		<span class="btn btn-large btn-success btn-file">
+	                    				<span class="fileinput-new">upload</span>
+	                    				<span class="fileinput-exists">change</span>
+	                    			
+	                    			<input type="file" name="...">
+	                    		</span>
+	                   
+                        	</div> 
+                        </div>
+              		</div>
+				</div>
+			</div>
+		</div>
+		
+		<div class="row">
+			<div class="col-xs-12 col-sm-12 col-md-5 col-lg-5">
+				<div class="form-group">
+					<div class="inner-addon left-addon">
+						<i class="glyphicon glyphicon-user"></i>
+						<input id="firstName" placeholder="first name" class="form-control myInput" value="{{contact.firstName}}"  readonly="true">
+					<hr></div>
+				</div>
+			</div>
+
+			<div class="col-xs-12 col-sm-12 col-md-5 col-lg-5 col-md-offset-2 col-lg-offset-2">
+				<div class="form-group">
+					<div class="inner-addon left-addon">
+						<i class="glyphicon glyphicon-user"></i>
+						<input id="lastName" placeholder="last name" class="form-control myInput" value="{{contact.lastName}}" readonly="true">
+					<hr></div>
+				</div>
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="col-xs-12 col-sm-12 col-md-5 col-lg-5">
+				<div class="form-group">
+					<div class="inner-addon left-addon">
+					<i class="glyphicon glyphicon-user"></i>
+					<input type="email" id="email" placeholder="email" class="form-control myInput" value="{{contact.email}}" readonly="true">
+					<hr></div>
+				</div>
+			</div>
+
+			<div class="col-xs-12 col-sm-12 col-md-5 col-md-offset-2 col-lg-5 col-lg-offset-2">
+				<div class="form-group">
+					<div class="inner-addon left-addon">
+					<i class="glyphicon glyphicon-earphone"></i>
+					<input id="phoneNo" placeholder="phone no" class="form-control myInput" value="{{contact.phoneNo}}" readonly="true">
+					<hr></div>
+				</div>
+			</div>
+		</div>
+
+        	<div class="row">
+			<div class="col-xs-12 col-sm-12 col-md-5 col-lg-5"><div class="row">
+				<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+				<div class="form-group ">
+					<div class="inner-addon left-addon">
+					<i class="glyphicon glyphicon-user"></i>
+					<input id="address"  placeholder="address" class="form-control myInput" value="{{contact.address}}" readonly="true">
+					<hr></div>
+				</div>
+			</div>
+				<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+				<div class="form-group ">
+					<div class="inner-addon left-addon">
+					<i class="glyphicon glyphicon-user"></i>
+					<input id="state"  placeholder="state" class="form-control myInput" value="{{contact.state}}" readonly="true">
+					<hr></div>
+				</div>
+				</div>
+			
+				<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+				<div class="form-group ">
+					<div class="inner-addon left-addon">
+					<i class="glyphicon glyphicon-user"></i>
+					<input id="country"  placeholder="country" class="form-control myInput" value="{{contact.country}}" readonly="true">
+					<hr></div>
+				</div>
+				</div></div>
+			
+			</div>
+
+			<div class="col-xs-12 col-sm-12 col-md-5 col-md-offset-2 col-lg-5 col-lg-offset-2">
+				<div class="row">
+				<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+				<div class="form-group ">
+					<div class="inner-addon left-addon">
+					<i class="glyphicon glyphicon-user"></i>
+					<input id="company"  placeholder="company" class="form-control myInput" value="{{contact.company}}" readonly="true">
+					<hr></div>
+				</div>
+			</div>
+				<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+				<div class="form-group ">
+					<div class="inner-addon left-addon">
+					<i class="glyphicon glyphicon-user"></i>
+					<input id="position"  placeholder="position" class="form-control myInput" value="{{contact.position}}" readonly="true">
+					<hr></div>
+				</div>
+				</div>
+			
+				<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+				<div class="form-group ">
+					<div class="inner-addon left-addon">
+					<i class="glyphicon glyphicon-calendar"></i>
+					<input type="date" id="dob"  placeholder="D.O.B." class="form-control myInput" value="{{contact.dob}}" readonly="true">
+					<hr>
+					</div>
+				</div>
+				</div></div>
+			</div>
+		</div>
+
+		
+		</div>
+		
+	    <div class="row">
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+ 		<div class="btn-group">
+        	<button id="save" class="btn btn-success btn-sm" ng-click="" title="edit"><i class="glyphicon glyphicon-edit hidden-md hidden-lg"></i><span class="glyphicon glyphicon-edit hidden-xs hidden-sm"> edit</span></button>
+        	<button id="reset" type="reset" class="btn btn-warning btn-sm" onclick="#" title="back"><i class="glyphicon glyphicon-arrow-left hidden-md hidden-lg"></i><span class="glyphicon glyphicon-arrow-left hidden-xs hidden-sm"> back</span></button>
+        	<button id="cancel" class="btn btn-danger btn-sm" onclick="#" title="delete"><i class="glyphicon glyphicon-trash hidden-md hidden-lg"></i><span class="glyphicon glyphicon-trash hidden-xs hidden-sm"> delete</span></button>
+        </div></div></div>
+		</fieldset>
+	</div>
+</form>
+</div>
