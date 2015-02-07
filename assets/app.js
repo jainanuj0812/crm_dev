@@ -1,4 +1,4 @@
-var crmApp=angular.module('crmApp',['ngRoute', 'crmApp.accountControllerModule', 'crmApp.leadControllerModule']);
+var crmApp=angular.module('crmApp',['ngRoute', 'crmApp.accountControllerModule', 'crmApp.leadControllerModule', 'crmApp.contactControllerModule']);
 
 crmApp.config(function($routeProvider){
 	$routeProvider
@@ -7,8 +7,8 @@ crmApp.config(function($routeProvider){
 		templateUrl: 'dashboard/dashboard.html'	
 	 })
 	 	.when('/contacts',{
-		controller: 'contactsController',
-		templateUrl: 'crm_dev/contacts/contacst.html'	
+		controller: 'contactListController',
+		templateUrl: 'contacts/partials/listContact.html'	
 	 })
 	 	.when('/accounts',{
 		controller: 'accountListController',
