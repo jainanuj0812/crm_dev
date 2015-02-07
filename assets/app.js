@@ -2,13 +2,13 @@ var crmApp=angular.module('crmApp',['ngRoute']);
 
 crmApp.config(function($routeProvider){
 	$routeProvider
-	.when('/dashboard',{
+	.when('#/dashboard',{
 		controller: 'dashboardController',
 		templateUrl: 'crm_dev/dashboard/dashboard.html'	
 	 })
 	 	.when('/contacts',{
 		controller: 'contactsController',
-		templateUrl: 'crm/components/contacts/contacstList.html'	
+		templateUrl: 'crm_dev/contacts/contacst.html'	
 	 })
 	 	.when('/accounts',{
 		controller: 'accountsController',

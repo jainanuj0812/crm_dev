@@ -17,10 +17,8 @@ this.getAccounts=function(){
    };
 	
 var accounts=[
-{id:1, firstName:'Amit', lastName:'Gadaley', email:'agadaley@gmail.com', phoneNo:9584593069,address:'cm-44',state:'madhya pradesh',country:'india',company:'hotwax systems',position:'engineer',dob:'1993-04-17'},
-{id:2, firstName:'Aman', lastName:'Agrawal', email:'aman@gmail.com', phoneNo:4512789632,address:'cm-12',state:'madhya pradesh',country:'india',company:'hotwax systems',position:'engineer',dob:'1993-04-17'},
-{id:3, firstName:'Anuj', lastName:'jain', email:'anuj@gmail.com', phoneNo:7845124152,address:'dm-25',state:'madhya pradesh',country:'india',company:'hotwax systems',position:'engineer',dob:'1993-04-17'},
-{id:4, firstName:'Saket', lastName:'Baghel', email:'saket@gmail.com', phoneNo:9696562385,address:'gh-44',state:'madhya pradesh',country:'india',company:'hotwax systems',position:'engineer',dob:'1993-04-17'},
-{id:5, firstName:'Rahul', lastName:'Bhammaker', email:'rahul@gmail.com', phoneNo:9656899556,address:'ym-44',state:'madhya pradesh',country:'india',company:'hotwax systems',position:'engineer',dob:'1993-04-17'} 
+{id:1, accountName:'Amit', responsiblePerson:'Gadaley', email:'agadaley@gmail.com', phoneNo:9584593069,companyType:'hotwax systems',industry:'engineer',annualIncome: 4000,currency: 'INR',comment: 'Comment just for testing purpose amit'},
+{id:1, accountName:'Rahul', responsiblePerson:'Bhammarker', email:'rahul@gmail.com', phoneNo:111111111,companyType:'hotwax media',industry:'engineer',annualIncome: 4000,currency: 'USD',comment: 'Comment just for testing purpose by rahul'},
+{id:1, accountName:'Aman', responsiblePerson:'agrawal', email:'aman@gmail.com', phoneNo:999999999,companyType:'hotwax family',industry:'engineer',annualIncome: 4000,currency: 'USD',comment: 'Comment just for testing purpose by aman'},
 ];
 });

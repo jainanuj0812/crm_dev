@@ -32,9 +32,10 @@
 		    		<img src="assets/images/demo.png" class="img-circle img-responsive " >
         			</div>
         			<div class="col-xs-7 col-sm-7 col-md-6 col-lg-6"  ng-model="hide" ng-click="hide=!hide">
-            		<h5><i class="glyphsicon glyphicon-user"></i><b>{{" "+account.firstName +" "+ account.lastName}}</b></h5>
+            		<h5><i class="glyphsicon glyphicon-user"></i><b>{{" "+account.accountName}}</b></h5>
             		<h6><i class="glyphicon glyphicon-envelope"></i>{{" "+account.email}}</h6>
             		<h6><i class="glyphicon glyphicon-earphone"></i>{{" "+account.phoneNo}}</h6>
+            		<h6><i class="glyphicon glyphicon-user"></i>{{" "+account.responsiblePerson}}</h6>
             		<h6><a href="#/viewAccount/{{account.id}}"><i class="glyphicon glyphicon-plus-sign">more..</i></a></h6>
             		</div>
         
