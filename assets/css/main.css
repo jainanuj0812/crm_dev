@@ -15,12 +15,28 @@
 }
 
 
-@media all and (min-width: 767px)
+@media (max-width: 767px)
 {
- #menuDiv{
- display:none !important;
+ #wrapper{
+ dispplay: none;
  }
-}	
+ #eventsOnDashboard{
+ dispplay: none;
+ }
+}
+
+@media (min-width: 768px)
+{
+ #wrapper{
+ dispplay: inline;
+ }
+ #eventsOnDashboard{
+ dispplay: inline;
+ }
+}
+
+
+	
 
 #contactRow
 {
@@ -28,7 +44,7 @@
  border-color:#EFEFDD;
  border-style:ridge;
  margin-top:15px;
-	}
+}
 
 .form-control[readonly]
 {
