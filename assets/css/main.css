@@ -47,8 +47,10 @@ pre{
 		 position: absolute;
 		 padding: 0;
 	}
+	#navOption{
+		display: inline !important;
+	}
 }
-
 
 @media (max-width: 767px)
 {
