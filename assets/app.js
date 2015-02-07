@@ -4,7 +4,7 @@ crmApp.config(function($routeProvider){
 	$routeProvider
 	.when('/dashboard',{
 		controller: 'dashboardController',
-		templateUrl: 'crm/components/dashboard/dashboard.html'	
+		templateUrl: 'crm_dev/dashboard/dashboard.html'	
 	 })
 	 	.when('/contacts',{
 		controller: 'contactsController',
