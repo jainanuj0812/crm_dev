@@ -2,9 +2,9 @@ var crmApp=angular.module('crmApp',['ngRoute']);
 
 crmApp.config(function($routeProvider){
 	$routeProvider
-	.when('#/dashboard',{
+	.when('/dashboard',{
 		controller: 'dashboardController',
-		templateUrl: 'crm_dev/dashboard/dashboard.html'	
+		templateUrl: 'dashboard/dashboard.html'	
 	 })
 	 	.when('/contacts',{
 		controller: 'contactsController',
@@ -26,5 +26,5 @@ crmApp.config(function($routeProvider){
 		templateUrl: 'crm/components/events/events.html'	
 	 })
 	
-	.otherwise({redirectTo:'/dashboard'});
+	.otherwise({redirectTo:'/'});
 });
