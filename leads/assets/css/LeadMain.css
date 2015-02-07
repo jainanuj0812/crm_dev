@@ -8,7 +8,7 @@ border: 0px none;
 box-shadow: none !important;
 }
 
-#accountRow
+#leadRow
 {
  border-width:thin;
  border-color:#EFEFDD;
@@ -16,7 +16,7 @@ box-shadow: none !important;
  margin-top:15px;
 	}
 
-#accountSearch
+#leadSearch
 {
 	outline: 0px;
 border-style:ridge;
@@ -28,7 +28,7 @@ box-shadow: none !important;
 	
 }
 
-#accountSearchh
+#leadSearchh
 {
     border-style:ridge;
 	width: 750px;
