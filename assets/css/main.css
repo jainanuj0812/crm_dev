@@ -52,28 +52,12 @@ pre{
 	}
 }
 
-@media (max-width: 767px)
-{
- #wrapper{
- dispplay: none;
- }
- #eventsOnDashboard{
- dispplay: none;
- }
+@media (max-width: 768px)
+{   
+   #eventsOnDashboard{
+      display: none;
+   }   
 }
-
-@media (min-width: 768px)
-{
- #wrapper{
- dispplay: inline;
- }
- #eventsOnDashboard{
- dispplay: inline;
- }
-}
-
-
-	
 
 #contactRow
 {
