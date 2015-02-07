@@ -20,7 +20,7 @@ crmApp.config(function($routeProvider){
 	 })
 	 	.when('/opportunities',{
 		controller: 'opportunitiesController',
-		templateUrl: 'crm/components/opportunities/opportunitiesList.html'	
+		templateUrl: 'opportunity/createOpportunity.html'	
 	 })	.when('/events',{
 		controller: 'eventsController',
 		templateUrl: 'crm/components/events/events.html'	
