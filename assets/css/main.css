@@ -15,28 +15,18 @@
 }
 
 
-@media (max-width: 767px)
+@media (max-width: 768px)
 {
- #wrapper{
- dispplay: none;
- }
- #eventsOnDashboard{
- dispplay: none;
- }
-}
-
-@media (min-width: 768px)
-{
- #wrapper{
- dispplay: inline;
- }
- #eventsOnDashboard{
- dispplay: inline;
- }
-}
-
-
 	
+   #wrapper{
+      display: none;
+   }
+   
+   #eventsOnDashboard{
+      display: none;
+   }
+   
+}
 
 #contactRow
 {
