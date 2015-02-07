@@ -16,16 +16,10 @@
 
 
 @media (max-width: 768px)
-{
-	
-   #wrapper{
-      display: none;
-   }
-   
+{   
    #eventsOnDashboard{
       display: none;
-   }
-   
+   }   
 }
 
 #contactRow
