@@ -28,19 +28,21 @@
 		<div class="row">
 			<div class="col-xs-12 col-sm-12 col-md-5 col-lg-5">
 				<div class="form-group">
+				<lable for="firstName">First name:</lable>
 					<div class="inner-addon left-addon">
 						<i class="glyphicon glyphicon-user"></i>
-						<input id="firstName" placeholder="first name" class="form-control myInput" value="{{contact.firstName}}"  readonly="true">
-					<hr></div>
+						<input id="firstName" class="form-control  " value="{{contact.firstName}}"  ng-readonly="notEditable">
+					 </div>
 				</div>
 			</div>
 
 			<div class="col-xs-12 col-sm-12 col-md-5 col-lg-5 col-md-offset-2 col-lg-offset-2">
 				<div class="form-group">
+				<lable for="lastName">Last name:</lable>
 					<div class="inner-addon left-addon">
 						<i class="glyphicon glyphicon-user"></i>
-						<input id="lastName" placeholder="last name" class="form-control myInput" value="{{contact.lastName}}" readonly="true">
-					<hr></div>
+						<input id="lastName" class="form-control  " value="{{contact.lastName}}" ng-readonly="notEditable">
+					 </div>
 				</div>
 			</div>
 		</div>
@@ -48,19 +50,21 @@
 		<div class="row">
 			<div class="col-xs-12 col-sm-12 col-md-5 col-lg-5">
 				<div class="form-group">
+				<lable for="email">E-mail:</lable>
 					<div class="inner-addon left-addon">
-					<i class="glyphicon glyphicon-user"></i>
-					<input type="email" id="email" placeholder="email" class="form-control myInput" value="{{contact.email}}" readonly="true">
-					<hr></div>
+					<i class="glyphicon glyphicon-envelope"></i>
+					<input type="email" id="email" class="form-control  " value="{{contact.email}}" ng-readonly="notEditable">
+					 </div>
 				</div>
 			</div>
 
 			<div class="col-xs-12 col-sm-12 col-md-5 col-md-offset-2 col-lg-5 col-lg-offset-2">
 				<div class="form-group">
+				<lable for="phoneNo">Last name :</lable>
 					<div class="inner-addon left-addon">
 					<i class="glyphicon glyphicon-earphone"></i>
-					<input id="phoneNo" placeholder="phone no" class="form-control myInput" value="{{contact.phoneNo}}" readonly="true">
-					<hr></div>
+					<input id="phoneNo" class="form-control  " value="{{contact.phoneNo}}" ng-readonly="notEditable">
+					 </div>
 				</div>
 			</div>
 		</div>
@@ -69,27 +73,30 @@
 			<div class="col-xs-12 col-sm-12 col-md-5 col-lg-5"><div class="row">
 				<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
 				<div class="form-group ">
+				<lable for="address">Address:</lable>
 					<div class="inner-addon left-addon">
 					<i class="glyphicon glyphicon-user"></i>
-					<input id="address"  placeholder="address" class="form-control myInput" value="{{contact.address}}" readonly="true">
-					<hr></div>
+					<input id="address" class="form-control  " value="{{contact.address}}" ng-readonly="notEditable">
+					 </div>
 				</div>
 			</div>
 				<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
 				<div class="form-group ">
+				<lable for="state">State:</lable>
 					<div class="inner-addon left-addon">
 					<i class="glyphicon glyphicon-user"></i>
-					<input id="state"  placeholder="state" class="form-control myInput" value="{{contact.state}}" readonly="true">
-					<hr></div>
+					<input id="state" class="form-control  " value="{{contact.state}}" ng-readonly="notEditable">
+					 </div>
 				</div>
 				</div>
 			
 				<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
 				<div class="form-group ">
+				<lable for="country">Country:</lable>
 					<div class="inner-addon left-addon">
 					<i class="glyphicon glyphicon-user"></i>
-					<input id="country"  placeholder="country" class="form-control myInput" value="{{contact.country}}" readonly="true">
-					<hr></div>
+					<input id="country" class="form-control  " value="{{contact.country}}" ng-readonly="notEditable">
+					 </div>
 				</div>
 				</div></div>
 			
@@ -99,27 +106,30 @@
 				<div class="row">
 				<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
 				<div class="form-group ">
+				<lable for="company">Company:</lable>
 					<div class="inner-addon left-addon">
 					<i class="glyphicon glyphicon-user"></i>
-					<input id="company"  placeholder="company" class="form-control myInput" value="{{contact.company}}" readonly="true">
-					<hr></div>
+					<input id="company" class="form-control  " value="{{contact.company}}" ng-readonly="notEditable">
+					 </div>
 				</div>
 			</div>
 				<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
 				<div class="form-group ">
+				<lable for="position">Position:</lable>
 					<div class="inner-addon left-addon">
 					<i class="glyphicon glyphicon-user"></i>
-					<input id="position"  placeholder="position" class="form-control myInput" value="{{contact.position}}" readonly="true">
-					<hr></div>
+					<input id="position"  class="form-control  " value="{{contact.position}}" ng-readonly="notEditable">
+					 </div>
 				</div>
 				</div>
 			
 				<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
 				<div class="form-group ">
+				<lable for="dob">Date of birth:</lable>
 					<div class="inner-addon left-addon">
 					<i class="glyphicon glyphicon-calendar"></i>
-					<input type="date" id="dob"  placeholder="D.O.B." class="form-control myInput" value="{{contact.dob}}" readonly="true">
-					<hr>
+					<input type="date" id="dob" class="form-control  " value="{{contact.dob}}" ng-readonly="notEditable">
+					 
 					</div>
 				</div>
 				</div></div>
@@ -132,7 +142,7 @@
 	    <div class="row">
         <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
  		<div class="btn-group">
-        	<button id="save" class="btn btn-success btn-sm" ng-click="" title="edit"><i class="glyphicon glyphicon-edit hidden-md hidden-lg"></i><span class="glyphicon glyphicon-edit hidden-xs hidden-sm"> edit</span></button>
+        	<button id="edit" class="btn btn-success btn-sm" ng-click="notEditable=!notEditable" onclick="#" title="edit"><i class="glyphicon glyphicon-edit hidden-md hidden-lg"></i><span class="glyphicon glyphicon-edit hidden-xs hidden-sm"> edit</span></button>
         	<button id="reset" type="reset" class="btn btn-warning btn-sm" onclick="#" title="back"><i class="glyphicon glyphicon-arrow-left hidden-md hidden-lg"></i><span class="glyphicon glyphicon-arrow-left hidden-xs hidden-sm"> back</span></button>
         	<button id="cancel" class="btn btn-danger btn-sm" onclick="#" title="delete"><i class="glyphicon glyphicon-trash hidden-md hidden-lg"></i><span class="glyphicon glyphicon-trash hidden-xs hidden-sm"> delete</span></button>
         </div></div></div>
