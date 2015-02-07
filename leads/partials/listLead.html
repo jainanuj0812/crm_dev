@@ -1,0 +1,94 @@
+<div class="container">
+
+	<div class="row">
+
+		<div
+			class="col-xs-10 col-xs-offset-1 col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2 col-lg-8 col-lg-offset-2">
+			<div class="row">
+				<div class="col-xs-12 col-sm-12 col-lg-12 col-md-12">
+					<div
+						class="inner-addon right-addon col-xs-9 col-sm-9 col-md-9 col-lg-9 ">
+
+						<input id="leadSearch" type="text"
+							placeholder="find leads here!"
+							class="img-rounded img-responsive"><i
+							class="glyphicon glyphicon-filter"></i>
+					</div>
+					<div class="dropdown col-xs-1 col-sm-1 col-md-1 col-lg-1">
+						<button class="btn btn-default dropdown-toggle" type="button"
+							id="menu1" data-toggle="dropdown">
+							<i class="glyphicon glyphicon-align-justify"></i> <span
+								class="caret"></span>
+						</button>
+						<ul class="dropdown-menu" role="menu" aria-labelledby="menu1">
+
+						</ul>
+					</div>
+					<div
+						class="col-xs-1 col-sm-1 col-md- col-lg-1 visible-md visible-lg"
+						style="margin-left: 5px;">
+						<button class="btn btn-info btn-sm img-rounded" type="button"
+							id="#">
+							<i class="glyphicon glyphicon-plus-sign"></i>
+
+						</button>
+
+					</div>
+
+				</div>
+
+			</div>
+
+			<div ng-repeat="lead in leads">
+				<div class="row img-rounded" id="leadRow">
+					<div class="col-xs-3 col-sm-3 col-md-3 col-lg-3" id="imgdiv">
+						<img src="assets/images/demo.png"
+							class="img-circle img-responsive ">
+					</div>
+					<div class="col-xs-7 col-sm-7 col-md-6 col-lg-6" ng-model="hide"
+						ng-click="hide=!hide">
+						<h5>
+							<i class="glyphsicon glyphicon-user"></i><b>{{"
+								"+lead.leadName}}</b>
+						</h5>
+						<h6>
+							<i class="glyphicon glyphicon-envelope"></i>{{" "+lead.email}}
+						</h6>
+						<h6>
+							<i class="glyphicon glyphicon-earphone"></i>{{"
+							"+lead.phoneNo}}
+						</h6>
+						<h6>
+							<i class="glyphicon glyphicon-user"></i>{{"
+							"+lead.responsiblePerson}}
+						</h6>
+						<h6>
+							<a href="#/viewLead/{{lead.id}}"><i
+								class="glyphicon glyphicon-plus-sign">more..</i></a>
+						</h6>
+					</div>
+
+					<div
+						class="col-xs-1  col-sm-1  col-md-1 col-md-offset-1 col-lg-1  col-lg-offset-1">
+						<div class="btn-group" style="float: right;">
+							<button id="edit" class="btn btn-info btn-xs btn-sm" onclick="#"
+								title="edit">
+								<i class="glyphicon glyphicon-pencil"></i>
+							</button>
+							<button id="delete" class="btn btn-danger btn-xs btn-sm"
+								onclick="#" title="delete">
+								<i class="glyphicon glyphicon-trash"></i>
+							</button>
+
+						</div>
+					</div>
+
+				</div>
+
+			</div>
+		</div>
+
+
+	</div>
+</div>
+
