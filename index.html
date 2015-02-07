@@ -1,45 +1,107 @@
 <!DOCTYPE HTML>
 <html data-ng-app='crmApp'>
-    <head>    
-    	<title>Customer Manager</title>
-      		<link href="assets/css/bootstrap.min.css" rel="stylesheet" />
-      		<script src="assets/js/bootstrap.min.js"></script>
-      	<link href="Content/main.css" rel="stylesheet" />
-   	</head>
-	<body>
-	    <nav class="navbar navbar-inverse navbar-static-top" style="margin-bottom:0px">
-		   	<div class="container-fluid">
-    		<!-- Brand and toggle get grouped for better mobile display -->
-    			<div id="menuButton" class="navbar-header" style="float: left;">
-      				<button id="menuButton" type="button" class="navbar-toggle collapsed" data-toggle="collapse">
-        				<span class="sr-only">Toggle navigation</span>
-        				<span class="icon-bar"></span>
-        				<span class="icon-bar"></span>
-        				<span class="icon-bar"></span>
-      				</button>
-      			</div>
-      			<!--Apache logo-->
-        		<img id="logo" alt="Brand" src="/crm/assets/images/apacheLogo.png">
-                <ul class="nav navbar-nav navbar-right  navbar-static-top">
-                   <br/> <li><a href="#about"><span class="glyphicon glyphicon-search"></span></a></li>
-                    <li><a href="#contact"><span class="glyphicon glyphicon-envelope"></span></a></li>
-                    <li><a href="#about"><span class="glyphicon glyphicon-bell"></span></a></li>
-                    <li><a href="#contact"><span class="glyphicon glyphicon-user"></span></a></li>
-                </ul>
-        	</div>
-		</nav>
-		<div id="menuDiv" class="slideMenu">
-        <ul role="menu">
-            <li><a href="dashboard.html"><span class="glyphicon glyphicon-home"></span>Dashboard</a></li>
-            <li><a href="contacts.html"><span class="glyphicon glyphicon-user"></span>Contacts</a></li>
-            <li><a href="accounts.html"><span class="glyphicon glyphicon-bell"></span>Accounts</a></li>
-            <li><a href="leads.html"><span class="glyphicon glyphicon-user"></span>Leads</a></li>
-            <li><a href="opportunities.html"><span class="glyphicon glyphicon-user"></span>Opportunities</a></li>
-            <li><a href="calender.html"><span class="glyphicon glyphicon-user"></span>Event/Task</a></li>
-        </ul></div>
+<head>
+<title>Customer</title>
+<link href="assets/css/bootstrap.min.css" rel="stylesheet" />
+<script src="assets/js/bootstrap.min.js"></script>
+<link href="assets/css/main.css" rel="stylesheet" />
+</head>
+<body>
+	<nav class="navbar navbar-inverse navbar-static-top"
+		style="margin-bottom: 0px">
+		<div class="container-fluid">
+			<!-- Brand and toggle get grouped for better mobile display -->
+			<div id="menuButton" class="navbar-header" style="float: left;">
+				<button id="menuButton" type="button"
+					class="navbar-toggle collapsed" data-toggle="collapse">
+					<span class="sr-only">Toggle navigation</span> <span
+						class="icon-bar"></span> <span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+			</div>
+			<!--Apache logo-->
+			<img id="logo" alt="Brand" src="/crm/assets/images/apacheLogo.png">
+			<ul class="nav navbar-nav navbar-right  navbar-static-top">
+				<br />
+				<li><a href="#about"><span
+						class="glyphicon glyphicon-search"></span></a></li>
+				<li><a href="#contact"><span
+						class="glyphicon glyphicon-envelope"></span></a></li>
+				<li><a href="#about"><span class="glyphicon glyphicon-bell"></span></a></li>
+				<li><a href="#contact"><span
+						class="glyphicon glyphicon-user"></span></a></li>
+			</ul>
+		</div>
+	</nav>
+	<div id="menuDiv" class="slideMenu">
+		<ul role="menu">
+			<li><a href="dashboard.html"><span
+					class="glyphicon glyphicon-home"></span>Dashboard</a></li>
+			<li><a href="contacts.html"><span
+					class="glyphicon glyphicon-user"></span>Contacts</a></li>
+			<li><a href="accounts.html"><span
+					class="glyphicon glyphicon-bell"></span>Accounts</a></li>
+			<li><a href="leads.html"><span
+					class="glyphicon glyphicon-user"></span>Leads</a></li>
+			<li><a href="opportunities.html"><span
+					class="glyphicon glyphicon-user"></span>Opportunities</a></li>
+			<li><a href="calender.html"><span
+					class="glyphicon glyphicon-user"></span>Event/Task</a></li>
+		</ul>
+	</div>
+	
+	<div id="wrapper">
+        <!-- Sidebar -->
+        <div id="sidebar-wrapper">
+            <ul class="sidebar-nav">
+                <li class="sidebar-brand">
+                    <a href="#">
+                        apache logo 
+                    </a>
+                </li>
+                <li>
+                    <a href="#">Dashboard</a>
+                </li>
+                <li>
+                    <a href="#">Contacts</a>
+                </li>
+                <li>
+                    <a href="#">Accounts</a>
+                </li>
+                <li>
+                    <a href="#">Leads</a>
+                </li>
+                <li>
+                    <a href="#">Opportunities</a>
+                </li>
+                <li>
+                    <a href="#">Events</a>
+                </li>
+                <li>
+                    <a href="#">Services</a>
+                </li>
+            </ul>
+        </div>
+        <!-- /#sidebar-wrapper -->
 
-       <div data-ng-view=""></div>
+        <!-- Page Content -->
+        <div id="page-content-wrapper">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <h1>Simple Sidebar</h1>
+                        <div data-ng-view=""></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- /#page-content-wrapper -->
 
-    </body>
+    </div>
+    <!-- /#wrapper -->
+
+	
+
+</body>
 <script src="assets/app.js"></script>
 </html>
