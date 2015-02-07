@@ -1,11 +1,11 @@
-var leadServiceModule=angular.module('leadServiceModule',['crmlead','leadControllerModule']);
+var leadServiceModule=angular.module('leadServiceModule',['crmLead','leadControllerModule']);
 leadServiceModule.service('leadService',function(){
 
-this.getleads=function(){
+this.getLeads=function(){
 		return leads;
 	};
 
-	this.getlead=function(id){
+	this.getLead=function(id){
         for(var i=0;i<leads.length-1;i++)
         {
             if(id==leads[i].id)

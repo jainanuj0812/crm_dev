@@ -1,25 +1,25 @@
 var crmLead=angular.module('crmLead',['ngRoute','leadServiceModule','leadControllerModule']);
 
-crmlead.config(function($routeProvider){
+crmLead.config(function($routeProvider){
 	$routeProvider
 	.when('/',{
 		controller: 'leadListController',
-		templateUrl: 'partials/listlead.html'	
+		templateUrl: 'partials/listLead.html'	
 	 })
 	 
-	 .when('/createlead',{
+	 .when('/createLead',{
 		controller: 'leadListController',
-		templateUrl: 'partials/createlead.html'	
+		templateUrl: 'partials/createLead.html'	
 	 })
 	 
-	   .when('/viewlead/:leadId',{
+	   .when('/viewLead/:leadId',{
 		controller: 'viewleadController',
-		templateUrl: 'partials/viewlead.html'	
+		templateUrl: 'partials/viewLead.html'	
 	 })
 	 
-	    .when('/listlead',{
+	    .when('/listLead',{
 		controller: 'leadListController',
-		templateUrl: 'partials/listlead.html'	
+		templateUrl: 'partials/listLead.html'	
 	 })
 	
 	.otherwise({redirectTo:'/'});
