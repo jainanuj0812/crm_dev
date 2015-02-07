@@ -26,5 +26,5 @@ crmApp.config(function($routeProvider){
 		templateUrl: 'crm/components/events/events.html'	
 	 })
 	
-	.otherwise({redirectTo:'/'});
+	.otherwise({redirectTo:'/dashboard'});
 });
