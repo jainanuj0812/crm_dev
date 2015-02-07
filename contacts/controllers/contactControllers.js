@@ -1,4 +1,5 @@
-app.controller('contactListController',function($scope,contactService)
+var contactControllerModule=angular.module('contactControllerModule',['contactServiceModule','crmContact']);
+contactControllerModule.controller('contactListController',function($scope,contactService)
 		{
          init();
          function init()
@@ -11,7 +12,7 @@ app.controller('contactListController',function($scope,contactService)
 		
 );
 
-app.controller('viewContactController', function($scope,$routeParams,contactService){
+contactControllerModule.controller('viewContactController', function($scope,$routeParams,contactService){
     var contactId;
     $scope.contact={};
     init();

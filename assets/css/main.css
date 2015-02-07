@@ -1,26 +1,75 @@
-#loginLogo{
-	width: 90%;
-	height: 25%;
-	margin: auto auto;
-	
+#logo{
+	width: 13%;
+	height: 100%;
+	position: absolute;
 }
 
+#menuDiv{
+	padding:0;
+	margin-top:0px;
+	width: 40%;
+	height: 100%;
+	background: AliceBlue;
+	color:white;
+	display:none;
+}
+
+
+@media all and (min-width: 767px)
+{
+ #menuDiv{
+ display:none !important;
+ }
+}	
+
+#contactRow
+{
+ border-width:thin;
+ border-color:#EFEFDD;
+ border-style:ridge;
+ margin-top:15px;
+	}
+
+.form-control[readonly]
+{
+	background-color: white;
+}
+
+hr
+{
+	margin-top: 5px;
+	border-top: 1px solid;
+	margin-left: 2px;
+	margin-right: 2px;
+	
+}
 .inner-addon { 
-   position: relative; 
+    position: relative; 
 }
 
 /* style icon */
 .inner-addon .glyphicon {
- position: absolute;
- padding: 1.5%;
- pointer-events: none;
+  position: absolute;
+  padding: 10px;
+  pointer-events: none;
+}
+
+/* style icon */
+.inner-addon .icon-large {
+  position: absolute;
+  padding: 10px;
+  pointer-events: none;
 }
 
 /* align icon */
 .left-addon .glyphicon  { left:  0px;}
-.right-addon .glyphicon { right: 0px;}
+.right-addon .glyphicon { right: 10px;}
 
+/* align icon */
+.left-addon .icon-large  { left:  0px;}
+.right-addon .icon-large { right: 0px;}
 
 /* add padding  */
-.left-addon input  { padding-left:  18%; }
-.right-addon input { padding-right: 6%; }
+.left-addon input  { padding-left:  30px; }
+.right-addon input { padding-right: 30px; }
+

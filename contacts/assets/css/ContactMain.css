@@ -1,0 +1,60 @@
+
+.myInput{
+color:black;
+background-color: transparent;
+outline: 0px;
+border: 0px none;
+-webkit-box-shadow: none !important;
+box-shadow: none !important;
+}
+
+#contactRow
+{
+ border-width:thin;
+ border-color:#EFEFDD;
+ border-style:ridge;
+ margin-top:15px;
+	}
+
+#contactSearch
+{
+	outline: 0px;
+border-style:ridge;
+width: 750px;
+padding:5px;
+font-size: 20px;
+-webkit-box-shadow: none !important;
+box-shadow: none !important;
+	
+}
+
+#contactSearchh
+{
+    border-style:ridge;
+	width: 750px;
+	padding:5px;
+	font-size: 20px;
+	color:black;
+	background-color: transparent;
+	-webkit-box-shadow: none !important;
+    box-shadow: none !important;
+	
+}
+
+#imgdiv
+{
+	padding-left: 0px;
+	padding-right: 0px;
+	
+}
+
+
+
+hr
+{
+	margin-top: 5px;
+	border-top: 1px solid;
+	margin-left: 2px;
+	margin-right: 2px;
+	
+}

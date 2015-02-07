@@ -1,30 +1,30 @@
-var app=angular.module('crmContact',['ngRoute']);
+var crmContact=angular.module('crmContact',['ngRoute','contactServiceModule','contactControllerModule']);
 
-app.config(function($routeProvider){
+crmContact.config(function($routeProvider){
 	$routeProvider
 	.when('/',{
 		controller: 'contactListController',
-		templateUrl: 'crm/components/contacts/partials/check.html'	
+		templateUrl: 'partials/check.html'	
 	 })
 	 
 	 .when('/createContact',{
 		controller: 'contactListController',
-		templateUrl: 'crm/components/contacts/partials/createContact.html'	
+		templateUrl: 'partials/createContact.html'	
 	 })
 	 
 	  .when('/createTask',{
 		controller: 'contactListController',
-		templateUrl: 'crm/components/contacts/partials/newTask.html'	
+		templateUrl: 'partials/newTask.html'	
 	 })
 	 
 	   .when('/viewContact/:contactId',{
 		controller: 'viewContactController',
-		templateUrl: 'crm/components/contacts/partials/viewContact.html'	
+		templateUrl: 'partials/viewContact.html'	
 	 })
 	 
 	    .when('/listContact',{
 		controller: 'contactListController',
-		templateUrl: 'crm/components/contacts/partials/listContact.html'	
+		templateUrl: 'partials/listContact.html'	
 	 })
 	
 	.otherwise({redirectTo:'/'});

@@ -1,4 +1,5 @@
-app.service('contactService',function(){
+var contactServiceModule=angular.module('contactServiceModule',['crmContact','contactControllerModule']);
+contactServiceModule.service('contactService',function(){
 
 this.getContacts=function(){
 		return contacts;
