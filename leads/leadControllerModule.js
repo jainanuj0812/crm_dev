@@ -1,4 +1,4 @@
-var leadControllerModule=angular.module('leadControllerModule',['leadServiceModule','crmLead']);
+var leadControllerModule=angular.module('crmApp.leadControllerModule',['crmApp.leadServiceModule']);
 leadControllerModule.controller('leadListController',function($scope,leadService)
 		{
          init();
