@@ -1,0 +1,126 @@
+<!DOCTYPE HTML>
+<html ng-app>
+	<head>    
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+		
+		<script src="../assets/js/jquery.min.js" type="text/javascript"></script>
+      	<script src="../assets/js/jquery-ui.min.js" type="text/javascript"></script>
+      	<script src="../assets/js/bootstrap.min.js" type="text/javascript"></script>
+      	<script src="../assets/js/angular.min.js"  type="text/javascript"></script>
+      	<script src="../assets/js/angular-route.js" type="text/javascript"></script>
+      	<script src="../assets/js/jasny-bootstrap.min.js" type="text/javascript"></script>
+      	<link href="../assets/css/bootstrap.min.css" rel="stylesheet" />
+      	<link href="../assets/css/main.css" rel="stylesheet" />
+      	<link href="../assets/css/jasny-bootstrap.min.css" rel="stylesheet" />
+      	
+	</head>
+
+	</head>
+	<body>
+    
+    <br/>
+    <div class="container-fluid">
+        <form method="#" action="#" class="form-horizontal col-xs-8 col-xs-offset-2 col-sm-6 col-sm-offset-3 col-md-8 col-md-offset-2 col-lg-8 col-lg-offset-2">
+		
+            
+            <div class="row">
+                <div class="col-xs-12 col-sm-12 col-md-offset-2 col-md-8 col-lg-offset-1 col-lg-10">
+				    <div class="form-group">
+					   <div class="inner-addon left-addon">
+						<i class="glyphicon glyphicon-user iconSize"></i>
+						<input type="text" id="eventName" placeholder="Event Name" class="form-control textSize textInput"><hr>
+					   </div>
+				    </div>
+			     </div>		
+			</div>
+            
+            <div class="row">
+                <div class="col-xs-12 col-sm-12 col-md-offset-2 col-md-8 col-lg-offset-1 col-lg-10">
+				    <div class="form-group">
+					   <div class="inner-addon left-addon">
+						  <i class="glyphicon glyphicon-user iconSize"></i>
+                            <select class="form-control textSize textInput" id="sel1">
+                                <option>&nbsp;&nbsp;&nbsp;--Availability--</option>
+                                <option>&nbsp;&nbsp;&nbsp;Occupied</option>
+                                <option>&nbsp;&nbsp;&nbsp;Free</option>
+                                <option>&nbsp;&nbsp;&nbsp;Away</option>
+                                <option>&nbsp;&nbsp;&nbsp;Undecided</option>
+                            </select>
+                            <hr>
+					   </div>
+				    </div>
+			     </div>		
+			</div>
+     
+
+
+        
+            <div ng-show="false"> 
+     
+                <div class="row">
+                    <div class="col-xs-12 col-sm-12 col-md-offset-2 col-md-8 col-lg-offset-1 col-lg-10">
+				        <div class="form-group">     
+                            <div class="checkbox">
+                                <label><input type="checkbox" value=""><span class="textSize">Set Reminder</span></label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+ 
+            
+                <div class="row">
+                    <div class="col-xs-12 col-sm-12 col-md-offset-2 col-md-8 col-lg-offset-1 col-lg-10">
+				        <div class="form-group">
+					       <div class="inner-addon left-addon">
+						      <i class="glyphicon glyphicon-user iconSize"></i>
+						      <input type="date" id="eventName" placeholder="Event Name" class="form-control textSize textInput"><hr>
+					       </div>
+				        </div>
+			         </div>		
+			     </div>
+            
+                <div class="row">
+                    <div class="col-xs-12 col-sm-12 col-md-offset-2 col-md-8 col-lg-offset-1 col-lg-10">
+				        <div class="form-group">
+					       <div class="inner-addon left-addon">
+						      <i class="glyphicon glyphicon-user iconSize"></i>
+						      <input type="date" id="eventName" placeholder="Event Name" class="form-control textSize textInput"><hr>
+					       </div>
+				        </div>
+			         </div>		
+			     </div>
+                 
+                <div class="row">
+                    <div class="col-xs-12 col-sm-12 col-md-offset-2 col-md-8 col-lg-offset-1 col-lg-10">
+				        <div class="form-group">
+					       <div class="inner-addon left-addon">
+						      <textarea placeholder="Description" class="form-control textSize"></textarea>
+					       </div>
+				        </div>
+			         </div>		
+			     </div>                 
+                 
+                 
+              </div>
+              
+            
+	           <div class="row">
+                    <div class="col-xs-12 col-sm-12 col-md-offset-2 col-md-8 col-lg-offset-1 col-lg-10">
+ 		                 <div class="btn-group">
+        	               <button id="save" class="btn btn-success btn-sm" onclick="#" title="save"><i class="glyphicon glyphicon-ok hidden-md hidden-lg"></i><span class="glyphicon glyphicon-save hidden-xs hidden-sm">save</span></button>
+        	               <button id="reset" type="reset" class="btn btn-warning btn-sm" onclick="#" title="reset"><i class="glyphicon glyphicon-repeat hidden-md hidden-lg"></i><span class="glyphicon glyphicon-repeat hidden-xs hidden-sm"> reset</span></button>
+        	               <button id="cancel" class="btn btn-danger btn-sm" onclick="#" title="cancel"><i class="glyphicon glyphicon-remove hidden-md hidden-lg"></i><span class="glyphicon glyphicon-remove hidden-xs hidden-sm"> cancel</span></button>
+                        </div>
+                        
+                        <botton type="button" class="btn pull-right" style="color: #0066FF;" ng-click="showMoreEventForm=!showMoreEventForm"><i class="glyphicon glyphicon-plus iconSize"></i><span class="textSize">  more</span></button>
+                    </div>
+               </div>
+	
+        </form>
+        
+    </div>
+
+ </body>
+
+</html>
