@@ -6,4 +6,7 @@ $(document).ready(function() {
                 $(sel).toggleClass('in');
                 $(sel2).toggleClass('out');
             });
+            $('.item').click(function(){
+            	$(sel).addClass('in');
+            });
         });
