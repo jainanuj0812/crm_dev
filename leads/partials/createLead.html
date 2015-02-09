@@ -1,168 +1,153 @@
-<div class="container">
+<div class="container-fluid">
 	<form method="#" action="#" accept="image/gif,image/jpeg"
-		class="form-horizontal col-xs-8 col-xs-offset-2 col-sm-6 col-sm-offset-3 col-md-8 col-md-offset-2 col-lg-8 col-lg-offset-2">
-		<fieldset>
-			<div class="row">
-				<legend>New Lead</legend>
-				<div class="row">
-					<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-						<div class="row">
-							<div
-								class="col-xs-11 col-xs-offset-1 col-md-10 col-md-offset-1 col-lg-10 col-lg-offset-1">
-								<div class="fileinput fileinput-new" data-provides="fileinput">
-									<div class="fileinput-preview thumbnail"
-										data-trigger="fileinput" style="width: 150px; height: 170px;">
-									</div>
-									<div style="display: inline;">
-										<span class="btn btn-large btn-success btn-file"> <span
-											class="fileinput-new">upload</span> <span
-											class="fileinput-exists">change</span> <input type="file"
-											name="...">
-										</span>
-									</div>
+		class="form-horizontal">
+
+		<div class="row">
+			<legend style="padding-left: 3%;">New Lead</legend>
+			<br />
+			<div class="col-lg-3">
+				<div class="fileinput fileinput-new" data-provides="fileinput">
+					<div class="row">
+						<div class="col-xs-offset-3 col-md-12">
+							<div class="fileinput fileinput-new" data-provides="fileinput">
+								<div class="fileinput-preview thumbnail"
+									data-trigger="fileinput" style="width: 150px; height: 170px;">
 								</div>
 							</div>
 						</div>
 					</div>
+					<div class="row center">
+						<div class="col-xs-offset-6 col-md-offset-6">
+							<div class="">
+								<span class="btn btn-lg btn-success btn-file"><span
+									class="fileinput-new"> Upload </span> <span
+									class="fileinput-exists"> Change</span> <input type="file"
+									name="..."> </span>
+							</div>
+						</div>
+					</div>
 				</div>
+			</div>
+			<div class="col-lg-9">
 				<div class="row">
-					<div class="col-xs-12 col-sm-12 col-md-5 col-lg-5">
+					<div class="col-lg-4">
 						<div class="form-group">
 							<label>Lead Name</label>
 							<div class="inner-addon left-addon">
 								<i class="glyphicon glyphicon-user"></i> <input id="leadName"
-									class="form-control loginInput">
+									class="form-control">
 							</div>
 						</div>
-					</div>
-
-					<div
-						class="col-xs-12 col-sm-12 col-md-5 col-lg-5 col-md-offset-2 col-lg-offset-2">
-						<div class="form-group">
-							<label>Company Type</label>
-							<div class="inner-addon left-addon">
-								<span class="glyphicon glyphicon-exclamation-sign"></span> <select
-									class="form-control loginInput" id="companyType">
-									<option>1</option>
-									<option>2</option>
-									<option>3</option>
-									<option>4</option>
-								</select>
-							</div>
-						</div>
-					</div>
-				</div>
-
-				<div class="row">
-					<div class="col-xs-12 col-sm-12 col-md-5 col-lg-5">
 						<div class="form-group">
 							<label>Source Name</label>
 							<div class="inner-addon left-addon">
-								<span class="glyphicon glyphicon-envelope"></span> <input
-									type="text" id="sourceName" class="form-control loginInput">
+								<i class="glyphicon glyphicon-user"></i> <input
+									id="sourceName" class="form-control">
 							</div>
 						</div>
 					</div>
-				</div>
-				<div class="row">
-					<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-						<div class="form-group">
-							<label>Comment :</label>
-							<textarea class="form-control" type="textarea" id="comment"
-								placeholder="comment" rows="3" style="border: 1px solid;"></textarea>
+					<div class="col-lg-4 col-lg-offset-1">
+					<div class="form-group ">
+							<label>Status</label>
+							<div class="inner-addon left-addon">
+								<span class="glyphicon glyphicon-exclamation-sign"></span> <input
+									id="status" class="form-control">
+							</div>
 						</div>
 					</div>
+					<div class="col-lg-9">
+						<div class="form-group ">
+					<label>Description</label>
+					<textarea rows="3" class="form-control" id="description"></textarea>	
+							</div>
+						</div>	
 				</div>
-			</div>
-
-
-
-			<div class="row">
+				<br />
 				<legend>Contact Information</legend>
 				<div class="row">
-					<div class="col-xs-12 col-sm-12 col-md-5 col-lg-5">
+					<div class="col-lg-4">
 						<div class="form-group">
-							<label>Next Step</label>
+							<label>Email ID</label>
 							<div class="inner-addon left-addon">
-								<span class="glyphicon glyphicon-envelope"></span> <input
-									type="email" id="nextStep" class="form-control loginInput">
+								<i class="glyphicon glyphicon-envelope"></i> <input id="email"
+									class="form-control">
 							</div>
 						</div>
-					</div>
-
-					<div
-						class="col-xs-12 col-sm-12 col-md-5 col-lg-5 col-md-offset-2 col-lg-offset-2">
-						<div class="form-group">
-							<label>Phone No</label>
-							<div class="inner-addon left-addon">
-								<span class="glyphicon glyphicon-earphone"></span> <input
-									id="phoneNumber" class="form-control loginInput">
-							</div>
-						</div>
-					</div>
-				</div>
-
-				<div class="row">
-					<div class="col-xs-12 col-sm-12 col-md-5 col-lg-5">
-						<div class="form-group">
-							<label>Address</label>
-							<div class="inner-addon left-addon">
-								<span class="glyphicon glyphicon-map-marker"></span> <input
-									type="text" id="address" class="form-control loginInput">
-							</div>
-						</div>
-					</div>
-
-					<div
-						class="col-xs-12 col-sm-12 col-md-5 col-md-offset-2 col-lg-5 col-lg-offset-2">
 						<div class="form-group">
 							<label>Company</label>
 							<div class="inner-addon left-addon">
-								<span class="glyphicon glyphicon-home"></span> <input
-									type="text" id="company" class="form-control loginInput">
+								<i class="glyphicon glyphicon-user"></i> <input
+									id="company" class="form-control">
+							</div>
+						</div>
+						<div class="form-group ">
+							<label>Phone No.</label>
+							<div class="inner-addon left-addon">
+								<span class="glyphicon glyphicon-exclamation-sign"></span> <input
+									id="phoneNo" class="form-control">
+							</div>
+						</div>
+					</div>
+					<div class="col-lg-4 col-lg-offset-1">
+						<div class="form-group ">
+							<label>Address Line 1</label>
+							<div class="inner-addon left-addon">
+								<span class="glyphicon glyphicon-map-marker"></span> <input
+									id="addressLine1" class="form-control">
+							</div>
+						</div>
+						<div class="form-group ">
+							<label>Address Line 2</label>
+							<div class="inner-addon left-addon">
+								<span class="glyphicon glyphicon-map-marker"></span> <input
+									id="addressLine2" class="form-control">
+							</div>
+						</div>
+						<div class="form-group ">
+							<label>Country</label>
+							<div class="inner-addon left-addon">
+								<span class="glyphicon glyphicon-map-marker"></span> <input
+									id="country" class="form-control">
+							</div>
+						</div>
+						<div class="form-group ">
+							<label>State</label>
+							<div class="inner-addon left-addon">
+								<span class="glyphicon glyphicon-map-marker"></span> <input
+									id="state" class="form-control">
 							</div>
 						</div>
 					</div>
 				</div>
+				
+				
+				
+				
 				<div class="row">
-					<div class="col-xs-12 col-sm-12 col-md-5 col-lg-5">
-						<div class="row">
-							<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-								<div class="form-group ">
-									<label>Country</label>
-									<div class="inner-addon left-addon">
-										<span class="glyphicon glyphicon-home"></span> <input
-											type="text" id="country" class="form-control">
-									</div>
-								</div>
-							</div>
+					<div class="col-lg-9">
+						<div class="">
+							<button id="save" class="btn btn-lg btn-success" onclick="#"
+								title="save">
+								<i class="glyphicon glyphicon-ok hidden-md hidden-lg"></i><span
+									class="glyphicon glyphicon-save hidden-xs hidden-sm">
+									Save</span>
+							</button>
+							<button id="reset" type="reset" class="btn btn-lg btn-warning"
+								onclick="#" title="reset">
+								<i class="glyphicon glyphicon-repeat hidden-md hidden-lg"></i><span
+									class="glyphicon glyphicon-repeat hidden-xs hidden-sm">
+									Reset</span>
+							</button>
+							<button id="cancel" class="btn btn-lg btn-danger" onclick="#"
+								title="cancel">
+								<i class="glyphicon glyphicon-remove hidden-md hidden-lg"></i><span
+									class="glyphicon glyphicon-remove hidden-xs hidden-sm">
+									Cancel</span>
+							</button>
 						</div>
 					</div>
 				</div>
 			</div>
-
-			<div class="row">
-				<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-					<div class="btn-group">
-						<button id="save" class="btn btn-success btn-lg" onclick="#"
-							title="save">
-							<i class="glyphicon glyphicon-ok hidden-md hidden-lg"></i><span
-								class="glyphicon glyphicon-save hidden-xs hidden-sm">save</span>
-						</button>
-						<button id="reset" type="reset" class="btn btn-warning btn-lg"
-							onclick="#" title="reset">
-							<i class="glyphicon glyphicon-repeat hidden-md hidden-lg"></i><span
-								class="glyphicon glyphicon-repeat hidden-xs hidden-sm">reset</span>
-						</button>
-						<button id="cancel" class="btn btn-danger btn-lg" onclick="#"
-							title="cancel">
-							<i class="glyphicon glyphicon-remove hidden-md hidden-lg"></i><span
-								class="glyphicon glyphicon-remove hidden-xs hidden-sm">cancel</span>
-						</button>
-					</div>
-				</div>
-			</div>
-
-		</fieldset>
+		</div>
 	</form>
 </div>
