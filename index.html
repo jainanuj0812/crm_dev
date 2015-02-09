@@ -3,6 +3,7 @@
     <head>
 		<title>Customer</title>
 		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<meta name="viewport" content="width=device-width , initial-scale=1">
     <meta name="description" content="Flexible Calendar with jQuery and CSS3" />
     <meta name="keywords" content="responsive, calendar, jquery, plugin, full page, flexible, javascript, css3, media queries" />
 		<link href="assets/css/bootstrap.min.css" rel="stylesheet" />
@@ -67,10 +68,25 @@
 	
 	<!-- Side menu start -->
 	
-	<div id="wrapper" style="margin-top: 2%;">
+	<div id="wrapper" style="margin-top: 3%;">
         <!-- Sidebar -->
         <div id="sidebar-wrapper"  style="background: #F5F5F5; margin-left: -220px !important;">
+        	 <div class="btn-group" style="margin: 5% 0 7% 20%;">
+          				<button type="button" class="btn btn-lg btn-primary dropdown-toggle" data-toggle="dropdown">
+            				Quick Create <span class="caret"></span>
+          				</button>
+          <ul class="dropdown-menu" role="menu">
+            <li><a href="#"><b>+</b>Contacts</a></li>
+            <li><a href="#"><b>+</b>Accounts</a></li>
+            <li><a href="#"><b>+</b>Leads</a></li>
+            <li class="divider"></li>
+            <li><a href="#">Separated link</a></li>
+          </ul>
+        </div>
             <ul id="sidebar" class="nav nav-pills nav-stacked" style="max-width: 200px; padding: 0;">
+            	<li>
+            		 
+            	</li>
      			<li><a href="#/dashboard"><span class="glyphicon glyphicon-user"></span>  Dashboard</a></li>     
     			<li><a href="#/contacts"><span class="glyphicon glyphicon-user"></span>  Contacts</a></li>
     			<li><a href="#/accounts"><span class="glyphicon glyphicon-lock"></span>  Accounts</a></li>
