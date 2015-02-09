@@ -7,7 +7,6 @@ leadControllerModule.controller('leadListController',function($scope,leadService
         	 $scope.leads=leadService.getLeads();
         	 $scope.hide=false;
          }
-	
 		}
 		
 );
