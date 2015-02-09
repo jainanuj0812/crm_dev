@@ -21,9 +21,15 @@ crmApp.config(function($routeProvider){
 		controller: 'accountListController',
 		templateUrl: 'accounts/partials/listAccount.html'	
 	 })
+	 	.when('/addAccount',{
+		templateUrl: 'accounts/partials/createAccount.html'
+	 })
 	 	.when('/leads',{
 		controller: 'leadListController',
 		templateUrl: 'leads/partials/listLead.html'	
+	 })
+	 	.when('/addLead',{
+		templateUrl: 'leads/partials/createLead.html'
 	 })
 	 	.when('/opportunities',{
 		controller: 'opportunitiesController',
