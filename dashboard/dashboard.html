@@ -9,7 +9,7 @@
 			      	<div class="row" style="margin-bottom: 5%">
 				         <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
 				         	<div class="row img-rounded" id="contactRow">
-								<div class="col-xs-3 col-sm-3 col-md-3 col-lg-3" id="imgdiv"  style="margin-top: -5%;">
+								<div class="col-xs-3 col-sm-3 col-md-3 col-lg-3" id="imgdiv">
 						    		<img src="assets/images/demo.png" class="img-circle img-responsive ">
 				        		</div>
 				        		<div class="col-xs-7 col-sm-7 col-md-6 col-lg-6">
@@ -22,7 +22,7 @@
 					<div class="row" style="margin-bottom: 5%">
 				         <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
 				         	<div class="row img-rounded" id="contactRow">
-								<div class="col-xs-3 col-sm-3 col-md-3 col-lg-3" id="imgdiv" style="margin-top: -5%;">
+								<div class="col-xs-3 col-sm-3 col-md-3 col-lg-3" id="imgdiv">
 						    		<img src="assets/images/demo.png" class="img-circle img-responsive " >
 				        		</div>
 				        		<div class="col-xs-7 col-sm-7 col-md-6 col-lg-6">
@@ -35,7 +35,7 @@
 				    <div class="row" style="margin-bottom: 5%">
 				    	<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
 				         	<div class="row img-rounded" id="contactRow">
-								<div class="col-xs-3 col-sm-3 col-md-3 col-lg-3" id="imgdiv" style="margin-top: -5%;">
+								<div class="col-xs-3 col-sm-3 col-md-3 col-lg-3" id="imgdiv">
 						    		<img src="assets/images/demo.png" class="img-circle img-responsive " >
 				        		</div>
 				        		<div class="col-xs-7 col-sm-7 col-md-6 col-lg-6">
@@ -48,7 +48,7 @@
 				    <div class="row" style="margin-bottom: 5%">
 				         <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
 				         	<div class="row img-rounded" id="contactRow">
-								<div class="col-xs-3 col-sm-3 col-md-3 col-lg-3" id="imgdiv"  style="margin-top: -5%;">
+								<div class="col-xs-3 col-sm-3 col-md-3 col-lg-3" id="imgdiv">
 						    		<img src="assets/images/demo.png" class="img-circle img-responsive">
 				        		</div>
 				        		<div class="col-xs-7 col-sm-7 col-md-6 col-lg-6">
@@ -61,7 +61,7 @@
 					<div class="row" style="margin-bottom: 5%">
 				         <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
 				         	<div class="row img-rounded" id="contactRow">
-								<div class="col-xs-3 col-sm-3 col-md-3 col-lg-3" id="imgdiv" style="margin-top: -5%;">
+								<div class="col-xs-3 col-sm-3 col-md-3 col-lg-3" id="imgdiv">
 						    		<img src="assets/images/demo.png" class="img-circle img-responsive " >
 				        		</div>
 				        		<div class="col-xs-7 col-sm-7 col-md-6 col-lg-6">
@@ -74,7 +74,7 @@
 				    <div class="row" style="margin-bottom: 5%">
 				    	<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
 				        	<div class="row img-rounded" id="contactRow">
-								<div class="col-xs-3 col-sm-3 col-md-3 col-lg-3" id="imgdiv" style="margin-top: -5%;">
+								<div class="col-xs-3 col-sm-3 col-md-3 col-lg-3" id="imgdiv">
 						    		<img src="assets/images/demo.png" class="img-circle img-responsive ">
 				        		</div>
 				        		<div class="col-xs-7 col-sm-7 col-md-6 col-lg-6">
@@ -109,6 +109,101 @@
 	          			</div>
 	          		</div>
 	        	</div>
+	        	
+	        	
+	        	
+	        	
+	        	 <div class="container">
+          	   <div class="custom-header clearfix">
+                 <nav>
+                  <span id="custom-prev" class="custom-prev"></span>
+                  <span id="custom-next" class="custom-next"></span>
+                 </nav>
+                 <h2 id="custom-month" class="custom-month"></h2>
+                 <h3 id="custom-year" class="custom-year"></h3>
+               </div>
+               <div id="calendar" class="fc-calendar-container">
+               </div>
+             </div><!-- /container -->
+        <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+        <script type="text/javascript" src="js/jquery.calendario.js"></script>
+        <script type="text/javascript" src="js/data.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+        <script type="text/javascript"> 
+            $(function() {
+                var pop_title = '', pop_content = '';
+                $(document).popover({
+                    delay: { show: 100, hide: 200 },
+                    html: true,
+                    trigger: 'hover',
+                    selector: 'div.fc-content',
+                    placement: 'auto',
+                    content: function() {
+                                return pop_content;
+                             },
+                    title: function() {
+                                return pop_title;
+                           },
+                    container: 'body'
+                });
+                var transEndEventNames = {
+                        'WebkitTransition' : 'webkitTransitionEnd',
+                        'MozTransition' : 'transitionend',
+                        'OTransition' : 'oTransitionEnd',
+                        'msTransition' : 'MSTransitionEnd',
+                        'transition' : 'transitionend'
+                    },
+                    transEndEventName = transEndEventNames[ Modernizr.prefixed( 'transition' ) ],
+                    $wrapper = $( '#custom-inner' ),
+                    $calendar = $( '#calendar' ),
+                    cal = $calendar.calendario({
+                        onDayMouseenter : function( $el, data, dateProperties ) {
+                            if( data.content.length > 0 ) {
+                                pop_title = dateProperties.monthname + ' ' + dateProperties.day + ', ' + dateProperties.year;
+                                pop_content = data.content.join('');
+                                cal.feed(logFeed);
+                            }
+                        },
+                        caldata : codropsEvents,
+                        events: 'mouseenter',
+                        displayWeekAbbr : true,
+                        fillEmpty: false
+                    }),
+                    $month = $( '#custom-month' ).html( cal.getMonthName() ),
+                    $year = $( '#custom-year' ).html( cal.getYear() );
+
+                $( '#custom-next' ).on( 'click', function() {
+                    cal.gotoNextMonth( updateMonthYear );
+                } );
+                $( '#custom-prev' ).on( 'click', function() {
+                    cal.gotoPreviousMonth( updateMonthYear );
+                } );
+
+                function updateMonthYear() {                
+                    $month.html( cal.getMonthName() );
+                    $year.html( cal.getYear() );
+                }
+
+                function logFeed( data ) {              
+                    console.log(data);
+                }
+            });
+        </script>
+	        	
+	        	
+	        	
+	        	
+	        	
+	        	
+	        	
+	        	
+	        	
+	        	
+	        	
+	        	
+	        	
+	        	
+	        	
 	     	</div>
 	     </div>	     	
 	</div>				
