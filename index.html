@@ -29,14 +29,26 @@
 		<header role="banner" class="navbar navbar-fixed-top" style="background: #F5F5F5; box-shadow: 5px 5px 5px #5F5F5F; margin: 1% 1% 1% 1%;">
       		<div class="container">
         		<div class="navbar-header" style="background: #F5F5F5;">
-	          		<button data-toggle="collapse-side" data-target=".side-collapse" data-target-2=".side-collapse-container" type="button" class="navbar-toggle pull-left"><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button>
+	          		<button data-toggle="collapse-side" data-target=".side-collapse" data-target-2=".side-collapse-container" type="button" class="navbar-toggle pull-left"><span class="icon-bar" style="backgroud-color: black !important;"></span><span class="icon-bar"></span><span class="icon-bar"></span></button>
                     <img src="assets/images/apacheLogo.png" id="logo">
+                    <div class="">
 	        	</div>
-	        	<div class="navbar-default side-collapse in" style="background: #F5F5F5;">
+	        	<div class="navbar-default side-collapse in" style="background: #F5F5F5; margin-top: 2%;">
 	         		 <nav role="navigation" class="navbar-collapse">
 	            		<ul class="nav navbar-nav" id="navOption" style="display: none;">
 	              			<li class="sidebar-brand">
-                    			<a href="#">ASF CRM</a>
+                    			<div class="btn-group" style="margin: 5% 0% 7% 10%;">
+          							<button type="button" class="btn btn-lg btn-primary dropdown-toggle" data-toggle="dropdown">
+            							Quick Create <span class="caret"></span>
+          							</button>
+          							<ul class="dropdown-menu" role="menu">
+            							<li><a href="#"><b>+</b>Contacts</a></li>
+            							<li><a href="#"><b>+</b>Accounts</a></li>
+            							<li><a href="#"><b>+</b>Leads</a></li>
+            							<li class="divider"></li>
+            							<li><a href="#">Separated link</a></li>
+          							</ul>
+        						</div>
                 			</li>
                 			<li>
                     			<a href="/dashboard">Dashboard</a>
@@ -57,8 +69,7 @@
                     			<a href="/events">Events</a>
                 			</li> 
 	            		</ul>
-	          		</nav>
-	          		
+	          		</nav>	          		
 	        	</div>
 	      	</div>
 	</header>
