@@ -6,9 +6,8 @@ contactControllerModule.controller('contactListController',function($scope,conta
          {
         	 $scope.contacts=contactService.getContacts();
         	 $scope.hide=false;
-         }
-	
-		}
+         };
+    }
 		
 );
 
