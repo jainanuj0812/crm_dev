@@ -18,14 +18,13 @@
 	</head>	
 	<body>
 		<!-- Navbar start here -->
-		<header role="banner" class="navbar navbar-fixed-top navbar-inverse">
+		<header role="banner" class="navbar navbar-fixed-top" style="background: #F1F1F1; box-shadow: 5px 5px 5px #5F5F5F">
       		<div class="container">
         		<div class="navbar-header">
 	          		<button data-toggle="collapse-side" data-target=".side-collapse" data-target-2=".side-collapse-container" type="button" class="navbar-toggle pull-left"><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button>
                     <img src="assets/images/apacheLogo.png" id="logo">
 	        	</div>
-	        	
-	        	<div class="navbar-inverse side-collapse in">
+	        	<div class="navbar-default side-collapse in">
 	         		 <nav role="navigation" class="navbar-collapse">
 	            		<ul class="nav navbar-nav" id="navOption" style="display: none;">
 	              			<li class="sidebar-brand">
@@ -57,32 +56,20 @@
 	</header>
 	
 	<!-- Side menu start -->
+	
 	<div id="wrapper">
         <!-- Sidebar -->
-        <div id="sidebar-wrapper">
-            <ul class="sidebar-nav">
-                <li class="sidebar-brand">
-                    <a href="#">ASF CRM</a>
-                </li>
-                <li>
-                    <a href="#/dashboard">Dashboard</a>
-                </li>
-                <li>
-                    <a href="#/contacts">Contacts</a>
-                </li>
-                <li>
-                    <a href="#/accounts">Accounts</a>
-                </li>
-                <li>
-                    <a href="#/leads">Leads</a>
-                </li>
-                <li>
-                    <a href="#/opportunities">Opportunities</a>
-                </li>
-                <li>
-                    <a href="#/events">Events</a>
-                </li> 
-            </ul>
+        <div id="sidebar-wrapper"  style="background: #F1F1F1;"><br/>
+            <ul id="sidebar" class="nav nav-pills nav-stacked" style="max-width: 200px;">
+    <li class="active"><a href="#"><span class="glyphicon glyphicon-off"></span>  Overview</a></li>
+    <li><a href="#"><span class="glyphicon glyphicon-user"></span>  Profile</a></li>
+    <li><a href="#"><span class="glyphicon glyphicon-lock"></span>  Access</a></li>
+    <li><a href="#"><span class="glyphicon glyphicon-envelope"></span>  Message</a></li>
+    <li><a href="#"><span class="glyphicon glyphicon-list"></span>  Schedule</a></li>
+    <li><a href="#"><span class="glyphicon glyphicon-signal"></span>  Statistics</a></li>
+    <li><a href="#"><span class="glyphicon glyphicon-comment"></span>  Chat</a></li>
+    <li><a href="#"><span class="glyphicon glyphicon-earphone"></span>  Contacts</a></li>
+</ul>
         </div>
         <!-- /#sidebar-wrapper -->
 
