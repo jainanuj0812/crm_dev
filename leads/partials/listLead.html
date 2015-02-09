@@ -7,18 +7,19 @@
 						<input id="leadSearch" type="text" placeholder="find leads here!" class="img-rounded img-responsive">
 						<i class="glyphicon glyphicon-filter"></i>
 					</div>
-					<div class="dropdown col-xs-1 col-sm-1 col-md-1 col-lg-1">
-						<button class="btn btn-default dropdown-toggle" type="button" id="menu1" data-toggle="dropdown">
-							<i class="glyphicon glyphicon-align-justify"></i> 
-							<span class="caret"></span>
-						</button>
-						<ul class="dropdown-menu" role="menu" aria-labelledby="menu1">
-
-						</ul>
-					</div>
+<div class="dropdown col-xs-1 col-sm-1 col-md-1 col-lg-1" >
+		   		<button class="btn btn-default btn-lg dropdown-toggle" type="button" id="menu1" data-toggle="modal" data-target="#quickAdd"><i class="glyphicon glyphicon-align-justify"></i>
+		   			<span class="caret"></span>
+		   		</button>
+		     		<ul class="dropdown-menu" role="menu" aria-labelledby="menu1">
+		       			<li><a href="#">Alphabatically</a></li>
+					    	<li><a href="#">Recently added</a></li>
+					    	<li><a href="#">Recently viewed</a></li>
+		     		</ul>
+		     </div>
 					<div class="col-xs-1 col-sm-1 col-md- col-lg-1 visible-md visible-lg" style="margin-left: 5px;">
-						<button class="btn btn-info btn-sm img-rounded" type="button" id="#">
-							<i class="glyphicon glyphicon-plus-sign"></i>
+						<button class="btn btn-info btn-lg img-rounded" type="button" id="#" data-toggle="modal" data-target="#quickAdd">
+							<i class="glyphicon glyphicon-plus"></i>
 						</button>
 					</div>
 				</div>
@@ -63,3 +64,51 @@
 	</div>
 </div>
 
+<!-- Modal -->
+<div class="modal fade" id="quickAdd" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">contact add</h4>
+      </div>
+      <div class="modal-body">
+        <form>
+        <div class="form-group">
+        <lable for="leadName">Lead Name</lable>
+					<div class="inner-addon left-addon">
+						<i class="glyphicon glyphicon-user"></i>
+						<input id="leadName" class="form-control  ">
+						 
+					</div>
+				</div>
+				
+        <div class="form-group">
+        <lable for="status">Status</lable>
+					<div class="inner-addon left-addon">
+						<i class="glyphicon glyphicon-user"></i>
+						<select id="status" class="form-control">
+						<option>&nbsp;&nbsp;Assigned</option>
+						<option>&nbsp;&nbsp;Future</option>
+						<option>&nbsp;&nbsp;In Progress</option>
+						<option>&nbsp;&nbsp;Dead</option>
+						</select>
+						 
+					</div>
+				</div>
+				<div class="form-group">
+				<lable for="sourceName">Source Name</lable>
+					<div class="inner-addon left-addon">
+						<i class="glyphicon glyphicon-user"></i>
+						<input id="sourceName" class="form-control">			 
+					</div>
+				</div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Add</button>
+      </div>
+    </div>
+  </div>
+</div>
