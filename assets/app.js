@@ -10,6 +10,11 @@ crmApp.config(function($routeProvider){
 		controller: 'contactListController',
 		templateUrl: 'contacts/partials/listContact.html'	
 	 })
+	 .when('/viewContact/:contactId',{
+		controller: 'viewContactController',
+		templateUrl: 'contacts/partials/newViewContact.html'	
+	 })
+	 
 	 	.when('/accounts',{
 		controller: 'accountListController',
 		templateUrl: 'accounts/partials/listAccount.html'	

@@ -20,7 +20,7 @@ contactControllerModule.controller('viewContactController', function($scope,$rou
          contactId=($routeParams.contactId);    
          $scope.contact=contactService.getContact(contactId);   
         
-  }
+    }
      
     
 });
