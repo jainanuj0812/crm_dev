@@ -1,0 +1,51 @@
+<div class="container-fluid">
+	<div class="row">
+    	<div class="col-xs-12  col-sm-12  col-md-10 col-md-offset-1 col-lg-10 col-lg-offset-1">
+    		<div class="panel panel-default img-responsive">
+  				<div class="panel-heading">
+	  				<div id="heading"><b>Contact details</b></div>
+	  				<div style="float:right">
+	        		<button id="edit" class="btn btn-success btn-sm" ng-click="#" onclick="#"  title="edit"><i class="glyphicon glyphicon-edit hidden-md hidden-lg"></i><span class="glyphicon glyphicon-edit hidden-xs hidden-sm"> edit</span></button>
+	        		</div>
+  				</div>
+				<div class="panel-body" style="font-size:  30px">
+                    <div class="row">
+		            	<div class="col-xs-12   col-sm-12  col-md-8 col-md-offset-2 col-lg-8 col-lg-offset-2">       
+		                   
+		                   <div>
+		                    	<label>First name:</label>&nbsp;{{contact.firstName}}
+		                   </div>
+		                   <div>
+		                    	<label>Last name:</label>&nbsp;{{contact.lastName}}
+		                   </div>
+		                   <div>
+		                    	<label>E-mail:</label>&nbsp;{{contact.email}}
+		                   </div>
+		                   <div>
+		                    	<label>Phone no:</label>&nbsp;{{contact.phoneNo}}
+		                   </div>
+		                   
+		                   <div>
+		                    	<label>Company:</label>&nbsp;{{contact.company}}
+		                   </div>
+		                   <div>
+		                    	<label>Position:</label>&nbsp;{{contact.position}}
+		                   </div>
+		                   <div>
+		                    	<label>D.O.B.:</label>&nbsp;{{contact.dob}}
+		                   </div>
+		                   <div>
+		                    	<label>Address:</label>
+		                    	<address>
+		                    	{{contact.address}}<br>
+		                    	{{contact.state}}<br>
+		                    	{{contact.country}}
+		                    	</address>
+		                   </div>
+						</div>
+					</div>
+				</div>
+   			</div>
+   		</div>
+	</div>
+</div>
