@@ -9,6 +9,13 @@
 	display:none;
 }
 
+.menuLink{
+	color: #0363C8 !important;	
+}
+
+.menuLink: hover{
+	color: #286090 !important;
+}
 /*===navbar CSS===*/
 body{ 
     padding-top: 50px;
