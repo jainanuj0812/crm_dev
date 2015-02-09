@@ -10,11 +10,13 @@ crmApp.config(function($routeProvider){
 		controller: 'contactListController',
 		templateUrl: 'contacts/partials/listContact.html'	
 	 })
-	 .when('/viewContact/:contactId',{
+	 	.when('/addContact',{
+		templateUrl: 'contacts/partials/createContact.html'
+	 })
+	 	.when('/viewContact/:contactId',{
 		controller: 'viewContactController',
 		templateUrl: 'contacts/partials/newViewContact.html'	
-	 })
-	 
+	 })	 
 	 	.when('/accounts',{
 		controller: 'accountListController',
 		templateUrl: 'accounts/partials/listAccount.html'	
@@ -26,10 +28,10 @@ crmApp.config(function($routeProvider){
 	 	.when('/opportunities',{
 		controller: 'opportunitiesController',
 		templateUrl: 'opportunity/createOpportunity.html'	
-	 })	.when('/events',{
+	 })	
+	 	.when('/events',{
 		controller: 'eventsController',
 		templateUrl: 'crm/components/events/events.html'	
-	 })
-	
+	 })	
 	.otherwise({redirectTo:'/dashboard'});
 });
