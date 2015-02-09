@@ -8,41 +8,23 @@
 	        		<button id="edit" class="btn btn-success btn-sm" data-toggle="modal" data-target="#editContact"  title="edit"><i class="glyphicon glyphicon-edit hidden-md hidden-lg"></i><span class="glyphicon glyphicon-edit hidden-xs hidden-sm"> edit</span></button>
 	        		</div>
   				</div>
-				<div class="panel-body" style="font-size:  30px">
+				<div class="panel-body" style="font-size:  25px">
                     <div class="row">
-		            	<div class="col-xs-12   col-sm-12  col-md-8 col-md-offset-2 col-lg-8 col-lg-offset-2">       
-		                   
-		                   <div>
-		                    	<label>First name:</label>&nbsp;{{contact.firstName}}"
-		                   </div>
-		                   <div>
-		                    	<label>Last name:</label>&nbsp;{{contact.lastName}}"
-		                   </div>
-		                   <div>
-		                    	<label>E-mail:</label>&nbsp;{{contact.email}}"
-		                   </div>
-		                   <div>
-		                    	<label>Phone no:</label>&nbsp;{{contact.phoneNo}}"
-		                   </div>
-		                   
-		                   <div>
-		                    	<label>Company:</label>&nbsp;{{contact.company}}"
-		                   </div>
-		                   <div>
-		                    	<label>Position:</label>&nbsp;{{contact.position}}"
-		                   </div>
-		                   <div>
-		                    	<label>D.O.B.:</label>&nbsp;{{contact.dob}}"
-		                   </div>
-		                   <div>
-		                    	<label>Address:</label>
-		                    	<address>
-		                    	{{contact.address}}"<br>
-		                    	{{contact.state}}"<br>
-		                    	{{contact.country}}"
-		                    	</address>
-		                   </div>
-						</div>
+                    	<div class="col-xs-12 col-sm-12 col-md-2 col-lg-2">
+                      		<div class="fileinput fileinput-new" data-provides="fileinput" style="margin-left:10px;">
+								<div class="fileinput-preview thumbnail" data-trigger="fileinput" style="width: 150px; height: 200px;">
+								<img src="assets/images/demo.png" class="img-responsive" style="padding-top:20px;">
+								</div>
+							</div>
+                     	</div>
+                     	<div class="col-xs-12 col-sm-12 col-md-8 col-lg-8">
+                     		<h1><b>{{contact.firstName +" "+contact.lastName}}<b></h1>
+                     		<h4>{{contact.position}} at {{contact.company}}</h4>
+                     		<h4><i class="glyphicon glyphicon-home"></i>{{" "+contact.address}}, {{" "+contact.state}},{{" "+contact.country}}</h4>
+                     		<h4><i class="glyphicon glyphicon-earphone"></i>{{" "+contact.phoneNo}}</h4>
+                     		<h4><i class="glyphicon glyphicon-envelope"></i>{{" "+contact.email}}</h4>
+                     		<h4><i class="glyphicon glyphicon glyphicon-gift"></i>{{" "+contact.dob}}</h4>
+                     	</div>
 					</div>
 				</div>
    			</div>
