@@ -12,7 +12,8 @@ contactControllerModule.controller('contactListController',function($scope,conta
 		
 );
 
-contactControllerModule.controller('viewContactController', function($scope,$routeParams,contactService){
+contactControllerModule.controller('viewContactController', function($scope,$routeParams,contactService)
+	{
     var contactId;
     $scope.contact={};
     init();
@@ -21,6 +22,7 @@ contactControllerModule.controller('viewContactController', function($scope,$rou
          $scope.contact=contactService.getContact(contactId);   
         
     }
-     
+    
+
     
 });

@@ -5,7 +5,7 @@
   				<div class="panel-heading">
 	  				<div id="heading"><b>Contact details</b></div>
 	  				<div style="float:right">
-	        		<button id="edit" class="btn btn-success btn-sm" ng-click="#" onclick="#"  title="edit"><i class="glyphicon glyphicon-edit hidden-md hidden-lg"></i><span class="glyphicon glyphicon-edit hidden-xs hidden-sm"> edit</span></button>
+	        		<button id="edit" class="btn btn-success btn-sm" data-toggle="modal" data-target="#editContact"  title="edit"><i class="glyphicon glyphicon-edit hidden-md hidden-lg"></i><span class="glyphicon glyphicon-edit hidden-xs hidden-sm"> edit</span></button>
 	        		</div>
   				</div>
 				<div class="panel-body" style="font-size:  30px">
@@ -13,33 +13,33 @@
 		            	<div class="col-xs-12   col-sm-12  col-md-8 col-md-offset-2 col-lg-8 col-lg-offset-2">       
 		                   
 		                   <div>
-		                    	<label>First name:</label>&nbsp;{{contact.firstName}}
+		                    	<label>First name:</label>&nbsp;{{contact.firstName}}"
 		                   </div>
 		                   <div>
-		                    	<label>Last name:</label>&nbsp;{{contact.lastName}}
+		                    	<label>Last name:</label>&nbsp;{{contact.lastName}}"
 		                   </div>
 		                   <div>
-		                    	<label>E-mail:</label>&nbsp;{{contact.email}}
+		                    	<label>E-mail:</label>&nbsp;{{contact.email}}"
 		                   </div>
 		                   <div>
-		                    	<label>Phone no:</label>&nbsp;{{contact.phoneNo}}
+		                    	<label>Phone no:</label>&nbsp;{{contact.phoneNo}}"
 		                   </div>
 		                   
 		                   <div>
-		                    	<label>Company:</label>&nbsp;{{contact.company}}
+		                    	<label>Company:</label>&nbsp;{{contact.company}}"
 		                   </div>
 		                   <div>
-		                    	<label>Position:</label>&nbsp;{{contact.position}}
+		                    	<label>Position:</label>&nbsp;{{contact.position}}"
 		                   </div>
 		                   <div>
-		                    	<label>D.O.B.:</label>&nbsp;{{contact.dob}}
+		                    	<label>D.O.B.:</label>&nbsp;{{contact.dob}}"
 		                   </div>
 		                   <div>
 		                    	<label>Address:</label>
 		                    	<address>
-		                    	{{contact.address}}<br>
-		                    	{{contact.state}}<br>
-		                    	{{contact.country}}
+		                    	{{contact.address}}"<br>
+		                    	{{contact.state}}"<br>
+		                    	{{contact.country}}"
 		                    	</address>
 		                   </div>
 						</div>
@@ -48,4 +48,113 @@
    			</div>
    		</div>
 	</div>
+
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="editContact" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">Edit contact</h4>
+      </div>
+      <div class="modal-body">
+        <form>
+        <div class="form-group">
+        <lable for="firstName">First name:</lable>
+					<div class="inner-addon left-addon">
+						<i class="glyphicon glyphicon-user"></i>
+						<input id="firstName"  class="form-control" value="{{contact.firstName}}">
+						 
+					</div>
+				</div>
+				
+        <div class="form-group">
+        <lable for="lastName">Last name:</lable>
+					<div class="inner-addon left-addon">
+						<i class="glyphicon glyphicon-user"></i>
+						<input id="lastName" class="form-control" value="{{contact.lastName}}">
+						 
+					</div>
+				</div>
+				<div class="form-group">
+				<lable for="email">E-mail:</lable>
+					<div class="inner-addon left-addon">
+						<i class="glyphicon glyphicon-envelope"></i>
+						<input id="email" class="form-control" value="{{contact.email}}">
+						 
+					</div>
+				</div>
+				
+				<div class="form-group">
+				<lable for="phoneNo">Phone no:</lable>
+					<div class="inner-addon left-addon">
+						<i class="glyphicon glyphicon-earphone"></i>
+						<input id="firstName" class="form-control" value="{{contact.phoneNo}}">
+						 
+					</div>
+				</div>
+				
+				<div class="form-group">
+				<lable for="company">Company:</lable>
+					<div class="inner-addon left-addon">
+						<i class="glyphicon glyphicon-earphone"></i>
+						<input id="company" class="form-control" value="{{contact.company}}">
+						 
+					</div>
+				</div>
+				
+				<div class="form-group">
+				<lable for="position">Position:</lable>
+					<div class="inner-addon left-addon">
+						<i class="glyphicon glyphicon-earphone"></i>
+						<input id="position" class="form-control" value="{{contact.position}}">
+						 
+					</div>
+				</div>
+				
+				<div class="form-group">
+				<lable for="dob">D.O.B.:</lable>
+					<div class="inner-addon left-addon">
+						<i class="glyphicon glyphicon-earphone"></i>
+						<input id="dob" class="form-control" value="{{contact.dob}}">
+						 
+					</div>
+				</div>
+				
+				<div class="form-group">
+				<lable for="address">Address:</lable>
+					<div class="inner-addon left-addon">
+						<i class="glyphicon glyphicon-earphone"></i>
+						<input id="address" class="form-control" value="{{contact.address}}">
+						 
+					</div>
+				</div>
+				
+				<div class="form-group">
+				<lable for="state">State:</lable>
+					<div class="inner-addon left-addon">
+						<i class="glyphicon glyphicon-earphone"></i>
+						<input id="state" class="form-control" value="{{contact.state}}">
+						 
+					</div>
+				</div>
+					<div class="form-group">
+				<lable for="country">Country:</lable>
+					<div class="inner-addon left-addon">
+						<i class="glyphicon glyphicon-earphone"></i>
+						<input id="country" class="form-control" value="{{contact.country}}">
+						 
+					</div>
+				</div>
+				
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save</button>
+      </div>
+    </div>
+  </div>
 </div>
