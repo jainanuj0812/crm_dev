@@ -26,23 +26,23 @@
 			   		<img src="assets/images/demo.png" class="img-circle img-responsive " >
      			</div>
      			<div class="col-xs-7 col-sm-7 col-md-6 col-lg-6"  ng-model="hide" ng-click="hide=!hide" ng-init="edit=true" ng-show="edit">
-       			<h5><i class="glyphicon glyphicon-user"></i><b>{{" "+contact.firstName +" "+ contact.lastName}}</b></h5>
-         		<h6><i class="glyphicon glyphicon-envelope"></i>{{" "+contact.email}}</h6>
+       			<h4><i class="glyphicon glyphicon-user"></i><b>{{" "+contact.firstName +" "+ contact.lastName}}</b></h4>
+         		<h5><i class="glyphicon glyphicon-envelope"></i>{{" "+contact.email}}</h5>
          		<div ng-show="hide">
-         		<h6><i class="glyphicon glyphicon-earphone"></i>{{" "+contact.phoneNo}}</h6>
-         		<h6><i class="glyphicon glyphicon-pencil"></i>{{" "+contact.company}}</h6>
-         		<h6><i class="glyphicon glyphicon-pencil"></i>{{" "+contact.address}}</h6>
-         		<h6><a href="#/viewContact/{{contact.id}}"><i class="glyphicon glyphicon-plus-sign">more..</i></a></h6>
+         		<h5><i class="glyphicon glyphicon-earphone"></i>{{" "+contact.phoneNo}}</h5>
+         		<h5><i class="glyphicon glyphicon-pencil"></i>{{" "+contact.company}}</h5>
+         		<h5><i class="glyphicon glyphicon-pencil"></i>{{" "+contact.address}}</h5>
+         		<h5><a href="#/viewContact/{{contact.id}}"><i class="glyphicon glyphicon-plus-sign">more..</i></a></h5>
          		</div>
          	</div>
          	
          	<div class="col-xs-7 col-sm-7 col-md-6 col-lg-6"    ng-hide="edit">
-       			<h5><i class="glyphicon glyphicon-user"></i><input type="text" value="{{contact.firstName}}"/><input type="text" value="{{contact.lastName}}"/></h5>
-         		<h6><i class="glyphicon glyphicon-envelope"></i><input type="text" value="{{contact.email}}"/></h6>
+       			<h4><i class="glyphicon glyphicon-user"></i><input type="text" value="{{contact.firstName}}"/><input type="text" value="{{contact.lastName}}"/></h4>
+         		<h5><i class="glyphicon glyphicon-envelope"></i><input type="text" value="{{contact.email}}"/></h5>
          		<div ng-show="hide">
-         		<h6><i class="glyphicon glyphicon-earphone"></i><input type="text" value="{{contact.phoneNo}}"/></h6>
-         		<h6><i class="glyphicon glyphicon-pencil"></i><input type="text" value="{{contact.company}}"/></h6>
-         		<h6><i class="glyphicon glyphicon-pencil"></i><input type="text" value="{{contact.address}}"/></h6>
+         		<h5><i class="glyphicon glyphicon-earphone"></i><input type="text" value="{{contact.phoneNo}}"/></h5>
+         		<h5><i class="glyphicon glyphicon-pencil"></i><input type="text" value="{{contact.company}}"/></h5>
+         		<h5><i class="glyphicon glyphicon-pencil"></i><input type="text" value="{{contact.address}}"/></h5>
          		</div>
          	</div>
 			    
