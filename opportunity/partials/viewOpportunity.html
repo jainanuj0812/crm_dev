@@ -93,25 +93,57 @@
       <div class="modal-body">
         <form>
         <div class="form-group">
-        <label for="leadName">LeadCountry Name</label>
+        <label for="leadName">Lead Name</label>
 					<div class="inner-addon left-addon">
 						<i class="glyphicon glyphicon-user"></i>
-						<input id="leadName"  class="form-control" value="{{lead.leadName}}">
+						<input id="leadName"  class="form-control" value="{{opportunity.leadName}}">
 						 
 					</div>
 				</div>
 				
+				<div class="form-group">
+				<label for="assignedTo">Assigned To</label>
+					<div class="inner-addon left-addon">
+						<i class="glyphicon glyphicon-user"></i>
+						<input id="assignedTo" class="form-control" value="{{opportunity.assignedTo}}">
+					</div>
+				</div>
+				
+				
         <div class="form-group">
-        <label for="status">Status</label>
+        <label for="leadSource">Lead Source</label>
 					<div class="inner-addon left-addon">
 						<i class="glyphicon glyphicon-info-sign"></i>
-						<select class="form-control" id="status">
-						<option selected="selected">{{lead.status}}</option>
-						<option>Assigned to</option>
-						<option>Future</option>
-						<option>In progress</option>
-						<option>Dead</option>
+						<select class="form-control" id="leadSource">
+						<option selected="selected">{{opportunity.leadSource}}</option>
+						<option>Cold call</option>
+						<option>Conference</option>
+						<option>Meeting</option>
 						</select>
+						 
+					</div>
+				</div>
+				
+		<div class="form-group">
+        <label for="team">Team</label>
+					<div class="inner-addon left-addon">
+						<i class="glyphicon glyphicon-info-sign"></i>
+						<select class="form-control" id="team">
+						<option selected="selected">{{opportunity.team}}</option>
+						<option>Hotwax Systems</option>
+						<option>Apache</option>
+						<option>Ofbiz</option>
+						</select>
+						 
+					</div>
+				</div>
+		
+				
+				<div class="form-group">
+				<label for="likely">Likely</label>
+					<div class="inner-addon left-addon">
+						<i class="glyphicon glyphicon-usd"></i>
+						<input id="likely" class="form-control" value="{{opportunity.likely}}">
 						 
 					</div>
 				</div>
@@ -119,75 +151,11 @@
 				<div class="form-group">
 				<label for="description">Description</label>
 					<div class="inner-addon left-addon">
-						<textarea id="email" class="form-control">{{lead.description}}</textarea>
+						<textarea id="description" class="form-control">{{opportunity.description}}</textarea>
 						 
 					</div>
 				</div>
-				<br>
-				<h3>Contact Information</h3>
-				<div class="form-group">
-				<label for="email">E-mail ID</label>
-					<div class="inner-addon left-addon">
-						<i class="glyphicon glyphicon-envelope"></i>
-						<input id="email" class="form-control" value="{{lead.email}}">
-						 
-					</div>
-				</div>
-				
-				<div class="form-group">
-				<label for="phoneNo">Phone No</label>
-					<div class="inner-addon left-addon">
-						<i class="glyphicon glyphicon-earphone"></i>
-						<input id="phoneNo" class="form-control" value="{{lead.phoneNo}}">
-						 
-					</div>
-				</div>
-				
-				<div class="form-group">
-				<label for="company">Company</label>
-					<div class="inner-addon left-addon">
-						<i class="glyphicon glyphicon-home"></i>
-						<input id="company" class="form-control" value="{{lead.company}}">
-						 
-					</div>
-				</div>
-				
-				<div class="form-group">
-				<label for="addressLine1">Address Line1</label>
-					<div class="inner-addon left-addon">
-						<i class="glyphicon glyphicon-map-marker"></i>
-						<input id="addressLine1" class="form-control" value="{{lead.addressLine1}}">
-						 
-					</div>
-				</div>
-				
-				<div class="form-group">
-				<label for="addressLine2">Address Line1</label>
-					<div class="inner-addon left-addon">
-						<i class="glyphicon glyphicon-map-marker"></i>
-						<input id="addressLine2" class="form-control" value="{{lead.addressLine2}}">
-						 
-					</div>
-				</div>
-				
-				<div class="form-group">
-				<label for="country">Country</label>
-					<div class="inner-addon left-addon">
-						<i class="glyphicon glyphicon-map-marker"></i>
-						<input id="country" class="form-control" value="{{lead.country}}">
-						 
-					</div>
-				</div>
-				
-				<div class="form-group">
-				<label for="state">State</label>
-					<div class="inner-addon left-addon">
-						<i class="glyphicon glyphicon-map-marker"></i>
-						<input id="state" class="form-control" value="{{lead.state}}">
-						 
-					</div>
-				</div>
-					
+								
 				
         </form>
       </div>
