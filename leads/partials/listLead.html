@@ -30,40 +30,40 @@
 						<img src="assets/images/demo.png" class="img-circle img-responsive ">
 					</div>
 					<div class="col-xs-7 col-sm-7 col-md-6 col-lg-6" ng-model="hide" ng-click="hide=!hide" ng-init="edit=true" ng-show="edit">
-						<h5>
+						<h4>
 							<i class="glyphsicon glyphicon-user"></i><b>{{"
 								"+lead.leadName}}</b>
-						</h5>
-						<h6>
+						</h4>
+						<h5>
 							<i class="glyphicon glyphicon-envelope"></i>{{" "+lead.email}}
-						</h6>
-						<h6>
+						</h5>
+						<h5>
 							<i class="glyphicon glyphicon-earphone"></i>{{"
 							"+lead.phoneNo}}
-						</h6>
-						<h6>
+						</h5>
+						<h5>
 							<i class="glyphicon glyphicon-user"></i>{{"
 							"+lead.status}}
-						</h6>
-						<h6>
+						</h5>
+						<h5>
 							<a href="#/viewLead/{{lead.id}}"><i
 								class="glyphicon glyphicon-plus-sign">more..</i></a>
-						</h6>
+						</h5>
 					</div>
 					
 					<div class="col-xs-7 col-sm-7 col-md-6 col-lg-6"  ng-hide="edit">
 						<h5>
 							<i class="glyphsicon glyphicon-user"></i><b><input type="text" value="{{lead.leadName}}"/></b>
 						</h5>
-						<h6>
+						<h5>
 							<i class="glyphicon glyphicon-envelope"></i><input type="text" value="{{lead.email}}"/>
-						</h6>
-						<h6>
+						</h5>
+						<h5>
 							<i class="glyphicon glyphicon-earphone"></i><input type="text" value="{{lead.phoneNo}}"/>
-						</h6>
-						<h6>
+						</h5>
+						<h5>
 							<i class="glyphicon glyphicon-user"></i><input type="text" value="{{lead.status}}"/>
-						</h6>
+						</h5>
 						
 					</div>
 					

@@ -29,26 +29,26 @@
 		    		<img src="assets/images/demo.png" class="img-circle img-responsive " >
         			</div>
         			<div class="col-xs-7 col-sm-7 col-md-6 col-lg-6"  ng-model="hide" ng-click="hide=!hide" ng-init="edit=true" ng-show="edit">
-            		<h5><i class="glyphsicon glyphicon-user"></i><b>{{" "+opportunity.leadName}}</b></h5>
-            		<h6><i class="glyphicon glyphicon-envelope"></i>{{" "+opportunity.assignedTo}}</h6>
-            		<h6><i class="glyphicon glyphicon-user"></i>{{" "+opportunity.leadSource}}</h6>
-            		<h6><i class="glyphicon glyphicon-usd"></i>{{" "+opportunity.likely}}</h6>
-            		<h6><a href="#/viewOpportunity/{{opportunity.id}}"><i class="glyphicon glyphicon-plus-sign">more..</i></a></h6>
+            		<h4><i class="glyphsicon glyphicon-user"></i><b>{{" "+opportunity.leadName}}</b></h4>
+            		<h5><i class="glyphicon glyphicon-envelope"></i>{{" "+opportunity.assignedTo}}</h5>
+            		<h5><i class="glyphicon glyphicon-user"></i>{{" "+opportunity.leadSource}}</h5>
+            		<h5><i class="glyphicon glyphicon-usd"></i>{{" "+opportunity.likely}}</h5>
+            		<h5><a href="#/viewOpportunity/{{opportunity.id}}"><i class="glyphicon glyphicon-plus-sign">more..</i></a></h5>
             		</div>
             		
             		<div class="col-xs-7 col-sm-7 col-md-6 col-lg-6"  ng-hide="edit">
-						<h5>
+						<h4>
 							<i class="glyphsicon glyphicon-user"></i><b><input type="text" value="{{opportunity.leadName}}"/></b>
-						</h5>
-						<h6>
+						</h4>
+						<h5>
 							<i class="glyphicon glyphicon-envelope"></i><input type="text" value="{{opportunity.assignedTo}}"/>
-						</h6>
-						<h6>
+						</h5>
+						<h5>
 							<i class="glyphicon glyphicon-earphone"></i><input type="text" value="{{opportunity.leadSource}}"/>
-						</h6>
-						<h6>
+						</h5>
+						<h5>
 							<i class="glyphicon glyphicon-user"></i><input type="text" value="{{opportunity.likely}}"/>
-						</h6>
+						</h5>
 						
 					</div>
             		
