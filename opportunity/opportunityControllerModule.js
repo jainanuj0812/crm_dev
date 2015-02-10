@@ -4,23 +4,9 @@ opportunityControllerModule.controller('opportunityListController',function($sco
          init();
          function init()
          {
-        	 $scope.opportunities=opportunityService.getOpportunities();
+        	 $scope.opportunities=opportunityService.getopportunities();
         	 $scope.hide=false;
          };
-	
-		}
+    }
 		
 );
-
-opportunityControllerModule.controller('viewOpportunityController', function($scope,$routeParams,opportunityService){
-    var opportunityId;
-    $scope.opportunity={};
-    init();
-    function init(){
-         opportunityId=($routeParams.opportunityId);    
-         $scope.opportunity=opportunityService.getopportunity(opportunityId);   
-        
-  }
-     
-    
-});

@@ -36,6 +36,10 @@ crmApp.config(function($routeProvider){
 	 	.when('/addLead',{
 		templateUrl: 'leads/partials/createLead.html'
 	 })
+	 	.when('/viewLead/:leadId',{
+		controller: 'viewLeadController',
+		templateUrl: 'leads/partials/viewLead.html'	
+	})	 
 	 	.when('/opportunities',{
 		controller: 'opportunityListController',
 		templateUrl: 'opportunity/partials/listOpportunity.html'	
