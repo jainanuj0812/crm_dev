@@ -17,7 +17,7 @@ leadControllerModule.controller('viewLeadController', function($scope,$routePara
     init();
     function init(){
          leadId=($routeParams.leadId);    
-         $scope.lead=leadService.getlead(leadId);   
+         $scope.lead=leadService.getLead(leadId);   
         
   }
      

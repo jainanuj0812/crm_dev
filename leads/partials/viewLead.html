@@ -5,7 +5,7 @@
   				<div class="panel-heading">
 	  				<div id="heading"><b>Lead details</b></div>
 	  				<div style="float:right">
-	        		<button id="edit" class="btn btn-success btn-sm" data-toggle="modal" data-target="#editAccount"  title="edit"><i class="glyphicon glyphicon-edit hidden-md hidden-lg"></i><span class="glyphicon glyphicon-edit hidden-xs hidden-sm"> edit</span></button>
+	        		<button id="edit" class="btn btn-success btn-sm" data-toggle="modal" data-target="#editLead"  title="edit"><i class="glyphicon glyphicon-edit hidden-md hidden-lg"></i><span class="glyphicon glyphicon-edit hidden-xs hidden-sm"> edit</span></button>
 	        		</div>
   				</div>
 				<div class="panel-body" style="font-size:  25px">
@@ -27,7 +27,7 @@
                      		<h4><i class="glyphicon glyphicon-earphone"></i>{{" "+lead.sourceName}}</h4>
                      		<h4><label>Description </label>{{" "+lead.description}}</h4>
                      		<h4><i class="glyphicon glyphicon-envelope"></i>{{" "+lead.email}}</h4>
-                     		<h4><i class="glyphicon glyphicon-earphone"></i>{{account.phoneNo}}</h4>
+                     		<h4><i class="glyphicon glyphicon-earphone"></i>{{lead.phoneNo}}</h4>
                      		<h4><i class="glyphicon glyphicon-home"></i>{{" "+lead.company}}</h4>
                      		<h4><i class="glyphicon glyphicon-map-marker"></i>{{" "+lead.addressLine1}},{{lead.addressLine2}}</h4>
                      		<h4><i class="glyphicon glyphicon-map-marker"></i>{{" "+lead.country}},({{lead.state}})</h4>
