@@ -1,0 +1,200 @@
+<div class="container-fluid">
+	<div class="row">
+    	<div class="col-xs-12  col-sm-12  col-md-10 col-md-offset-1 col-lg-10 col-lg-offset-1">
+    		<div class="panel panel-default img-responsive">
+  				<div class="panel-heading">
+	  				<div id="heading"><b>Opportunity</b></div>
+	  				<div style="float:right">
+	        		<button id="edit" class="btn btn-success btn-sm" data-toggle="modal" data-target="#editOpportunity"  title="edit"><i class="glyphicon glyphicon-edit hidden-md hidden-lg"></i><span class="glyphicon glyphicon-edit hidden-xs hidden-sm"> edit</span></button>
+	        		</div>
+  				</div>
+				<div class="panel-body">
+                    <div class="row">
+             	<div class="col-xs-12 col-sm-12 col-md-8 col-md-offset-1 col-lg-8 col-lg-offset-1">
+             		<div>
+             		<div ng-init="editName=true;visible=false;" ng-mouseover="visible=true" ng-mouseleave="visible=false">
+             		<span class="h2" ng-show="editName"><b>{{opportunity.leadName}}</b></span> 
+             		<span ng-hide="editName"><input type="text" value="{{opportunity.leadName}}" autofocus onfocus="this.value = this.value;"></span>
+             		
+             		<button type="button" class="btn btn-sm btn-default editBtn" ng-click="editName=!editName" ng-show="visible">
+             		  <span ng-show="editName"><i class="glyphicon glyphicon-pencil"></i></span>
+             		  <span ng-hide="editName"><i class="glyphicon glyphicon-ok"></i></span>
+             		 </button>
+             		 </div>
+             		
+             		<div ng-init="editAssigned=true;visible2=false;" ng-mouseover="visible2=true" ng-mouseleave="visible2=false">
+             		<span class="h4"  ng-show="editAssigned"><i class="glyphicon glyphicon-user"></i>{{" "+opportunity.assignedTo}}</span>
+             		<span ng-hide="editAssigned"><input type="text" value="{{opportunity.assignedTo}}" autofocus onfocus="this.value = this.value;"></span>
+                    <button type="button" class="btn btn-default   editBtn" ng-click="editAssigned=!editAssigned" ng-show="visible2">
+             		  <span ng-show="editAssigned"><i class="glyphicon glyphicon-pencil"></i></span>
+             		  <span ng-hide="editAssigned"><i class="glyphicon glyphicon-ok"></i></span>
+             		 </button>
+             		 </div>
+                
+                <div ng-init="editNext=true;visible3=false;" ng-mouseover="visible3=true" ng-mouseleave="visible3=false">
+                <span class="h4"  ng-show="editNext"><i class="glyphicon glyphicon-info-sign"></i>{{" "+opportunity.nextStep}}</span>
+             		<span ng-hide="editNext"><input type="text" value="{{opportunity.nextStep}}" autofocus onfocus="this.value = this.value;"></span>
+             		<button type="button" class="btn btn-default   editBtn" ng-click="editNext=!editNext" ng-show="visible3">
+             		  <span ng-show="editNext"><i class="glyphicon glyphicon-pencil"></i></span>
+             		  <span ng-hide="editNext"><i class="glyphicon glyphicon-ok"></i></span>
+             		 </button></div>
+             	
+             	<div ng-init="editSource=true;visible4=false;" ng-mouseover="visible4=true" ng-mouseleave="visible4=false">
+                <span class="h4"  ng-show="editSource"><i class="glyphicon glyphicon-info-sign"></i>{{" "+opportunity.leadSource}}</span>
+             		<span ng-hide="editSource"><input type="text" value="{{opportunity.leadSource}}" autofocus onfocus="this.value = this.value;"></span>
+             		<button type="button" class="btn btn-default   editBtn" ng-click="editSource=!editSource" ng-show="visible4">
+             		  <span ng-show="editSource"><i class="glyphicon glyphicon-pencil"></i></span>
+             		  <span ng-hide="editSource"><i class="glyphicon glyphicon-ok"></i></span>
+             		 </button></div>
+             	
+             		<div ng-init="editTeam=true;visible5=false;" ng-mouseover="visible5=true" ng-mouseleave="visible5=false">
+                <span class="h4"  ng-show="editTeam"><i class="glyphicon glyphicon-user"></i>{{" "+opportunity.team}}</span>
+             		<span ng-hide="editTeam"><input type="text" value="{{opportunity.team}}" autofocus onfocus="this.value = this.value;"></span>
+             		<button type="button" class="btn btn-default   editBtn" ng-click="editTeam=!editTeam" ng-show="visible5">
+             		  <span ng-show="editTeam"><i class="glyphicon glyphicon-pencil"></i></span>
+             		  <span ng-hide="editTeam"><i class="glyphicon glyphicon-ok"></i></span>
+             		 </button></div>
+             		
+             		<div ng-init="editLikely=true;visible6=false;" ng-mouseover="visible6=true" ng-mouseleave="visible6=false">
+             	<span class="h4"  ng-show="editLikely"><i class="glyphicon glyphicon-usd"></i> {{opportunity.likely}}</span>
+             		<span ng-hide="editLikely"><input type="text" value="{{opportunity.likely}}" autofocus onfocus="this.value = this.value;"></span>
+             		<button type="button" class="btn btn-default   editBtn" ng-click="editLikely=!editLikely" ng-show="visible6">
+             		  <span ng-show="editLikely"><i class="glyphicon glyphicon-pencil"></i></span>
+             		  <span ng-hide="editLikely"><i class="glyphicon glyphicon-ok"></i></span>
+             		 </button></div>                     		
+             		
+             		<h4>Description</h4>
+             		<div ng-init="editDescription=true;visible7=false" ng-mouseover="visible7=true" ng-mouseleave="visible7=false">
+             	<span class="h4"  ng-show="editDescription">{{opportunity.description}}</span>
+             		<span ng-hide="editDescription"><input type="text" value="{{opportunity.description}}" autofocus onfocus="this.value = this.value;"></span>
+             		<button type="button" class="btn btn-default   editBtn" ng-click="editDescription=!editDescription" ng-show="visible7">
+             		  <span ng-show="editDescription"><i class="glyphicon glyphicon-pencil"></i></span>
+             		  <span ng-hide="editDescription"><i class="glyphicon glyphicon-ok"></i></span>
+             		 </button></div>
+             		              
+             	 	</div>
+
+					</div>
+				</div>
+   			</div>
+   		</div>
+	</div>
+
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="editOpportunity" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">Edit Lead</h4>
+      </div>
+      <div class="modal-body">
+        <form>
+        <div class="form-group">
+        <label for="leadName">LeadCountry Name</label>
+					<div class="inner-addon left-addon">
+						<i class="glyphicon glyphicon-user"></i>
+						<input id="leadName"  class="form-control" value="{{lead.leadName}}">
+						 
+					</div>
+				</div>
+				
+        <div class="form-group">
+        <label for="status">Status</label>
+					<div class="inner-addon left-addon">
+						<i class="glyphicon glyphicon-info-sign"></i>
+						<select class="form-control" id="status">
+						<option selected="selected">{{lead.status}}</option>
+						<option>Assigned to</option>
+						<option>Future</option>
+						<option>In progress</option>
+						<option>Dead</option>
+						</select>
+						 
+					</div>
+				</div>
+				
+				<div class="form-group">
+				<label for="description">Description</label>
+					<div class="inner-addon left-addon">
+						<textarea id="email" class="form-control">{{lead.description}}</textarea>
+						 
+					</div>
+				</div>
+				<br>
+				<h3>Contact Information</h3>
+				<div class="form-group">
+				<label for="email">E-mail ID</label>
+					<div class="inner-addon left-addon">
+						<i class="glyphicon glyphicon-envelope"></i>
+						<input id="email" class="form-control" value="{{lead.email}}">
+						 
+					</div>
+				</div>
+				
+				<div class="form-group">
+				<label for="phoneNo">Phone No</label>
+					<div class="inner-addon left-addon">
+						<i class="glyphicon glyphicon-earphone"></i>
+						<input id="phoneNo" class="form-control" value="{{lead.phoneNo}}">
+						 
+					</div>
+				</div>
+				
+				<div class="form-group">
+				<label for="company">Company</label>
+					<div class="inner-addon left-addon">
+						<i class="glyphicon glyphicon-home"></i>
+						<input id="company" class="form-control" value="{{lead.company}}">
+						 
+					</div>
+				</div>
+				
+				<div class="form-group">
+				<label for="addressLine1">Address Line1</label>
+					<div class="inner-addon left-addon">
+						<i class="glyphicon glyphicon-map-marker"></i>
+						<input id="addressLine1" class="form-control" value="{{lead.addressLine1}}">
+						 
+					</div>
+				</div>
+				
+				<div class="form-group">
+				<label for="addressLine2">Address Line1</label>
+					<div class="inner-addon left-addon">
+						<i class="glyphicon glyphicon-map-marker"></i>
+						<input id="addressLine2" class="form-control" value="{{lead.addressLine2}}">
+						 
+					</div>
+				</div>
+				
+				<div class="form-group">
+				<label for="country">Country</label>
+					<div class="inner-addon left-addon">
+						<i class="glyphicon glyphicon-map-marker"></i>
+						<input id="country" class="form-control" value="{{lead.country}}">
+						 
+					</div>
+				</div>
+				
+				<div class="form-group">
+				<label for="state">State</label>
+					<div class="inner-addon left-addon">
+						<i class="glyphicon glyphicon-map-marker"></i>
+						<input id="state" class="form-control" value="{{lead.state}}">
+						 
+					</div>
+				</div>
+					
+				
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save</button>
+      </div>
+    </div>
+  </div>
+</div>
