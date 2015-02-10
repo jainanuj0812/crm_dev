@@ -22,6 +22,10 @@ crmApp.config(function($routeProvider){
 		controller: 'accountListController',
 		templateUrl: 'accounts/partials/listAccount.html'	
 	 })
+	 	.when('/viewAccount/:accountId',{
+		controller: 'viewAccountController',
+		templateUrl: 'contacts/partials/viewAccount.html'	
+	})	 
 	 	.when('/addAccount',{
 		templateUrl: 'accounts/partials/createAccount.html'
 	 })
@@ -33,7 +37,7 @@ crmApp.config(function($routeProvider){
 		templateUrl: 'leads/partials/createLead.html'
 	 })
 	 	.when('/opportunities',{
-		controller: 'opportunitiesController',
+		controller: 'opportunityListController',
 		templateUrl: 'opportunity/partials/listOpportunity.html'	
 	 })	
 	 	.when('/addOpportunity',{
