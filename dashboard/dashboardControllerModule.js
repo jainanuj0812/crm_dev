@@ -1,9 +1,9 @@
 var dashboardControllerModule=angular.module('crmApp.dashboardControllerModule', []);
 dashboardControllerModule.controller('dashboardController',function($scope){
 	 $scope.todos = [
-	                 {text:'Prepare Report', done:true},
-	                 {text:'Meeting @ Sayaji', done:true},
-	                 {text:'Do Homework', done:false}];
+	                 {text:'Prepare Report', done:false},
+	                 {text:'Meeting @ Sayaji', done:false},
+	                 {text:'Do Homework', done:true}];
 	            
 	               $scope.addTodo = function() {
 	                 $scope.todos.push({text:$scope.todoText, done:false});
