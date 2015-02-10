@@ -34,14 +34,14 @@ crmApp.config(function($routeProvider){
 	 })
 	 	.when('/opportunities',{
 		controller: 'opportunitiesController',
-		templateUrl: 'opportunity/partials/createOpportunity.html'	
+		templateUrl: 'opportunity/partials/listOpportunity.html'	
 	 })	
 	 	.when('/addOpportunity',{
-		templateUrl: 'opportunity/partials/createOpportunity.html'	
+		templateUrl: 'opportunity/partials/createOpportunity.html'
 	 })	
 	 	.when('/events',{
 		controller: 'eventsController',
-		templateUrl: 'crm/components/events/events.html'	
+		templateUrl: 'events/createEvent.html'	
 	 })	
 	.otherwise({redirectTo:'/dashboard'});
 });
