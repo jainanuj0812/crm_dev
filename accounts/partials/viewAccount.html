@@ -23,10 +23,10 @@
            		<button type="button" class="btn btn-info pull-right" ng-click="edit=!edit">
            		  <span ng-show="edit"><i class="glyphicon glyphicon-pencil"></i></span>
            		  <span ng-hide="edit"><i class="glyphicon glyphicon-ok"></i></span></button>
-           		<h4><i class="glyphicon glyphicon-user"></i>{{account.responsiblePerson}}</h4>
+           		<h4><i class="glyphicon glyphicon-user"></i>{{" "+account.responsiblePerson}}</h4>
            		<h4><i class="glyphicon glyphicon-earphone"></i>{{" "+account.phoneNo}}</h4>
            		<h4><i class="glyphicon glyphicon-envelope"></i>{{" "+account.email}}</h4>
-           		<h4><i class="glyphicon glyphicon-home"></i>{{account.companyType}}</h4>
+           		<h4><i class="glyphicon glyphicon-home"></i>{{" "+account.companyType}}</h4>
            		<h4><i class="glyphicon glyphicon-home"></i>{{" "+account.industry}}</h4>
            		<h4><i class="glyphicon glyphicon-usd"></i>{{" "+account.annualIncome}}{{" "+account.currency}}</h4>
            		<h4><label>Comments </label>{{" "+account.comment}}</h4>
