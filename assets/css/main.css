@@ -18,7 +18,7 @@ input[type='checkbox'] {
     -webkit-appearance:none;
     width:35px;
     height:22px;
-    background: #abd;
+    background: white;
     background-position : 0 -6px;
     border-radius:5px;
     border:2px solid #555;
@@ -120,8 +120,8 @@ pre{
  border-width:thin;
  border-color:#EFEFDD;
  border-style:ridge;
- margin-top:35px;
- margin-bottom:35px;
+ padding-top:1%;
+ padding-bottom:1%;
 }
 
 
