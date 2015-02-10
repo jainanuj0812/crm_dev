@@ -94,8 +94,6 @@
 			          <span ng-hide="editCom"><i class="glyphicon glyphicon-ok"></i></span>
 			          </button>
 		          </div>
-		        
-		      
           	</div>
           </div>
  </div>
@@ -107,3 +105,111 @@
 </div>
 
 <!-- Modal -->
+
+<div class="modal fade" id="editAccount" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">Edit Account</h4>
+      </div>
+      <div class="modal-body">
+        <form>
+        <div class="form-group">
+        <label for="accountName">Account Name</label>
+					<div class="inner-addon left-addon">
+						<i class="glyphicon glyphicon-user"></i>
+						<input id="accountName"  class="form-control" value="{{account.accountName}}">
+						 
+					</div>
+				</div>
+				
+				<div class="form-group">
+				<label for="responsiblePerson">Responsible Person</label>
+					<div class="inner-addon left-addon">
+						<i class="glyphicon glyphicon-user"></i>
+						<input id="responsiblePerson" class="form-control" value="{{account.responsiblePerson}}">
+					</div>
+				</div>
+				
+				<div class="form-group">
+				<label for="email">Email ID</label>
+					<div class="inner-addon left-addon">
+						<i class="glyphicon glyphicon-envelope"></i>
+						<input id="email" class="form-control" value="{{account.email}}">
+					</div>
+				</div>
+				
+				<div class="form-group">
+				<label for="phoneNo">Phone No</label>
+					<div class="inner-addon left-addon">
+						<i class="glyphicon glyphicon-earphone"></i>
+						<input id="phoneNo" class="form-control" value="{{account.phoneNo}}">
+					</div>
+				</div>
+				
+				
+        <div class="form-group">
+        <label for="companyType">Company Type</label>
+					<div class="inner-addon left-addon">
+						<i class="glyphicon glyphicon-home"></i>
+						<select class="form-control" id="companyType">
+						<option selected="selected">{{account.companyType}}</option>
+						<option>hotwax systems</option>
+						<option>hotwax media</option>
+						<option>Hotwax Family</option>
+						<option>Hotwax Systems</option>
+						</select>
+						 
+					</div>
+				</div>
+				
+		<div class="form-group">
+        <label for="industry">Team</label>
+					<div class="inner-addon left-addon">
+						<i class="glyphicon glyphicon-user"></i>
+						<select class="form-control" id="industry">
+						<option selected="selected">{{account.industry}}</option>
+						<option>Engineer</option>
+						<option>Doctor</option>
+						</select>
+						 
+					</div>
+				</div>
+		
+				
+				<div class="form-group">
+				<label for="annualIncome">Annual Income</label>
+					<div class="inner-addon left-addon">
+						<i class="glyphicon glyphicon-usd"></i>
+						<input id="annualIncome" class="form-control" value="{{account.annualIncome}}">
+						 
+					</div>
+				</div>
+				
+				<div class="form-group">
+				<label for="currency">Currency</label>
+					<div class="inner-addon left-addon">
+						<i class="glyphicon glyphicon-usd"></i>
+						<input id="currency" class="form-control" value="{{account.currency}}">
+						 
+					</div>
+				</div>
+				
+				<div class="form-group">
+				<label for="comment">Comments</label>
+					<div class="inner-addon left-addon">
+						<textarea id="description" class="form-control">{{account.comment}}</textarea>						 
+					</div>
+				</div>
+								
+				
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save</button>
+      </div>
+    </div>
+  </div>
+</div>
