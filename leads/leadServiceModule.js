@@ -17,8 +17,8 @@ this.getLeads=function(){
    };
 	
 var leads=[
-{id:1, leadName:'Amit', status:'In progress', sourceName:'...........',email:'gadaley@gmail.com', phoneNo:9584593069,company:'hotwax systems',addressLine1: 'vijaynagar',addressLine2: ''},
-{id:2, leadName:'Rahul', responsiblePerson:'Bhammarker', email:'rahul@gmail.com', phoneNo:111111111,companyType:'hotwax media',industry:'engineer',annualIncome: 4000,currency: 'USD',comment: 'Comment just for testing purpose by rahul'},
-{id:3, leadName:'Aman', responsiblePerson:'agrawal', email:'aman@gmail.com', phoneNo:999999999,companyType:'hotwax family',industry:'engineer',annualIncome: 4000,currency: 'USD',comment: 'Comment just for testing purpose by aman'},
+{id:1, leadName:'Amit', status:'In progress', sourceName:'...........',email:'gadaley@gmail.com', phoneNo:9584593069,company:'hotwax systems',addressLine1: 'vijaynagar',addressLine2: 'behind sayaji',country:'India',state:'m.p'},
+{id:2, leadName:'Rahul', status:'Assigned to', sourceName:'...........',email:'bhammarker@gmail.com', phoneNo:1111111111,company:'hotwax media',addressLine1: 'LIG',addressLine2: 'behind C21',country:'India',state:'u.p'},
+{id:3, leadName:'Saket', status:'Dead', sourceName:'...........',email:'saket@gmail.com', phoneNo:9425094250,company:'hotwax family',addressLine1: 'sneh nagar',addressLine2: 'behind Lotus',country:'India',state:'delhi'},
 ];
 });
