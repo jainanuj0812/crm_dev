@@ -8,31 +8,31 @@
 	        		<button id="edit" class="btn btn-success btn-sm" data-toggle="modal" data-target="#editAccount"  title="edit"><i class="glyphicon glyphicon-edit hidden-md hidden-lg"></i><span class="glyphicon glyphicon-edit hidden-xs hidden-sm"> edit</span></button>
 	        		</div>
   				</div>
-				<div class="panel-body" style="font-size:  25px">
-                    <div class="row">
-                    	<div class="col-xs-12 col-sm-12 col-md-2 col-lg-2">
-                      		<div class="fileinput fileinput-new" data-provides="fileinput" style="margin-left:10px;">
-								<div class="fileinput-preview thumbnail" data-trigger="fileinput" style="width: 150px; height: 200px;">
-								<img src="assets/images/demo.png" class="img-responsive" style="padding-top:20px;">
+				<div class="panel-body" style="font-size:  150%;">
+          <div class="row">
+          	 <div class="col-xs-12 col-sm-12 col-md-2 col-lg-2">
+            		<div class="fileinput fileinput-new" data-provides="fileinput" style="margin-left:10px;">
+									<div class="fileinput-preview thumbnail" data-trigger="fileinput" style="width: 150px; height: 200px;">
+										<img src="assets/images/demo.png" class="img-responsive" style="padding-top:20px;">
+									</div>
 								</div>
-							</div>
-                     	</div>
-                     	<div class="col-xs-12 col-sm-12 col-md-8 col-lg-8">
-                     		<span ng-init="edit=true" ng-show="edit"><b>{{account.accountName}}<b></span>
-                     		<span ng-hide="edit"><input type="text" value="{{account.accountName}}"></span>
-                     		<button type="button" class="btn btn-info pull-right" ng-click="edit=!edit">
-                     		  <span ng-show="edit"><i class="glyphicon glyphicon-pencil"></i></span>
-                     		  <span ng-hide="edit"><i class="glyphicon glyphicon-ok"></i></span></button>
-                     		<h4><i class="glyphicon glyphicon-user"></i>{{account.responsiblePerson}}</h4>
-                     		<h4><i class="glyphicon glyphicon-earphone"></i>{{" "+account.phoneNo}}</h4>
-                     		<h4><i class="glyphicon glyphicon-envelope"></i>{{" "+account.email}}</h4>
-                     		<h4><i class="glyphicon glyphicon-home"></i>{{account.companyType}}</h4>
-                     		<h4><i class="glyphicon glyphicon-home"></i>{{" "+account.industry}}</h4>
-                     		<h4><i class="glyphicon glyphicon-usd"></i>{{" "+account.annualIncome}}{{" "+account.currency}}</h4>
-                     		<h4><label>Comments </label>{{" "+account.comment}}</h4>
-                     	</div>
-					</div>
-				</div>
+           	</div>
+           	<div class="col-xs-12 col-sm-12 col-md-8 col-lg-8">
+           		<span ng-init="edit=true" ng-show="edit"><b>{{account.accountName}}<b></span>
+           		<span ng-hide="edit"><input type="text" value="{{account.accountName}}"></span>
+           		<button type="button" class="btn btn-info pull-right" ng-click="edit=!edit">
+           		  <span ng-show="edit"><i class="glyphicon glyphicon-pencil"></i></span>
+           		  <span ng-hide="edit"><i class="glyphicon glyphicon-ok"></i></span></button>
+           		<h4><i class="glyphicon glyphicon-user"></i>{{account.responsiblePerson}}</h4>
+           		<h4><i class="glyphicon glyphicon-earphone"></i>{{" "+account.phoneNo}}</h4>
+           		<h4><i class="glyphicon glyphicon-envelope"></i>{{" "+account.email}}</h4>
+           		<h4><i class="glyphicon glyphicon-home"></i>{{account.companyType}}</h4>
+           		<h4><i class="glyphicon glyphicon-home"></i>{{" "+account.industry}}</h4>
+           		<h4><i class="glyphicon glyphicon-usd"></i>{{" "+account.annualIncome}}{{" "+account.currency}}</h4>
+           		<h4><label>Comments </label>{{" "+account.comment}}</h4>
+           	 </div>
+					  </div>
+				  </div>
    			</div>
    		</div>
 	</div>
