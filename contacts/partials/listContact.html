@@ -36,7 +36,7 @@
          		</div>
          	</div>
          	
-         	<div class="col-xs-7 col-sm-7 col-md-6 col-lg-6"  ng-model="hide"   ng-hide="edit">
+         	<div class="col-xs-7 col-sm-7 col-md-6 col-lg-6"    ng-hide="edit">
        			<h5><i class="glyphicon glyphicon-user"></i><input type="text" value="{{contact.firstName}}"/><input type="text" value="{{contact.lastName}}"/></h5>
          		<h6><i class="glyphicon glyphicon-envelope"></i><input type="text" value="{{contact.email}}"/></h6>
          		<div ng-show="hide">
@@ -48,7 +48,7 @@
 			    
      				<div class="btn-group" style="float:right;">
 	     				<button id="edit" class="btn btn-default btn-lg btn-lg"  style="color: blue; border: 0;" title="edit" ng-click="edit=!edit"><i class="glyphicon glyphicon-pencil" ng-show="edit"></i><i class="glyphicon glyphicon-ok" ng-hide="edit"></i></button>
-	     				<button id="delete" class="btn btn-default btn-lg btn-lg"  style="color: red; border: 0;" onclick="#" title="delete"><i class="glyphicon glyphicon-trash" ng-show="edit"></i><i class="glyphicon glyphicon-remove" ng-hide="edit"></i></button>
+	     				<button id="delete" class="btn btn-default btn-lg btn-lg"  style="color: red; border: 0;"  onclick="#" title="delete"><i class="glyphicon glyphicon-trash" ng-show="edit"></i><i class="glyphicon glyphicon-remove" ng-click="edit=!edit" ng-hide="edit"></i></button>
      				</div>
    				
 	    	</div>
