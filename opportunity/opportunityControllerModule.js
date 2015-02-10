@@ -4,9 +4,9 @@ opportunityControllerModule.controller('opportunityListController',function($sco
          init();
          function init()
          {
-        	 $scope.opportunitys=opportunityService.getOpportunities();
+        	 $scope.opportunities=opportunityService.getOpportunities();
         	 $scope.hide=false;
-         }
+         };
 	
 		}
 		
