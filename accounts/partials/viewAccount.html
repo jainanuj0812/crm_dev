@@ -1,213 +1,262 @@
 <div class="container-fluid">
-<div class="row">
-   	<div class="col-xs-12  col-sm-12  col-md-10 col-md-offset-1 col-lg-10 col-lg-offset-1">
-   	<div class="panel panel-default img-responsive">
- 	<div class="panel-heading">
- 	<div id="heading"><b>Account</b></div>
- 	<div style="float:right">
-       	<button id="" class="btn btn-default btn-lg " data-toggle="modal" data-target="#editAccount"  title="edit">
-	        			<i class="glyphicon glyphicon-pencil"></i>
-	        			</button>
-	        			</div>
- 	</div>
-<div class="panel-body" >
-         <div class="row">
-         	<div class="col-xs-12 col-sm-12 col-md-2 col-md-offset-1 col-lg-2 col-lg-offset-1">
-           	<div class="fileinput fileinput-new" data-provides="fileinput">
-<div class="fileinput-preview thumbnail" data-trigger="fileinput" style="max-width: 150px; max-height: 200px;">
-<img src="assets/images/demo.png" class="img-responsive" style="padding-top:20px;">
-</div>
-</div>
-          </div>
-          <div class="col-xs-12 col-sm-12 col-md-8   col-lg-8 ">
-		     <div>    
-		        <div ng-init="editName=true;visible=false;" ng-mouseover="visible=true" ng-mouseleave="visible=false">
-			         <span class="h2" ng-show="editName"><b>{{account.accountName}}<b></span>
-			         <span ng-hide="editName"><input type="text" value="{{account.accountName}}" autofocus onfocus="this.value = this.value;"></span>
-			         <button type="button" class="btn btn-sm btn-default editBtn" ng-click="editName=!editName" ng-show="visible">
-			          <span ng-show="editName"><i class="glyphicon glyphicon-pencil"></i></span>
-			          <span ng-hide="editName"><i class="glyphicon glyphicon-ok"></i></span>
-			          </button>
-		          </div>
-		          
-		          <div ng-init="editPerson=true;visible1=false;" ng-mouseover="visible1=true" ng-mouseleave="visible1=false">
-			         <span class="h4" ng-show="editPerson"><i class="glyphicon glyphicon-user"></i>{{" "+account.responsiblePerson}}</span>
-			         <span ng-hide="editPerson"><input type="text" value="{{account.responsiblePerson}}" autofocus onfocus="this.value = this.value;"></span>
-			         <button type="button" class="btn btn-sm btn-default editBtn" ng-click="editPerson=!editPerson" ng-show="visible1">
-			          <span ng-show="editPerson"><i class="glyphicon glyphicon-pencil"></i></span>
-			          <span ng-hide="editPerson"><i class="glyphicon glyphicon-ok"></i></span>
-			          </button>
-		          </div>
-		          
-		          <div ng-init="editPhone=true;visible2=false;" ng-mouseover="visible2=true" ng-mouseleave="visible2=false">
-			         <span class="h4" ng-show="editPhone"><i class="glyphicon glyphicon-earphone"></i>{{" "+account.phoneNo}}</span>
-			         <span ng-hide="editPhone"><input type="text" value="{{account.phoneNo}}" autofocus onfocus="this.value = this.value;"></span>
-			         <button type="button" class="btn btn-sm btn-default editBtn" ng-click="editPhone=!editPhone" ng-show="visible2">
-			          <span ng-show="editPhone"><i class="glyphicon glyphicon-pencil"></i></span>
-			          <span ng-hide="editPhone"><i class="glyphicon glyphicon-ok"></i></span>
-			          </button>
-		          </div>
-		          
-		          <div ng-init="editEmail=true;visible3=false;" ng-mouseover="visible3=true" ng-mouseleave="visible3=false">
-			         <span class="h4" ng-show="editEmail"><i class="glyphicon glyphicon-envelope"></i>{{" "+account.email}}</span>
-			         <span ng-hide="editEmail"><input type="text" value="{{account.email}}" autofocus onfocus="this.value = this.value;"></span>
-			         <button type="button" class="btn btn-sm btn-default editBtn" ng-click="editEmail=!editEmail" ng-show="visible3">
-			          <span ng-show="editPhone"><i class="glyphicon glyphicon-pencil"></i></span>
-			          <span ng-hide="editPhone"><i class="glyphicon glyphicon-ok"></i></span>
-			          </button>
-		          </div>
-		          
-		          <div ng-init="editType=true;visible4=false;" ng-mouseover="visible4=true" ng-mouseleave="visible4=false">
-			         <span class="h4" ng-show="editType"><i class="glyphicon glyphicon-home"></i>{{" "+account.companyType}}</span>
-			         <span ng-hide="editType"><input type="text" value="{{account.companyType}}" autofocus onfocus="this.value = this.value;"></span>
-			         <button type="button" class="btn btn-sm btn-default editBtn" ng-click="editType=!editType" ng-show="visible4">
-			          <span ng-show="editType"><i class="glyphicon glyphicon-pencil"></i></span>
-			          <span ng-hide="editType"><i class="glyphicon glyphicon-ok"></i></span>
-			          </button>
-		          </div>
-		          
-		          <div ng-init="editInd=true;visible5=false;" ng-mouseover="visible5=true" ng-mouseleave="visible5=false">
-			         <span class="h4" ng-show="editInd"><i class="glyphicon glyphicon-home"></i>{{" "+account.industry}}</span>
-			         <span ng-hide="editInd"><input type="text" value="{{account.industry}}" autofocus onfocus="this.value = this.value;"></span>
-			         <button type="button" class="btn btn-sm btn-default editBtn" ng-click="editInd=!editInd" ng-show="visible5">
-			          <span ng-show="editInd"><i class="glyphicon glyphicon-pencil"></i></span>
-			          <span ng-hide="editInd"><i class="glyphicon glyphicon-ok"></i></span>
-			          </button>
-		          </div>
-		          
-		          <div ng-init="editInc=true;visible6=false;" ng-mouseover="visible6=true" ng-mouseleave="visible6=false">
-			         <span class="h4" ng-show="editInc"><i class="glyphicon glyphicon-usd"></i>{{" "+account.annualIncome}}{{account.currency}}</span>
-			         <span ng-hide="editInc"><input type="text" value="{{account.annualIncome}}" autofocus onfocus="this.value = this.value;">
-			         <input type="text" value="{{account.currency}}"></span>
-			         <button type="button" class="btn btn-sm btn-default editBtn" ng-click="editInc=!editInc" ng-show="visible6">
-			          <span ng-show="editInc"><i class="glyphicon glyphicon-pencil"></i></span>
-			          <span ng-hide="editInc"><i class="glyphicon glyphicon-ok"></i></span>
-			          </button>
-		          </div>
-		        
-		         <div ng-init="editCom=true;visible7=false;" ng-mouseover="visible7=true" ng-mouseleave="visible7=false">
-			         <span class="h4" ng-show="editCom"><label>Comments </label><br>{{" "+account.comment}}</span>
-			         <span ng-hide="editCom"><input type="text" value="{{account.comment}}" autofocus onfocus="this.value = this.value;">
-			         <input type="text" value="{{account.currency}}"></span>
-			         <button type="button" class="btn btn-sm btn-default editBtn" ng-click="editCom=!editCom" ng-show="visible7">
-			          <span ng-show="editCom"><i class="glyphicon glyphicon-pencil"></i></span>
-			          <span ng-hide="editCom"><i class="glyphicon glyphicon-ok"></i></span>
-			          </button>
-		          </div>
-          	</div>
-          </div>
- </div>
- </div>
-  </div>
-  </div>
-</div>
+	<div class="row">
+		<div class="col-xs-12  col-sm-12  col-md-10 col-md-offset-1 col-lg-10 col-lg-offset-1">
+			<div class="panel panel-default img-responsive">
+				<div class="panel-heading">
+					<div id="heading">
+						<b>Account</b>
+					</div>
+					<div style="float: right">
+						<button id="" class="btn btn-default btn-lg " data-toggle="modal" data-target="#editAccount" title="edit">
+							<i class="glyphicon glyphicon-pencil"></i>
+						</button>
+					</div>
+				</div>
+				<div class="panel-body">
+					<div class="row">
+						<div class="col-xs-12 col-sm-12 col-md-2 col-md-offset-1 col-lg-2 col-lg-offset-1">
+							<div class="fileinput fileinput-new" data-provides="fileinput">
+								<div class="fileinput-preview thumbnail" data-trigger="fileinput" style="max-width: 200px; max-height: 700px;">
+									<img src={{account.img}} class="img-responsive" style="padding-top: 20px;">
+								</div>
+							</div>
+						</div>
+						<div class="col-xs-12 col-sm-12 col-md-8   col-lg-8 ">
+							<div>
+								<div ng-init="editName=true;visible=false;" ng-mouseover="visible=true" ng-mouseleave="visible=false">
+									<span class="h2" ng-show="editName"><b>{{account.accountName}}<b></span>
+									<span ng-hide="editName"><input type="text" value="{{account.accountName}}" autofocus onfocus="this.value = this.value;"></span>
+									<button type="button" class="btn btn-sm btn-default editBtn" ng-click="editName=!editName" ng-show="visible">
+										<span ng-show="editName"><i class="glyphicon glyphicon-pencil"></i></span> 
+										<span ng-hide="editName"><i class="glyphicon glyphicon-ok"></i></span>
+									</button>
+								</div>
+
+								<div ng-init="editPerson=true;visible1=false;"
+									ng-mouseover="visible1=true" ng-mouseleave="visible1=false">
+									<span class="h4" ng-show="editPerson"><i
+										class="glyphicon glyphicon-user"></i>{{"
+										"+account.responsiblePerson}}</span> <span ng-hide="editPerson"><input
+										type="text" value="{{account.responsiblePerson}}" autofocus
+										onfocus="this.value = this.value;"></span>
+									<button type="button" class="btn btn-sm btn-default editBtn"
+										ng-click="editPerson=!editPerson" ng-show="visible1">
+										<span ng-show="editPerson"><i
+											class="glyphicon glyphicon-pencil"></i></span> <span
+											ng-hide="editPerson"><i class="glyphicon glyphicon-ok"></i></span>
+									</button>
+								</div>
+
+								<div ng-init="editPhone=true;visible2=false;"
+									ng-mouseover="visible2=true" ng-mouseleave="visible2=false">
+									<span class="h4" ng-show="editPhone"><i
+										class="glyphicon glyphicon-earphone"></i>{{"
+										"+account.phoneNo}}</span> <span ng-hide="editPhone"><input
+										type="text" value="{{account.phoneNo}}" autofocus
+										onfocus="this.value = this.value;"></span>
+									<button type="button" class="btn btn-sm btn-default editBtn"
+										ng-click="editPhone=!editPhone" ng-show="visible2">
+										<span ng-show="editPhone"><i
+											class="glyphicon glyphicon-pencil"></i></span> <span
+											ng-hide="editPhone"><i class="glyphicon glyphicon-ok"></i></span>
+									</button>
+								</div>
+
+								<div ng-init="editEmail=true;visible3=false;"
+									ng-mouseover="visible3=true" ng-mouseleave="visible3=false">
+									<span class="h4" ng-show="editEmail"><i
+										class="glyphicon glyphicon-envelope"></i>{{" "+account.email}}</span>
+									<span ng-hide="editEmail"><input type="text"
+										value="{{account.email}}" autofocus
+										onfocus="this.value = this.value;"></span>
+									<button type="button" class="btn btn-sm btn-default editBtn"
+										ng-click="editEmail=!editEmail" ng-show="visible3">
+										<span ng-show="editPhone"><i
+											class="glyphicon glyphicon-pencil"></i></span> <span
+											ng-hide="editPhone"><i class="glyphicon glyphicon-ok"></i></span>
+									</button>
+								</div>
+
+								<div ng-init="editType=true;visible4=false;"
+									ng-mouseover="visible4=true" ng-mouseleave="visible4=false">
+									<span class="h4" ng-show="editType"><i
+										class="glyphicon glyphicon-home"></i>{{"
+										"+account.companyType}}</span> <span ng-hide="editType"><input
+										type="text" value="{{account.companyType}}" autofocus
+										onfocus="this.value = this.value;"></span>
+									<button type="button" class="btn btn-sm btn-default editBtn"
+										ng-click="editType=!editType" ng-show="visible4">
+										<span ng-show="editType"><i
+											class="glyphicon glyphicon-pencil"></i></span> <span
+											ng-hide="editType"><i class="glyphicon glyphicon-ok"></i></span>
+									</button>
+								</div>
+
+								<div ng-init="editInd=true;visible5=false;"
+									ng-mouseover="visible5=true" ng-mouseleave="visible5=false">
+									<span class="h4" ng-show="editInd"><i
+										class="glyphicon glyphicon-home"></i>{{" "+account.industry}}</span>
+									<span ng-hide="editInd"><input type="text"
+										value="{{account.industry}}" autofocus
+										onfocus="this.value = this.value;"></span>
+									<button type="button" class="btn btn-sm btn-default editBtn"
+										ng-click="editInd=!editInd" ng-show="visible5">
+										<span ng-show="editInd"><i
+											class="glyphicon glyphicon-pencil"></i></span> <span
+											ng-hide="editInd"><i class="glyphicon glyphicon-ok"></i></span>
+									</button>
+								</div>
+
+								<div ng-init="editInc=true;visible6=false;"
+									ng-mouseover="visible6=true" ng-mouseleave="visible6=false">
+									<span class="h4" ng-show="editInc"><i
+										class="glyphicon glyphicon-usd"></i>{{"
+										"+account.annualIncome}}{{account.currency}}</span> <span
+										ng-hide="editInc"><input type="text"
+										value="{{account.annualIncome}}" autofocus
+										onfocus="this.value = this.value;"> <input type="text"
+										value="{{account.currency}}"></span>
+									<button type="button" class="btn btn-sm btn-default editBtn"
+										ng-click="editInc=!editInc" ng-show="visible6">
+										<span ng-show="editInc"><i
+											class="glyphicon glyphicon-pencil"></i></span> <span
+											ng-hide="editInc"><i class="glyphicon glyphicon-ok"></i></span>
+									</button>
+								</div>
+
+								<div ng-init="editCom=true;visible7=false;"
+									ng-mouseover="visible7=true" ng-mouseleave="visible7=false">
+									<span class="h4" ng-show="editCom"><label>Comments
+									</label><br>{{" "+account.comment}}</span> <span ng-hide="editCom"><input
+										type="text" value="{{account.comment}}" autofocus
+										onfocus="this.value = this.value;"> <input type="text"
+										value="{{account.currency}}"></span>
+									<button type="button" class="btn btn-sm btn-default editBtn"
+										ng-click="editCom=!editCom" ng-show="visible7">
+										<span ng-show="editCom"><i
+											class="glyphicon glyphicon-pencil"></i></span> <span
+											ng-hide="editCom"><i class="glyphicon glyphicon-ok"></i></span>
+									</button>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
 
 </div>
 
 <!-- Modal -->
 
-<div class="modal fade" id="editAccount" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-        <h4 class="modal-title" id="myModalLabel">Edit Account</h4>
-      </div>
-      <div class="modal-body">
-        <form>
-        <div class="form-group">
-        <label for="accountName">Account Name</label>
-					<div class="inner-addon left-addon">
-						<i class="glyphicon glyphicon-user"></i>
-						<input id="accountName"  class="form-control" value="{{account.accountName}}">
-						 
+<div class="modal fade" id="editAccount" tabindex="-1" role="dialog"
+	aria-labelledby="myModalLabel" aria-hidden="true">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal"
+					aria-label="Close">
+					<span aria-hidden="true">&times;</span>
+				</button>
+				<h4 class="modal-title" id="myModalLabel">Edit Account</h4>
+			</div>
+			<div class="modal-body">
+				<form>
+					<div class="form-group">
+						<label for="accountName">Account Name</label>
+						<div class="inner-addon left-addon">
+							<i class="glyphicon glyphicon-user"></i> <input id="accountName"
+								class="form-control" value="{{account.accountName}}">
+
+						</div>
 					</div>
-				</div>
-				
-				<div class="form-group">
-				<label for="responsiblePerson">Responsible Person</label>
-					<div class="inner-addon left-addon">
-						<i class="glyphicon glyphicon-user"></i>
-						<input id="responsiblePerson" class="form-control" value="{{account.responsiblePerson}}">
+
+					<div class="form-group">
+						<label for="responsiblePerson">Responsible Person</label>
+						<div class="inner-addon left-addon">
+							<i class="glyphicon glyphicon-user"></i> <input
+								id="responsiblePerson" class="form-control"
+								value="{{account.responsiblePerson}}">
+						</div>
 					</div>
-				</div>
-				
-				<div class="form-group">
-				<label for="email">Email ID</label>
-					<div class="inner-addon left-addon">
-						<i class="glyphicon glyphicon-envelope"></i>
-						<input id="email" class="form-control" value="{{account.email}}">
+
+					<div class="form-group">
+						<label for="email">Email ID</label>
+						<div class="inner-addon left-addon">
+							<i class="glyphicon glyphicon-envelope"></i> <input id="email"
+								class="form-control" value="{{account.email}}">
+						</div>
 					</div>
-				</div>
-				
-				<div class="form-group">
-				<label for="phoneNo">Phone No</label>
-					<div class="inner-addon left-addon">
-						<i class="glyphicon glyphicon-earphone"></i>
-						<input id="phoneNo" class="form-control" value="{{account.phoneNo}}">
+
+					<div class="form-group">
+						<label for="phoneNo">Phone No</label>
+						<div class="inner-addon left-addon">
+							<i class="glyphicon glyphicon-earphone"></i> <input id="phoneNo"
+								class="form-control" value="{{account.phoneNo}}">
+						</div>
 					</div>
-				</div>
-				
-				
-        <div class="form-group">
-        <label for="companyType">Company Type</label>
-					<div class="inner-addon left-addon">
-						<i class="glyphicon glyphicon-home"></i>
-						<select class="form-control" id="companyType">
-						<option selected="selected">{{account.companyType}}</option>
-						<option>hotwax systems</option>
-						<option>hotwax media</option>
-						<option>Hotwax Family</option>
-						<option>Hotwax Systems</option>
-						</select>
-						 
+
+
+					<div class="form-group">
+						<label for="companyType">Company Type</label>
+						<div class="inner-addon left-addon">
+							<i class="glyphicon glyphicon-home"></i> <select
+								class="form-control" id="companyType">
+								<option selected="selected">{{account.companyType}}</option>
+								<option>hotwax systems</option>
+								<option>hotwax media</option>
+								<option>Hotwax Family</option>
+								<option>Hotwax Systems</option>
+							</select>
+
+						</div>
 					</div>
-				</div>
-				
-		<div class="form-group">
-        <label for="industry">Team</label>
-					<div class="inner-addon left-addon">
-						<i class="glyphicon glyphicon-user"></i>
-						<select class="form-control" id="industry">
-						<option selected="selected">{{account.industry}}</option>
-						<option>Engineer</option>
-						<option>Doctor</option>
-						</select>
-						 
+
+					<div class="form-group">
+						<label for="industry">Team</label>
+						<div class="inner-addon left-addon">
+							<i class="glyphicon glyphicon-user"></i> <select
+								class="form-control" id="industry">
+								<option selected="selected">{{account.industry}}</option>
+								<option>Engineer</option>
+								<option>Doctor</option>
+							</select>
+
+						</div>
 					</div>
-				</div>
-		
-				
-				<div class="form-group">
-				<label for="annualIncome">Annual Income</label>
-					<div class="inner-addon left-addon">
-						<i class="glyphicon glyphicon-usd"></i>
-						<input id="annualIncome" class="form-control" value="{{account.annualIncome}}">
-						 
+
+
+					<div class="form-group">
+						<label for="annualIncome">Annual Income</label>
+						<div class="inner-addon left-addon">
+							<i class="glyphicon glyphicon-usd"></i> <input id="annualIncome"
+								class="form-control" value="{{account.annualIncome}}">
+
+						</div>
 					</div>
-				</div>
-				
-				<div class="form-group">
-				<label for="currency">Currency</label>
-					<div class="inner-addon left-addon">
-						<i class="glyphicon glyphicon-usd"></i>
-						<input id="currency" class="form-control" value="{{account.currency}}">
-						 
+
+					<div class="form-group">
+						<label for="currency">Currency</label>
+						<div class="inner-addon left-addon">
+							<i class="glyphicon glyphicon-usd"></i> <input id="currency"
+								class="form-control" value="{{account.currency}}">
+
+						</div>
 					</div>
-				</div>
-				
-				<div class="form-group">
-				<label for="comment">Comments</label>
-					<div class="inner-addon left-addon">
-						<textarea id="description" class="form-control">{{account.comment}}</textarea>						 
+
+					<div class="form-group">
+						<label for="comment">Comments</label>
+						<div class="inner-addon left-addon">
+							<textarea id="description" class="form-control">{{account.comment}}</textarea>
+						</div>
 					</div>
-				</div>				
-        </form>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Save</button>
-      </div>
-    </div>
-  </div>
+				</form>
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+				<button type="button" class="btn btn-primary">Save</button>
+			</div>
+		</div>
+	</div>
 </div>
