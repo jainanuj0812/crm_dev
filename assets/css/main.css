@@ -25,7 +25,16 @@ pre{
     tab-size: 8;
 }
 
-@media screen and (max-width: 768px){
+.editBtn
+{
+	color: blue; 
+	border: 0;
+	
+}
+.deleteBtn
+{
+	color: red;
+	 border: 0;
     .side-collapse-container{
         width:100%;
         position:relative;

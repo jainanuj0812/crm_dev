@@ -29,7 +29,7 @@
 					<div class="col-xs-3 col-sm-3 col-md-3 col-lg-3" id="imgdiv">
 						<img src="assets/images/demo.png" class="img-circle img-responsive ">
 					</div>
-					<div class="col-xs-7 col-sm-7 col-md-6 col-lg-6" ng-model="hide" ng-click="hide=!hide" ng-init="edit=true" ng-show="edit">
+					<div class="col-xs-7 col-sm-7 col-md-6 col-lg-6" ng-model="hide" ng-click="hide=!hide" ng-init="edit=true;del=true;" ng-show="edit">
 						<h4>
 							<i class="glyphsicon glyphicon-user"></i><b>{{"
 								"+lead.leadName}}</b>
@@ -69,7 +69,7 @@
 					
 						<div class="btn-group" style="float:right;">
 	     				<button id="edit" class="btn btn-default btn-lg btn-lg"  style="color: blue; border: 0;" title="edit" ng-click="edit=!edit"><i class="glyphicon glyphicon-pencil" ng-show="edit"></i><i class="glyphicon glyphicon-ok" ng-hide="edit"></i></button>
-	     				<button id="delete" class="btn btn-default btn-lg btn-lg"  style="color: red; border: 0;"  onclick="#" title="delete" ng-click="edit=!edit"><i class="glyphicon glyphicon-trash" ng-show="edit"></i><i class="glyphicon glyphicon-remove" ng-hide="edit"></i></button>
+	     				<button id="delete" class="btn btn-default btn-lg btn-lg"  style="color: red; border: 0;"  onclick="#" title="delete" ng-click="del=!del"><i class="glyphicon glyphicon-trash" ng-show="del"></i><i class="glyphicon glyphicon-remove" ng-hide="del"></i></button>
      				</div>
 				</div>
 			</div>
@@ -86,7 +86,7 @@
         <h4 class="modal-title" id="myModalLabel">contact add</h4>
       </div>
       <div class="modal-body">
-        <form>
+        <form>ng-hide="edit"
         <div class="form-group">
         <lable for="leadName">Lead Name</lable>
 					<div class="inner-addon left-addon">
@@ -95,7 +95,7 @@
 						 
 					</div>
 				</div>
-				
+				ng-hide="edit"
         <div class="form-group">
         <lable for="status">Status</lable>
 					<div class="inner-addon left-addon">
