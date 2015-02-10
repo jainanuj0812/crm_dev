@@ -1,4 +1,4 @@
-var crmApp=angular.module('crmApp',['ngRoute','crmApp.dashboardControllerModule', 'crmApp.accountControllerModule', 'crmApp.leadControllerModule', 'crmApp.contactControllerModule', 'crmApp.opportunityControllerModule','ui.calendar']);
+var crmApp=angular.module('crmApp',['ngRoute', 'crmApp.dashboardControllerModule', 'crmApp.accountControllerModule', 'crmApp.leadControllerModule', 'crmApp.contactControllerModule', 'crmApp.opportunityControllerModule','ui.calendar']);
 
 crmApp.config(function($routeProvider){
 	$routeProvider

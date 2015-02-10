@@ -1,4 +1,4 @@
-var dashboardControllerModule=angular.module('crmApp.dashboardControllerModule');
+var dashboardControllerModule=angular.module('crmApp.dashboardControllerModule', []);
 dashboardControllerModule.controller('dashboardController',function($scope){
 	 $scope.todos = [
 	                 {text:'Prepare Report', done:true},
