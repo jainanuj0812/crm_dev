@@ -9,6 +9,10 @@
 	display:none;
 }
 
+.done-true {
+  text-decoration: line-through;
+  color: grey;
+}
 .menuLink{
 	color: #0363C8 !important;	
 }
