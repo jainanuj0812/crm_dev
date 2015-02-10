@@ -54,7 +54,8 @@ pre{
 .deleteBtn
 {
 	color: red;
-	 border: 0;
+	 border: 0;}
+    
     .side-collapse-container{
         width:100%;
         position:relative;
