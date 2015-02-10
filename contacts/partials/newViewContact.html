@@ -16,19 +16,46 @@
 								<img src="assets/images/demo.png" class="img-responsive" style="padding-top:20px;">
 								</div>
 							</div>
-                     	</div>
-                     	<div class="col-xs-12 col-sm-12 col-md-8 col-md-offset-1  col-lg-8 col-lg-offset-1">
-                     		<span ng-init="edit=true" ng-show="edit"><b>{{contact.firstName +" "+contact.lastName}}<b></span>
-                     		<span ng-hide="edit"><input type="text" value="{{contact.firstName}} {{contact.lastName}}"></span>
-                     		<button type="button" class="btn btn-info pull-right" ng-click="edit=!edit">
-                     		  <span ng-show="edit"><i class="glyphicon glyphicon-pencil"></i></span>
-                     		  <span ng-hide="edit"><i class="glyphicon glyphicon-ok"></i></span></button>
-                     		<h4>{{contact.position}} at {{contact.company}}</h4>
-                     		<h4><i class="glyphicon glyphicon-home"></i>{{" "+contact.address}}, {{" "+contact.state}},{{" "+contact.country}}</h4>
-                     		<h4><i class="glyphicon glyphicon-earphone"></i>{{" "+contact.phoneNo}}</h4>
-                     		<h4><i class="glyphicon glyphicon-envelope"></i>{{" "+contact.email}}</h4>
-                     		<h4><i class="glyphicon glyphicon glyphicon-gift"></i>{{" "+contact.dob}}</h4>
-                     	</div>
+             </div>
+             <div class="col-xs-12 col-sm-12 col-md-8 col-md-offset-1  col-lg-8 col-lg-offset-1">
+             		<span class="h1" ng-init="editName=true" ng-show="editName"><b>{{contact.firstName +" "+contact.lastName}}</b></span>
+             		<span ng-hide="editName"><input type="text" value="{{contact.firstName}} {{contact.lastName}}" autofocus onfocus="this.value = this.value;"></span>
+             		<button type="button" class="btn btn-info pull-right" ng-click="editName=!editName">
+             		  <span ng-show="editName"><i class="glyphicon glyphicon-pencil"></i></span>
+             		  <span ng-hide="editName"><i class="glyphicon glyphicon-ok"></i></span>
+             		 </button><br/>
+             		<span ng-init="editWork=true" ng-show="editWork">{{contact.position}} at {{contact.company}}</span>
+             		<span ng-hide="editWork"><input type="text" value="{{contact.position}}" autofocus onfocus="this.value = this.value;"> at <input type="text" value="{{contact.company}}"></span>
+                <button type="button" class="btn btn-info pull-right" ng-click="editWork=!editWork">
+             		  <span ng-show="editWork"><i class="glyphicon glyphicon-pencil"></i></span>
+             		  <span ng-hide="editWork"><i class="glyphicon glyphicon-ok"></i></span>
+             		 </button><br/>
+                <span ng-init="editHome=true" ng-show="editHome"><i class="glyphicon glyphicon-home"></i>{{" "+contact.address}}, {{" "+contact.state}},{{" "+contact.country}}</span>
+             		<span ng-hide="editHome"><input type="text" value="{{contact.address}}" autofocus onfocus="this.value = this.value;"><input type="text" value="{{contact.state}}"><input type="text" value="{{contact.country}}"></span>
+             		<button type="button" class="btn btn-info pull-right" ng-click="editHome=!editHome">
+             		  <span ng-show="editHome"><i class="glyphicon glyphicon-pencil"></i></span>
+             		  <span ng-hide="editHome"><i class="glyphicon glyphicon-ok"></i></span>
+             		 </button><br/>
+             		<span ng-init="editPhone=true" ng-show="editPhone"><i class="glyphicon glyphicon-earphone"></i> {{contact.phoneNo}}</span>
+             		<span ng-hide="editPhone"><input type="text" value="{{contact.phoneNo}}" autofocus onfocus="this.value = this.value;"></span>
+             		<button type="button" class="btn btn-info pull-right" ng-click="editPhone=!editPhone">
+             		  <span ng-show="editPhone"><i class="glyphicon glyphicon-pencil"></i></span>
+             		  <span ng-hide="editPhone"><i class="glyphicon glyphicon-ok"></i></span>
+             		 </button><br/>
+             		<span ng-init="editEmail=true" ng-show="editEmail"><i class="glyphicon glyphicon-envelope"></i> {{contact.email}}</span>
+             		<span ng-hide="editEmail"><input type="text" value="{{contact.email}}" autofocus onfocus="this.value = this.value;"></span>
+             		<button type="button" class="btn btn-info pull-right" ng-click="editEmail=!editEmail">
+             		  <span ng-show="editEmail"><i class="glyphicon glyphicon-pencil"></i></span>
+             		  <span ng-hide="editEmail"><i class="glyphicon glyphicon-ok"></i></span>
+             		 </button><br/>                     		
+             		<span ng-init="editDob=true" ng-show="editDob"><i class="glyphicon glyphicon-earphone"></i> {{contact.dob}}</span>
+             		<span ng-hide="editDob"><input type="text" value="{{contact.dob}}" autofocus onfocus="this.value = this.value;"></span>
+             		<button type="button" class="btn btn-info pull-right" ng-click="editDob=!editDob">
+             		  <span ng-show="editDob"><i class="glyphicon glyphicon-pencil"></i></span>
+             		  <span ng-hide="editDob"><i class="glyphicon glyphicon-ok"></i></span>
+             		 </button><br/>
+             	</div>
+
 					</div>
 				</div>
    			</div>
