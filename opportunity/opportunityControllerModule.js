@@ -10,3 +10,18 @@ opportunityControllerModule.controller('opportunityListController',function($sco
     }
 		
 );
+
+opportunityControllerModule.controller('viewOpportunityController', function($scope,$routeParams,opportunityService)
+		{
+	    var opportunityId;
+	    $scope.opportunity={};
+	    init();
+	    function init(){
+	         opportunityId=($routeParams.opportunityId);    
+	         $scope.opportunity=opportunityService.getOpportunity(opportunityId);   
+	        
+	    }
+	    
+
+	    
+	});

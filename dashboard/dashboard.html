@@ -133,10 +133,10 @@
 	          			</div> 
 	          			<div>
       							<span>{{remaining()}} of {{todos.length}} remaining</span>
-      							 <ul class="unstyled">
+      							 <ul style="list-style-type: none;">
         							<li ng-repeat="todo in todos">
           							<input type="checkbox" ng-model="todo.done">
-          							<span class="done-{{todo.done}}">{{todo.text}}</span>
+          							<span class="done-{{todo.done}}">{{todo.text}}</span><hr>
         							</li>
       							 </ul>
     							</div>

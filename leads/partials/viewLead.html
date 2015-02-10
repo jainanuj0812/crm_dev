@@ -98,102 +98,111 @@
 </div>
 
 <!-- Modal -->
-<div class="modal fade" id="editContact" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+<div class="modal fade" id="editLead" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-        <h4 class="modal-title" id="myModalLabel">Edit contact</h4>
+        <h4 class="modal-title" id="myModalLabel">Edit Lead</h4>
       </div>
       <div class="modal-body">
         <form>
         <div class="form-group">
-        <label for="firstName">First name:</label>
+        <label for="leadName">LeadCountry Name</label>
 					<div class="inner-addon left-addon">
 						<i class="glyphicon glyphicon-user"></i>
-						<input id="firstName"  class="form-control" value="{{contact.firstName}}">
+						<input id="leadName"  class="form-control" value="{{lead.leadName}}">
 						 
 					</div>
 				</div>
 				
         <div class="form-group">
-        <label for="lastName">Last name:</label>
+        <label for="status">Status</label>
 					<div class="inner-addon left-addon">
-						<i class="glyphicon glyphicon-user"></i>
-						<input id="lastName" class="form-control" value="{{contact.lastName}}">
+						<i class="glyphicon glyphicon-info-sign"></i>
+						<select class="form-control" id="status">
+						<option selected="selected">{{lead.status}}</option>
+						<option>Assigned to</option>
+						<option>Future</option>
+						<option>In progress</option>
+						<option>Dead</option>
+						</select>
 						 
 					</div>
 				</div>
+				
 				<div class="form-group">
-				<label for="email">E-mail:</label>
+				<label for="description">Description</label>
+					<div class="inner-addon left-addon">
+						<textarea id="email" class="form-control">{{lead.description}}</textarea>
+						 
+					</div>
+				</div>
+				<br>
+				<h3>Contact Information</h3>
+				<div class="form-group">
+				<label for="email">E-mail ID</label>
 					<div class="inner-addon left-addon">
 						<i class="glyphicon glyphicon-envelope"></i>
-						<input id="email" class="form-control" value="{{contact.email}}">
+						<input id="email" class="form-control" value="{{lead.email}}">
 						 
 					</div>
 				</div>
 				
 				<div class="form-group">
-				<label for="phoneNo">Phone no:</label>
+				<label for="phoneNo">Phone No</label>
 					<div class="inner-addon left-addon">
 						<i class="glyphicon glyphicon-earphone"></i>
-						<input id="firstName" class="form-control" value="{{contact.phoneNo}}">
+						<input id="phoneNo" class="form-control" value="{{lead.phoneNo}}">
 						 
 					</div>
 				</div>
 				
 				<div class="form-group">
-				<label for="company">Company:</label>
+				<label for="company">Company</label>
 					<div class="inner-addon left-addon">
-						<i class="glyphicon glyphicon-earphone"></i>
-						<input id="company" class="form-control" value="{{contact.company}}">
+						<i class="glyphicon glyphicon-home"></i>
+						<input id="company" class="form-control" value="{{lead.company}}">
 						 
 					</div>
 				</div>
 				
 				<div class="form-group">
-				<label for="position">Position:</label>
+				<label for="addressLine1">Address Line1</label>
 					<div class="inner-addon left-addon">
-						<i class="glyphicon glyphicon-earphone"></i>
-						<input id="position" class="form-control" value="{{contact.position}}">
+						<i class="glyphicon glyphicon-map-marker"></i>
+						<input id="addressLine1" class="form-control" value="{{lead.addressLine1}}">
 						 
 					</div>
 				</div>
 				
 				<div class="form-group">
-				<label for="dob">D.O.B.:</label>
+				<label for="addressLine2">Address Line1</label>
 					<div class="inner-addon left-addon">
-						<i class="glyphicon glyphicon-earphone"></i>
-						<input id="dob" class="form-control" value="{{contact.dob}}">
+						<i class="glyphicon glyphicon-map-marker"></i>
+						<input id="addressLine2" class="form-control" value="{{lead.addressLine2}}">
 						 
 					</div>
 				</div>
 				
 				<div class="form-group">
-				<label for="address">Address:</label>
+				<label for="country">Country</label>
 					<div class="inner-addon left-addon">
-						<i class="glyphicon glyphicon-earphone"></i>
-						<input id="address" class="form-control" value="{{contact.address}}">
+						<i class="glyphicon glyphicon-map-marker"></i>
+						<input id="country" class="form-control" value="{{lead.country}}">
 						 
 					</div>
 				</div>
 				
 				<div class="form-group">
-				<label for="state">State:</label>
+				<label for="state">State</label>
 					<div class="inner-addon left-addon">
-						<i class="glyphicon glyphicon-earphone"></i>
-						<input id="state" class="form-control" value="{{contact.state}}">
+						<i class="glyphicon glyphicon-map-marker"></i>
+						<input id="state" class="form-control" value="{{lead.state}}">
 						 
 					</div>
 				</div>
-					<div class="form-group">
-				<label for="country">Country:</label>
-					<div class="inner-addon left-addon">
-						<i class="glyphicon glyphicon-earphone"></i>
-						<input id="country" class="form-control" value="{{contact.country}}">
-						 
-					</div>
-				</div>
+					
 				
         </form>
       </div>
