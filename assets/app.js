@@ -24,7 +24,7 @@ crmApp.config(function($routeProvider){
 	 })
 	 	.when('/viewAccount/:accountId',{
 		controller: 'viewAccountController',
-		templateUrl: 'contacts/partials/viewAccount.html'	
+		templateUrl: 'accounts/partials/viewAccount.html'	
 	})	 
 	 	.when('/addAccount',{
 		templateUrl: 'accounts/partials/createAccount.html'
