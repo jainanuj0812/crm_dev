@@ -113,6 +113,16 @@ pre{
  margin-top:15px;
 }
 
+.listRow
+{
+ border-width:thin;
+ border-color:#EFEFDD;
+ border-style:ridge;
+ margin-top:35px;
+ margin-bottom:35px;
+}
+
+
 .form-control[readonly]
 {
 	background-color: white;
