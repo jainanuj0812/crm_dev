@@ -9,6 +9,26 @@
 	display:none;
 }
 
+.done-true {
+  text-decoration: line-through;
+  color: grey;
+}
+
+input[type='checkbox'] {
+    -webkit-appearance:none;
+    width:35px;
+    height:25px;
+    background: #abd;
+    background-position : 0 -6px;
+    border-radius:5px;
+    border:2px solid #555;
+}
+input[type='checkbox']:checked {
+    background:url('../images/tick.png') no-repeat;
+    background-position : 0 -6px;
+    
+}
+
 .menuLink{
 	color: #0363C8 !important;	
 }
@@ -25,7 +45,16 @@ pre{
     tab-size: 8;
 }
 
-@media screen and (max-width: 768px){
+.editBtn
+{
+	color: blue; 
+	border: 0;
+	
+}
+.deleteBtn
+{
+	color: red;
+	 border: 0;
     .side-collapse-container{
         width:100%;
         position:relative;
