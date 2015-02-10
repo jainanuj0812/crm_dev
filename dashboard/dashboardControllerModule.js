@@ -1,9 +1,14 @@
 var dashboardControllerModule=angular.module('crmApp.dashboardControllerModule');
-dashboardControllerModule.controller('dashboardController',['$scope',function($scope){
+dashboardControllerModule.controller('dashboardController',function($scope){
 	 $scope.todos = [
 	                 {text:'Prepare Report', done:true},
 	                 {text:'Meeting @ Sayaji', done:true},
 	                 {text:'Do Homework', done:false}];
+	            
+	               $scope.addTodo = function() {
+	                 $scope.todos.push({text:$scope.todoText, done:false});
+	                 $scope.todoText = '';
+	               };
 	            
 	               $scope.remaining = function() {
 	                 var count = 0;
@@ -12,7 +17,7 @@ dashboardControllerModule.controller('dashboardController',['$scope',function($s
 	                 });
 	                 return count;
 	               };
-	            }]);
+	            });
 
 
 
