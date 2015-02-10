@@ -30,7 +30,7 @@
              		 </div>
              		
              		<div ng-init="editStatus=true;visible2=false;" ng-mouseover="visible2=true" ng-mouseleave="visible2=false">
-             		<span class="h4"  ng-show="editStatus"><i class="glyphicon glyphicon-user"></i>{{" "+lead.status}}</span>
+             		<span class="h4"  ng-show="editStatus"><i class="glyphicon glyphicon-info-sign"></i>{{" "+lead.status}}</span>
              		<span ng-hide="editStatus"><input type="text" value="{{contact.status}}" autofocus onfocus="this.value = this.value;"></span>
                     <button type="button" class="btn btn-default   editBtn" ng-click="editStatus=!editStatus" ng-show="visible2">
              		  <span ng-show="editStatus"><i class="glyphicon glyphicon-pencil"></i></span>
@@ -45,29 +45,46 @@
              		  <span ng-show="editSource"><i class="glyphicon glyphicon-pencil"></i></span>
              		  <span ng-hide="editSource"><i class="glyphicon glyphicon-ok"></i></span>
              		 </button></div>
-             		
-             		<div ng-init="editPhone=true;visible4=false;" ng-mouseover="visible4=true" ng-mouseleave="visible4=false">
+             	
+             	<div ng-init="editDescription=true;visible4=false;" ng-mouseover="visible4=true" ng-mouseleave="visible4=false">
+                <span class="h4"  ng-show="editDescription"><i class="glyphicon glyphicon-info-sign"></i>{{" "+lead.description}}</span>
+             		<span ng-hide="editDescription"><input type="text" value="{{lead.description}}" autofocus onfocus="this.value = this.value;"></span>
+             		<button type="button" class="btn btn-default   editBtn" ng-click="editDescription=!editDescription" ng-show="visible4">
+             		  <span ng-show="editDescription"><i class="glyphicon glyphicon-pencil"></i></span>
+             		  <span ng-hide="editDescription"><i class="glyphicon glyphicon-ok"></i></span>
+             		 </button></div>
+             	<br>
+             		<h2>Contact Information</h2>
+             		<div ng-init="editPhone=true;visible5=false;" ng-mouseover="visible5=true" ng-mouseleave="visible5=false">
              	<span class="h4"   ng-show="editPhone"><i class="glyphicon glyphicon-earphone"></i> {{lead.phoneNo}}</span>
              		<span ng-hide="editPhone"><input type="text" value="{{lead.phoneNo}}" autofocus onfocus="this.value = this.value;"></span>
-             		<button type="button" class="btn btn-default   editBtn" ng-click="editPhone=!editPhone" ng-show="visible4">
+             		<button type="button" class="btn btn-default   editBtn" ng-click="editPhone=!editPhone" ng-show="visible5">
              		  <span ng-show="editPhone"><i class="glyphicon glyphicon-pencil"></i></span>
              		  <span ng-hide="editPhone"><i class="glyphicon glyphicon-ok"></i></span>
              		 </button></div>
              		
-             		<div ng-init="editEmail=true;visible5=false;" ng-mouseover="visible5=true" ng-mouseleave="visible5=false">
+             		<div ng-init="editEmail=true;visible6=false;" ng-mouseover="visible6=true" ng-mouseleave="visible6=false">
              	<span class="h4"  ng-show="editEmail"><i class="glyphicon glyphicon-envelope"></i> {{lead.email}}</span>
              		<span ng-hide="editEmail"><input type="text" value="{{lead.email}}" autofocus onfocus="this.value = this.value;"></span>
-             		<button type="button" class="btn btn-default   editBtn" ng-click="editEmail=!editEmail" ng-show="visible5">
+             		<button type="button" class="btn btn-default   editBtn" ng-click="editEmail=!editEmail" ng-show="visible6">
              		  <span ng-show="editEmail"><i class="glyphicon glyphicon-pencil"></i></span>
              		  <span ng-hide="editEmail"><i class="glyphicon glyphicon-ok"></i></span>
              		 </button></div>                     		
              		
-             		<div ng-init="editDob=true;visible6=false" ng-mouseover="visible6=true" ng-mouseleave="visible6=false">
-             	<span class="h4"  ng-show="editDob"><i class="glyphicon glyphicon-earphone"></i> {{contact.dob}}</span>
-             		<span ng-hide="editDob"><input type="text" value="{{contact.dob}}" autofocus onfocus="this.value = this.value;"></span>
-             		<button type="button" class="btn btn-default   editBtn" ng-click="editDob=!editDob" ng-show="visible6">
-             		  <span ng-show="editDob"><i class="glyphicon glyphicon-pencil"></i></span>
-             		  <span ng-hide="editDob"><i class="glyphicon glyphicon-ok"></i></span>
+             		<div ng-init="editAddress=true;visible7=false" ng-mouseover="visible7=true" ng-mouseleave="visible7=false">
+             	<span class="h4"  ng-show="editAddress"><i class="glyphicon glyphicon-map-marker"></i> {{lead.addressLine1}},{{lead.addressLine2}}</span>
+             		<span ng-hide="editAddress"><input type="text" value="{{lead.addressLine1}}" autofocus onfocus="this.value = this.value;"><input type="text" value="{{lead.addressLine2}}"></span>
+             		<button type="button" class="btn btn-default   editBtn" ng-click="editAddress=!editAddress" ng-show="visible7">
+             		  <span ng-show="editAddress"><i class="glyphicon glyphicon-pencil"></i></span>
+             		  <span ng-hide="editAddress"><i class="glyphicon glyphicon-ok"></i></span>
+             		 </button></div>
+             
+             	<div ng-init="editCountry=true;visible8=false" ng-mouseover="visible8=true" ng-mouseleave="visible8=false">
+             	<span class="h4"  ng-show="editCountry"><i class="glyphicon glyphicon-map-marker"></i> {{lead.country+" "}}({{lead.state}})</span>
+             		<span ng-hide="editCountry"><input type="text" value="{{lead.country}}" autofocus onfocus="this.value = this.value;"><input type="text" value="{{lead.state}}"></span>
+             		<button type="button" class="btn btn-default   editBtn" ng-click="editCountry=!editCountry" ng-show="visible8">
+             		  <span ng-show="editCountry"><i class="glyphicon glyphicon-pencil"></i></span>
+             		  <span ng-hide="editCountry"><i class="glyphicon glyphicon-ok"></i></span>
              		 </button></div>
              
              	 	</div>
