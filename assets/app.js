@@ -47,6 +47,10 @@ crmApp.config(function($routeProvider){
 	 	.when('/addOpportunity',{
 		templateUrl: 'opportunity/partials/createOpportunity.html'
 	 })	
+	 	.when('/viewOpportunity/:opportunityId',{
+		controller: 'viewOpportunityController',
+		templateUrl: 'opportunity/partials/viewOpportunity.html'	
+	 })	 
 	 	.when('/events',{
 		controller: 'eventsController',
 		templateUrl: 'events/createEvent.html'	
