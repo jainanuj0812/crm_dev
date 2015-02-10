@@ -17,8 +17,8 @@ this.getLeads=function(){
    };
 	
 var leads=[
-{id:1, leadName:'Amit Gadaley', status:'In progress', sourceName:'call',email:'gadaley@gmail.com', phoneNo:9584593069,company:'hotwax systems',addressLine1: 'vijaynagar',addressLine2: 'behind sayaji',country:'India',state:'m.p',description:'Testing purpose from amit'},
-{id:2, leadName:'Rahul', status:'Assigned to', sourceName:'conference',email:'bhammarker@gmail.com', phoneNo:1111111111,company:'hotwax media',addressLine1: 'LIG',addressLine2: 'behind C21',country:'India',state:'u.p',description:'Testing purpose from rahul'},
-{id:3, leadName:'Saket', status:'Dead', sourceName:'meeting',email:'saket@gmail.com', phoneNo:9425094250,company:'hotwax family',addressLine1: 'sneh nagar',addressLine2: 'behind Lotus',country:'India',state:'delhi',description:'Testing purpose from saket'},
+{id:1, leadName:'Amit Gadaley', status:'In progress', sourceName:'Cold call',email:'gadaley@gmail.com', phoneNo:9584593069,company:'hotwax systems',addressLine1: 'Scheme no 54',addressLine2: 'behind Sayaji Vijaya Nagar',country:'India',state:'M.P',description:'Testing purpose from amit'},
+{id:2, leadName:'Rahul bhammarker', status:'Assigned to', sourceName:'Conference',email:'bhammarker@gmail.com', phoneNo:9875232145,company:'Hotwax media',addressLine1: 'LIG-65',addressLine2: 'behind C21 Anand Nagar',country:'India',state:'u.p',description:'Testing purpose from rahul'},
+{id:3, leadName:'Saket Baghel', status:'Dead', sourceName:'Meeting',email:'saket@gmail.com', phoneNo:9425094250,company:'Hotwax Systems',addressLine1: 'Sneha Nagar',addressLine2: 'Behind Lotus Temple',country:'India',state:'New Delhi',description:'Test purpose from saket'},
 ];
 });
