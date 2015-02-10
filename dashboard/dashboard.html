@@ -132,13 +132,14 @@
 	          				<br/><hr style="border-color:#A0A0A0;">
 	          			</div> 
 	          			<div>
-      							<span>{{remaining()}} of {{todos.length}} remaining</span>
+      							
       							 <ul style="list-style-type: none;">
         							<li ng-repeat="todo in todos">
           							<input type="checkbox" ng-model="todo.done">
-          							<span class="done-{{todo.done}}">{{todo.text}}</span><hr>
+          							<span class="done-{{todo.done}}"><span style="font-size: 150%;">{{todo.text}} </span><span style="color:grey;"> {{todo.timing}}</span></span><hr>
         							</li>
       							 </ul>
+      							 <span class="textSize"> ({{remaining()}} of {{todos.length}} tasks remaining)</span>
     							</div>
 	          		</div>
 	        	</div>

@@ -17,7 +17,7 @@
 input[type='checkbox'] {
     -webkit-appearance:none;
     width:35px;
-    height:25px;
+    height:22px;
     background: #abd;
     background-position : 0 -6px;
     border-radius:5px;
@@ -25,7 +25,7 @@ input[type='checkbox'] {
 }
 input[type='checkbox']:checked {
     background:url('../images/tick.png') no-repeat;
-    background-position : 0 -6px;
+    background-position : 4px -2px;
     
 }
 
