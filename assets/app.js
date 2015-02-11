@@ -41,7 +41,7 @@ crmApp.config(function($routeProvider) {
     controller : 'viewOpportunityController',
     templateUrl : 'opportunity/partials/viewOpportunity.html'
   }).when('/events', {
-    controller : 'eventsController',
+    controller : 'calendarController',
     templateUrl : 'events/createEvent.html'
   }).otherwise({
     redirectTo : '/dashboard'
