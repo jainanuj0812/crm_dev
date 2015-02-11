@@ -18,8 +18,7 @@ dashboardServiceModule.service('dashboardService', function() {
 
 	var users = [ {
 		id : 1,
-		firstName : 'Amit',
-		lastName : 'Gadaley',
+		name : 'Amit Gadaley',
 		email : 'agadaley@gmail.com',
 		phoneNo : 9584593069,
 		addressLine1 : 'HB-32',
@@ -31,8 +30,7 @@ dashboardServiceModule.service('dashboardService', function() {
 		dob : '17-04-1993'
 	}, {
 		id : 2,
-		firstName : 'Aman',
-		lastName : 'Agrawal',
+		name : 'Aman Agrawal',
 		email : 'aman@gmail.com',
 		phoneNo : 4512789632,
 		address : 'LIG-52',
@@ -42,5 +40,17 @@ dashboardServiceModule.service('dashboardService', function() {
 		company : 'HotWax Systems',
 		position : 'Enterprise software  engineer',
 		dob : '23-02-1993'
-	} ];
+	} , {
+		id : 3,
+		name : 'saket Baghel',
+		email : 'aman@gmail.com',
+		phoneNo : 4512789632,
+		address : 'LIG-52',
+		addressLine2 : 'Ananand Nagar 542263',
+		state : 'Madhya pradesh',
+		country : 'India',
+		company : 'HotWax Systems',
+		position : 'Enterprise software  engineer',
+		dob : '23-02-1993'
+	}];
 });

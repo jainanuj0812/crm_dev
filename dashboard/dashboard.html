@@ -112,8 +112,8 @@
                     <b> To all Employees</b>
                   </span>
                   <br />
-                  <p ng-model="userMessage" ng-trim="false">Using a planned agenda</p>
-                  <p>{{userMessage.length}}</p>
+                  <p id="userMessage">Using a planned agenda</p>
+                  <p id="Message"></p>
                 </div>
               </div>
             </div>
@@ -246,5 +246,6 @@
     // put your options and callbacks here
     })
 
+    var len = $('useMessage').text().length;
   });
 </script>
