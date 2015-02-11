@@ -15,23 +15,23 @@
         <div class="panel-body">
           <div class="row">
             <div class="col-xs-12 col-sm-12 col-md-8 col-md-offset-1 col-lg-8 col-lg-offset-1">
-                <div ng-init="editName=true;visible=false;" ng-mouseover="visible=true" ng-mouseleave="visible=false">
-                  <span class="h2" ng-show="editName">
-                    <b>{{opportunity.opportunityName}}</b>
+              <div ng-init="editName=true;visible=false;" ng-mouseover="visible=true" ng-mouseleave="visible=false">
+                <span class="h2" ng-show="editName">
+                  <b>{{opportunity.opportunityName}}</b>
+                </span>
+                <span ng-hide="editName">
+                  <input type="text" value="{{opportunity.opportunityName}}" autofocus onfocus="this.value = this.value;">
+                </span>
+                <button type="button" class="btn btn-sm btn-default editBtn" ng-click="editName=!editName" ng-show="visible">
+                  <span ng-show="editName">
+                    <i class="glyphicon glyphicon-pencil"></i>
                   </span>
                   <span ng-hide="editName">
-                    <input type="text" value="{{opportunity.opportunityName}}" autofocus onfocus="this.value = this.value;">
+                    <i class="glyphicon glyphicon-ok"></i>
                   </span>
-                  <button type="button" class="btn btn-sm btn-default editBtn" ng-click="editName=!editName" ng-show="visible">
-                    <span ng-show="editName">
-                      <i class="glyphicon glyphicon-pencil"></i>
-                    </span>
-                    <span ng-hide="editName">
-                      <i class="glyphicon glyphicon-ok"></i>
-                    </span>
-                  </button>
-                </div>
-                <div class="col-sm-12 col-md-4 col-md-offset-1">
+                </button>
+              </div>
+              <div class="col-sm-12 col-md-4 col-md-offset-1">
                 <br>
                 <div ng-init="leadName=true;visible8=false;" ng-mouseover="visible8=true" ng-mouseleave="visible8=false">
                   <span class="h4" ng-show="leadName">
@@ -101,7 +101,7 @@
                     </span>
                   </button>
                 </div>
-                                <div ng-init="editTeam=true;visible5=false;" ng-mouseover="visible5=true" ng-mouseleave="visible5=false">
+                <div ng-init="editTeam=true;visible5=false;" ng-mouseover="visible5=true" ng-mouseleave="visible5=false">
                   <span class="h4" ng-show="editTeam">
                     <label>Team :</label>
                     {{" "+opportunity.team}}
@@ -136,9 +136,9 @@
                     </span>
                   </button>
                 </div>
-                
-                </div>
-                <div class="col-md-4 col-md-offset-1">
+
+              </div>
+              <div class="col-md-4 col-md-offset-1">
                 <br>
                 <div ng-init="editProbability=true;visible9=false;" ng-mouseover="visible9=true" ng-mouseleave="visible9=false">
                   <span class="h4" ng-show="editProbability">
@@ -261,19 +261,19 @@
             </div>
             <div class="form-group">
               <label for="estimateAmount">Estimate Amount</label>
-                <input id="estimateAmount" class="form-control" value="{{opportunity.estimateAmount}}">
+              <input id="estimateAmount" class="form-control" value="{{opportunity.estimateAmount}}">
             </div>
             <div class="form-group">
               <label for="initialStage">Initial Stage</label>
-                <input id="initialStage" class="form-control" value="{{opportunity.initialStage}}">
+              <input id="initialStage" class="form-control" value="{{opportunity.initialStage}}">
             </div>
             <div class="form-group">
               <label for="initialAmount">Initial Amount</label>
-                <input id="initialAmount" class="form-control" value="{{opportunity.initialAmount}}">
+              <input id="initialAmount" class="form-control" value="{{opportunity.initialAmount}}">
             </div>
             <div class="form-group">
               <label for="probability">Probability</label>
-                <input id="probability" class="form-control" value="{{opportunity.probability}}">
+              <input id="probability" class="form-control" value="{{opportunity.probability}}">
             </div>
             <div class="form-group">
               <label for="description">Description</label>
