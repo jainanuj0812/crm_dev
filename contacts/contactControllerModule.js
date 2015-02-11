@@ -1,4 +1,4 @@
-var contactControllerModule = angular.module('crmApp.contactControllerModule',[ 'crmApp.contactServiceModule' ]);
+var contactControllerModule = angular.module('crmApp.contactControllerModule',['crmApp.contactServiceModule']);
 contactControllerModule.controller('contactListController', function($scope, contactService) {
   init();
   function init() {

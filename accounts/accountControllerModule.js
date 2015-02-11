@@ -1,4 +1,4 @@
-var accountControllerModule = angular.module('crmApp.accountControllerModule','crmApp.accountServiceModule']);
+var accountControllerModule = angular.module('crmApp.accountControllerModule',['crmApp.accountServiceModule']);
   accountControllerModule.controller('accountListController', function($scope,accountService) {
     init();
     function init() {

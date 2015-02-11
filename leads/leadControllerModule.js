@@ -1,4 +1,4 @@
-var leadControllerModule = angular.module('crmApp.leadControllerModule',[ 'crmApp.leadServiceModule' ]);
+var leadControllerModule = angular.module('crmApp.leadControllerModule',['crmApp.leadServiceModule']);
 leadControllerModule.controller('leadListController', function($scope,leadService) {
   init();
   function init() {
@@ -9,7 +9,7 @@ leadControllerModule.controller('leadListController', function($scope,leadServic
 
 );
 
-leadControllerModule.controller('viewLeadController', function($scope,$routeParams, leadService) {
+leadControllerModule.controller('viewLeadController', function($scope, $routeParams, leadService) {
   var leadId;
   $scope.lead = {};
   init();
