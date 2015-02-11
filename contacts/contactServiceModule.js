@@ -1,7 +1,5 @@
-var contactServiceModule = angular.module('crmApp.contactServiceModule',
-    [ 'crmApp.contactControllerModule' ]);
+var contactServiceModule = angular.module('crmApp.contactServiceModule',[ 'crmApp.contactControllerModule' ]);
 contactServiceModule.service('contactService', function() {
-
   this.getContacts = function() {
     return contacts;
   };

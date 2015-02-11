@@ -1,5 +1,4 @@
-var accountServiceModule = angular.module('crmApp.accountServiceModule',
-    [ 'crmApp.accountControllerModule' ]);
+var accountServiceModule = angular.module('crmApp.accountServiceModule', [ 'crmApp.accountControllerModule' ]);
 accountServiceModule.service('accountService', function() {
   this.getAccounts = function() {
     return accounts;
