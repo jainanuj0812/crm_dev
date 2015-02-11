@@ -102,45 +102,47 @@
     </div>
   </div>
 </div>
-<!-- event modal -->
+<!-- event model -->
 <div id="event" class="modal fade">
-  <div class="modal-dialog modal-md">
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-        <h4 class="modal-title">Add Task</h4>
-      </div>
-      <div class="modal-body">
-        <form>
-          <div class="form-group">
-            <div class="inner-addon left-addon">
-              <i class="glyphicon glyphicon-user iconSize"></i>
-              <input type="text" id="taskName" placeholder="Task Name" class="form-control textSize textInput">
+          <div class="modal-dialog modal-md">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <h4 class="modal-title">Add Task</h4>
+              </div>
+              <div class="modal-body">
+                <form>
+                  <div class="form-group">
+                    <div class="inner-addon left-addon">
+                      <i class="glyphicon glyphicon-user iconSize"></i>
+                      <input type="text" id="taskName" placeholder="Task Name" class="form-control textSize textInput">
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <div class="inner-addon left-addon">
+                      <i class="glyphicon glyphicon-user iconSize"></i>
+                      <select class="form-control textSize textInput" id="sel1">
+                        <option>&nbsp;&nbsp;&nbsp;--Availability--</option>
+                        <option>&nbsp;&nbsp;&nbsp;Occupied</option>
+                        <option>&nbsp;&nbsp;&nbsp;Free</option>
+                        <option>&nbsp;&nbsp;&nbsp;Away</option>
+                        <option>&nbsp;&nbsp;&nbsp;Undecided</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label for="message-text" class="control-label">Message:</label>
+                    <textarea class="form-control" id="message-text" placeholder="Description . . ."></textarea>
+                  </div>
+                </form>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-danger" data-dismiss="modal">Cancel</button>
+                <button type="button" class="btn btn-success">Save</button>
+              </div>
             </div>
           </div>
-          <div class="form-group">
-            <select class="form-control textSize textInput" id="sel1">
-              <option disabled selected>--Availability--</option>
-              <option>Occupied</option>
-              <option>Free</option>
-              <option>Away</option>
-              <option>Undecided</option>
-            </select>
-          </div>
-      </div>
-      <div class="form-group">
-        <label for="message-text" class="control-label">Message:</label>
-        <textarea class="form-control" id="message-text" placeholder="Description . . ."></textarea>
-      </div>
-      </form>
-    </div>
-    <div class="modal-footer">
-      <button type="button" class="btn btn-danger" data-dismiss="modal">Cancel</button>
-      <button type="button" class="btn btn-success">Save</button>
-    </div>
-  </div>
-</div>
-</div>
+        </div>
 <!-- Modal -->
 <div class="modal fade" id="quickAdd" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
   <div class="modal-dialog">
