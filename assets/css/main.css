@@ -78,6 +78,18 @@ pre{
 	border: 0;
 	
 }
+.editEnv
+{
+	color: blue; 
+	border: 0;
+	
+}
+.editCal
+{
+	color: blue; 
+	border: 0;
+	
+}
 .deleteBtn
 {
 	color: red;
