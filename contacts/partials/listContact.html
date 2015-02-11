@@ -91,7 +91,7 @@
             </div>
           </div>
           <div class="btn-group" style="float: right;">
-            <button id="mail" class="btn btn-default btn-lg btn-lg editEnv"  title="meeting" ng-click="#" data-toggle="modal" data-target="#">
+            <button id="mail" class="btn btn-default btn-lg btn-lg editEnv"  title="meeting" ng-click="#" data-toggle="modal" data-target="#mailevent">
               <i class="glyphicon glyphicon-envelope" ng-show="edit"></i>
             </button>
             <button id="eventbox" class="btn btn-default btn-lg btn-lg editCal"  title="meeting" ng-click="#" data-toggle="modal" data-target="#event">
@@ -146,6 +146,42 @@
 </div>
 </div>
 </div>
+
+<!-- mailt model -->
+<div id="mailevent" class="modal fade">
+<div class="modal-dialog modal-md">
+<div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+<h4 class="modal-title">Mail this contact</h4>
+</div>
+<div class="modal-body">
+<form>
+<div class="form-group">
+<label for="message-text" class="control-label">To : </label>
+<input type="text" placeholder="Email Id" class="form-control textSize textInput">
+</div>
+
+<div class="form-group">
+<label for="message-text" class="control-label">Subject : </label>
+<input type="text" placeholder="" class="form-control textSize textInput">
+</div>
+
+<div class="form-group">
+<label for="message-text" class="control-label">Message : </label>
+<textarea class="form-control" id="message-text" placeholder="write here . . ."></textarea>
+</div>
+</form>
+</div>
+<div class="modal-footer">
+<button type="button" class="btn btn-danger" data-dismiss="modal">Cancel</button>
+<button type="button" class="btn btn-success">Save</button>
+</div>
+</div>
+</div>
+</div>
+
+
 <!-- Modal -->
 <div class="modal fade" id="quickAdd" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
   <div class="modal-dialog">
