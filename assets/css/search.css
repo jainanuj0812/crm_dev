@@ -1,6 +1,6 @@
 #search input[type="text"] {
     background: url(search-white.png) no-repeat 10px 6px #444;
-    border: 0 none;
+    border: 0;
     font: bold 12px Arial,Helvetica,Sans-serif;
     color: #d7d7d7;
     width:150px;
@@ -12,23 +12,35 @@
     -webkit-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.1), 0 1px 3px rgba(0, 0, 0, 0.2) inset;
     -moz-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.1), 0 1px 3px rgba(0, 0, 0, 0.2) inset;
     box-shadow: 0 1px 0 rgba(255, 255, 255, 0.1), 0 1px 3px rgba(0, 0, 0, 0.2) inset;
+    }
+    
+    
+@media(min-width: 767px){
+	#search input[type="text"] {
     -webkit-transition: all 0.7s ease 0s;
     -moz-transition: all 0.7s ease 0s;
     -o-transition: all 0.7s ease 0s;
     transition: all 0.7s ease 0s;
     }
-    
+}
+
+@media(max-width: 767px){   
+    #search input[type="text"]:focus {    
+    	width: 150px !important;    
+    }
+    #search input[type="text"] {
+    	width: 150px !important;
+    }
+}
     
 
 
 #search input[type="text"]:focus {
     background: url(search-dark.png) no-repeat 10px 6px #fcfcfc;
     color: #6a6f75;
-    border: 0 none;
+    border: 0;
     width: 600px;
-    -webkit-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.1), 0 1px 0 rgba(0, 0, 0, 0.9) inset;
-    -moz-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.1), 0 1px 0 rgba(0, 0, 0, 0.9) inset;
-    box-shadow: 0 1px 0 rgba(255, 255, 255, 0.1), 0 1px 0 rgba(0, 0, 0, 0.9) inset;
+    
     text-shadow: 0 2px 3px rgba(0, 0, 0, 0.1);
     }
 

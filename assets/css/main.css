@@ -300,3 +300,11 @@ pre{
   border-radius: 25px; 
   outline: none;
 }
+
+/* css to make left corner icon to be hide in mobile view*/
+
+@media(max-width: 767px){
+	li.itemHide{
+		display: none;
+	}
+}
