@@ -41,8 +41,8 @@
              		 </div>
                 
                 <div ng-init="editHome=true;visible3=false;" ng-mouseover="visible3=true" ng-mouseleave="visible3=false">
-                <span class="h4"  ng-show="editHome"><i class="glyphicon glyphicon-home"></i>{{" "+contact.address}}, {{" "+contact.state}},{{" "+contact.country}}</span>
-             		<span ng-hide="editHome"><input type="text" value="{{contact.address}}" autofocus onfocus="this.value = this.value;"><input type="text" value="{{contact.state}}"><input type="text" value="{{contact.country}}"></span>
+                <span class="h4"  ng-show="editHome"><i class="glyphicon glyphicon-map-marker"></i>{{" "+contact.addressLine1}},{{" "+contact.addressLine2}},{{" "+contact.country}} ({{contact.state}})</span>
+             		<span ng-hide="editHome"><input type="text" value="{{contact.addressLine1}}" autofocus onfocus="this.value = this.value;"><input type="text" value="{{contact.addressLine2}}"><input type="text" value="{{contact.state}}"><input type="text" value="{{contact.country}}"></span>
              		<button type="button" class="btn btn-default   editBtn" ng-click="editHome=!editHome" ng-show="visible3">
              		  <span ng-show="editHome"><i class="glyphicon glyphicon-pencil"></i></span>
              		  <span ng-hide="editHome"><i class="glyphicon glyphicon-ok"></i></span>
@@ -93,7 +93,7 @@
       <div class="modal-body">
         <form>
         <div class="form-group">
-        <label for="firstName">First name:</label>
+        <label for="firstName">First name</label>
 					<div class="inner-addon left-addon">
 						<i class="glyphicon glyphicon-user"></i>
 						<input id="firstName"  class="form-control" value="{{contact.firstName}}">
@@ -102,7 +102,7 @@
 				</div>
 				
         <div class="form-group">
-        <label for="lastName">Last name:</label>
+        <label for="lastName">Last name</label>
 					<div class="inner-addon left-addon">
 						<i class="glyphicon glyphicon-user"></i>
 						<input id="lastName" class="form-control" value="{{contact.lastName}}">
@@ -110,7 +110,7 @@
 					</div>
 				</div>
 				<div class="form-group">
-				<label for="email">E-mail:</label>
+				<label for="email">Email ID</label>
 					<div class="inner-addon left-addon">
 						<i class="glyphicon glyphicon-envelope"></i>
 						<input id="email" class="form-control" value="{{contact.email}}">
@@ -119,7 +119,7 @@
 				</div>
 				
 				<div class="form-group">
-				<label for="phoneNo">Phone no:</label>
+				<label for="phoneNo">Phone No</label>
 					<div class="inner-addon left-addon">
 						<i class="glyphicon glyphicon-earphone"></i>
 						<input id="firstName" class="form-control" value="{{contact.phoneNo}}">
@@ -128,7 +128,7 @@
 				</div>
 				
 				<div class="form-group">
-				<label for="company">Company:</label>
+				<label for="company">Company</label>
 					<div class="inner-addon left-addon">
 						<i class="glyphicon glyphicon-earphone"></i>
 						<input id="company" class="form-control" value="{{contact.company}}">
@@ -137,7 +137,7 @@
 				</div>
 				
 				<div class="form-group">
-				<label for="position">Position:</label>
+				<label for="position">Position</label>
 					<div class="inner-addon left-addon">
 						<i class="glyphicon glyphicon-earphone"></i>
 						<input id="position" class="form-control" value="{{contact.position}}">
@@ -146,7 +146,7 @@
 				</div>
 				
 				<div class="form-group">
-				<label for="dob">D.O.B.:</label>
+				<label for="dob">D.O.B.</label>
 					<div class="inner-addon left-addon">
 						<i class="glyphicon glyphicon-earphone"></i>
 						<input id="dob" class="form-control" value="{{contact.dob}}">
@@ -155,27 +155,37 @@
 				</div>
 				
 				<div class="form-group">
-				<label for="address">Address:</label>
+				<label for="address">Address Line 1</label>
 					<div class="inner-addon left-addon">
-						<i class="glyphicon glyphicon-earphone"></i>
-						<input id="address" class="form-control" value="{{contact.address}}">
+						<i class="glyphicon glyphicon-map-marker"></i>
+						<input id="addressLine1" class="form-control" value="{{contact.addressLine1}}">
 						 
 					</div>
 				</div>
 				
 				<div class="form-group">
-				<label for="state">State:</label>
+				<label for="address">Address Line 2</label>
 					<div class="inner-addon left-addon">
-						<i class="glyphicon glyphicon-earphone"></i>
-						<input id="state" class="form-control" value="{{contact.state}}">
+						<i class="glyphicon glyphicon-map-marker"></i>
+						<input id="addressLine2" class="form-control" value="{{contact.addressLine2}}">
 						 
 					</div>
 				</div>
-					<div class="form-group">
-				<label for="country">Country:</label>
+				
+				<div class="form-group">
+				<label for="country">Country</label>
 					<div class="inner-addon left-addon">
 						<i class="glyphicon glyphicon-earphone"></i>
 						<input id="country" class="form-control" value="{{contact.country}}">
+						 
+					</div>
+				</div>
+				
+				<div class="form-group">
+				<label for="state">State</label>
+					<div class="inner-addon left-addon">
+						<i class="glyphicon glyphicon-earphone"></i>
+						<input id="state" class="form-control" value="{{contact.state}}">
 						 
 					</div>
 				</div>
