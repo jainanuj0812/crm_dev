@@ -7,6 +7,10 @@
         <div class="row">
           <div class="col-lg-4 col-lg-offset-1">
             <div class="form-group">
+              <label>Opportunity Name</label>
+                <input id="opportunityName" class="form-control">
+            </div>
+            <div class="form-group">
               <label>Lead Name</label>
                 <input id="leadName" class="form-control" >
             </div>
@@ -15,8 +19,8 @@
                 <input id="nextStep" class="form-control">
             </div>
             <div class="form-group ">
-              <label>Lead Source</label>
-                <select class="form-control">
+              <label>Source</label>
+                <select class="form-control" id="source">
                 <option disabled selected>--select--</option>
                   <option>Cold call</option>
                   <option>Meeting</option>
@@ -25,11 +29,15 @@
             </div>
             <div class="form-group ">
               <label>Team</label>
-                <select class="form-control">
+                <select class="form-control" id="team">
                   <option disabled selected>--select--</option>
                   <option>Hotwax Systems</option>
                   <option>Hotwax Media</option>
                 </select>
+            </div>
+            <div class="form-group ">
+              <label>Description</label>
+              <textarea rows="4" class="form-control" id="description"></textarea>
             </div>
           </div>
           <div class="col-lg-4 col-lg-offset-2">
@@ -38,15 +46,26 @@
                 <input id="assignedTo" class="form-control">
             </div>
             <div class="form-group ">
-              <label>Likely</label>
-              <div class="inner-addon left-addon">
-                <span class="glyphicon glyphicon-usd"></span>
-                <input id="likely" class="form-control">
-              </div>
+              <label>Estimate Amount</label>
+                <input id="estimateAmount" class="form-control">
             </div>
             <div class="form-group ">
-              <label>Description</label>
-              <textarea rows="4" class="form-control" id="description"></textarea>
+              <label>Probability</label>
+                <input id="probability" class="form-control">
+            </div>
+            <div class="form-group ">
+              <label>Initial Stage</label>
+                <select id="initialStage" class="form-control">
+                  <option disabled selected>--select--</option>
+                  <option>Prospect</option>
+                  <option>Proposal</option>
+                  <option>Quoted</option>
+                  <option>Closed</option>
+                </select>
+            </div>
+            <div class="form-group ">
+              <label>Initial Amount</label>
+                <input id="initialAmount" class="form-control">
             </div>
           </div>
         </div>

@@ -28,7 +28,8 @@
                     <b>{{contact.firstName +" "+contact.lastName}}</b>
                   </span>
                   <span ng-hide="editName">
-                    <input type="text" value="{{contact.firstName}}" autofocus onfocus="this.value = this.value;"><input type="text" value="{{contact.lastName}}" autofocus onfocus="this.value = this.value;">
+                    <input type="text" value="{{contact.firstName}}" autofocus onfocus="this.value = this.value;" class="form-control" style="width:40%">
+                    <input type="text" value="{{contact.lastName}}"  class="form-control" style="width:40%">
                   </span>
 
                   <button type="button" class="btn btn-sm btn-default editBtn" ng-click="editName=!editName" ng-show="visible">
@@ -44,9 +45,9 @@
                 <div ng-init="editWork=true;visible2=false;" ng-mouseover="visible2=true" ng-mouseleave="visible2=false">
                   <span class="h3" ng-show="editWork">{{contact.position}} at {{contact.company}}</span>
                   <span ng-hide="editWork">
-                    <input type="text" value="{{contact.position}}" autofocus onfocus="this.value = this.value;">
+                    <input type="text" value="{{contact.position}}" autofocus onfocus="this.value = this.value;" class="form-control" style="width:40%">
                     at
-                    <input type="text" value="{{contact.company}}">
+                    <input type="text" value="{{contact.company}}" class="form-control" style="width:40%">
                   </span>
                   <button type="button" class="btn btn-default   editBtn" ng-click="editWork=!editWork" ng-show="visible2">
                     <span ng-show="editWork">
@@ -64,10 +65,10 @@
                     {{" "+contact.addressLine1}},{{" "+contact.addressLine2}},{{" "+contact.country}} ({{contact.state}})
                   </span>
                   <span ng-hide="editHome">
-                    <input type="text" value="{{contact.addressLine1}}" autofocus onfocus="this.value = this.value;">
-                    <input type="text" value="{{contact.addressLine2}}">
-                    <input type="text" value="{{contact.state}}">
-                    <input type="text" value="{{contact.country}}">
+                    <input type="text" value="{{contact.addressLine1}}" autofocus onfocus="this.value = this.value;" class="form-control" style="width:40%">
+                    <input type="text" value="{{contact.addressLine2}}" class="form-control" style="width:40%">
+                    <input type="text" value="{{contact.state}}" class="form-control" style="width:40%">
+                    <input type="text" value="{{contact.country}}" class="form-control" style="width:40%">
                   </span>
                   <button type="button" class="btn btn-default   editBtn" ng-click="editHome=!editHome" ng-show="visible3">
                     <span ng-show="editHome">
@@ -85,7 +86,7 @@
                     {{contact.phoneNo}}
                   </span>
                   <span ng-hide="editPhone">
-                    <input type="text" value="{{contact.phoneNo}}" autofocus onfocus="this.value = this.value;">
+                    <input type="text" value="{{contact.phoneNo}}" autofocus onfocus="this.value = this.value;" class="form-control" style="width:40%">
                   </span>
                   <button type="button" class="btn btn-default   editBtn" ng-click="editPhone=!editPhone" ng-show="visible4">
                     <span ng-show="editPhone">
@@ -103,7 +104,7 @@
                     {{contact.email}}
                   </span>
                   <span ng-hide="editEmail">
-                    <input type="text" value="{{contact.email}}" autofocus onfocus="this.value = this.value;">
+                    <input type="text" value="{{contact.email}}" autofocus onfocus="this.value = this.value;" class="form-control" style="width:40%">
                   </span>
                   <button type="button" class="btn btn-default   editBtn" ng-click="editEmail=!editEmail" ng-show="visible5">
                     <span ng-show="editEmail">
@@ -121,7 +122,7 @@
                     {{contact.dob}}
                   </span>
                   <span ng-hide="editDob">
-                    <input type="text" value="{{contact.dob}}" autofocus onfocus="this.value = this.value;">
+                    <input type="date" value="{{contact.dob}}" autofocus onfocus="this.value = this.value;" class="form-control" style="width:40%">
                   </span>
                   <button type="button" class="btn btn-default   editBtn" ng-click="editDob=!editDob" ng-show="visible6">
                     <span ng-show="editDob">

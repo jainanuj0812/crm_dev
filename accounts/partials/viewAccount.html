@@ -28,7 +28,7 @@
                     <b>{{account.accountName}}<b>
                   </span>
                   <span ng-hide="editName">
-                    <input type="text" value="{{account.accountName}}" autofocus onfocus="this.value = this.value;">
+                    <input type="text" value="{{account.accountName}}" autofocus onfocus="this.value = this.value;" class="form-control" style="width:40%">
                   </span>
                   <button type="button" class="btn btn-sm btn-default editBtn" ng-click="editName=!editName" ng-show="visible">
                     <span ng-show="editName">
@@ -46,7 +46,7 @@
                     {{" "+account.responsiblePerson}}
                   </span>
                   <span ng-hide="editPerson">
-                    <input type="text" value="{{account.responsiblePerson}}" autofocus onfocus="this.value = this.value;">
+                    <input type="text" value="{{account.responsiblePerson}}" autofocus onfocus="this.value = this.value;" class="form-control" style="width:40%">
                   </span>
                   <button type="button" class="btn btn-sm btn-default editBtn" ng-click="editPerson=!editPerson" ng-show="visible1">
                     <span ng-show="editPerson">
@@ -64,7 +64,7 @@
                     {{" "+account.phoneNo}}
                   </span>
                   <span ng-hide="editPhone">
-                    <input type="text" value="{{account.phoneNo}}" autofocus onfocus="this.value = this.value;">
+                    <input type="text" value="{{account.phoneNo}}" autofocus onfocus="this.value = this.value;" class="form-control" style="width:40%">
                   </span>
                   <button type="button" class="btn btn-sm btn-default editBtn" ng-click="editPhone=!editPhone" ng-show="visible2">
                     <span ng-show="editPhone">
@@ -82,7 +82,7 @@
                     {{" "+account.email}}
                   </span>
                   <span ng-hide="editEmail">
-                    <input type="text" value="{{account.email}}" autofocus onfocus="this.value = this.value;">
+                    <input type="text" value="{{account.email}}" autofocus onfocus="this.value = this.value;" class="form-control" style="width:40%">
                   </span>
                   <button type="button" class="btn btn-sm btn-default editBtn" ng-click="editEmail=!editEmail" ng-show="visible3">
                     <span ng-show="editPhone">
@@ -100,7 +100,7 @@
                     {{" "+account.industry}}
                   </span>
                   <span ng-hide="editInd">
-                    <input type="text" value="{{account.industry}}" autofocus onfocus="this.value = this.value;">
+                    <input type="text" value="{{account.industry}}" autofocus onfocus="this.value = this.value;" class="form-control" style="width:40%">
                   </span>
                   <button type="button" class="btn btn-sm btn-default editBtn" ng-click="editInd=!editInd" ng-show="visible5">
                     <span ng-show="editInd">
@@ -118,8 +118,8 @@
                     {{" "+account.annualIncome}}{{" "+account.currency}}
                   </span>
                   <span ng-hide="editInc">
-                    <input type="text" value="{{account.annualIncome}}" autofocus onfocus="this.value = this.value;">
-                    <input type="text" value="{{account.currency}}">
+                    <input type="text" value="{{account.annualIncome}}" autofocus onfocus="this.value = this.value;" class="form-control" style="width:40%">
+                    <input type="text" value="{{account.currency}}" class="form-control" style="width:40%">
                   </span>
                   <button type="button" class="btn btn-sm btn-default editBtn" ng-click="editInc=!editInc" ng-show="visible6">
                     <span ng-show="editInc">
@@ -137,8 +137,8 @@
                     <br>{{" "+account.comment}}
                   </span>
                   <span ng-hide="editCom">
-                    <input type="text" value="{{account.comment}}" autofocus onfocus="this.value = this.value;">
-                    <input type="text" value="{{account.comment}}">
+                    <input type="text" value="{{account.comment}}" autofocus onfocus="this.value = this.value;" class="form-control" style="width:40%">
+                   
                   </span>
                   <button type="button" class="btn btn-sm btn-default editBtn" ng-click="editCom=!editCom" ng-show="visible7">
                     <span ng-show="editCom">
