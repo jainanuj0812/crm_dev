@@ -47,6 +47,7 @@
                     {{" "+lead.status}}
                   </span>
                   <span ng-hide="editStatus">
+                    <h4 style="font-weight: bold;">Status :</h4>
                     <input type="text" value="{{contact.status}}" autofocus onfocus="this.value = this.value;">
                   </span>
                   <button type="button" class="btn btn-default   editBtn" ng-click="editStatus=!editStatus" ng-show="visible2">
@@ -54,6 +55,7 @@
                       <i class="glyphicon glyphicon-pencil"></i>
                     </span>
                     <span ng-hide="editStatus">
+                    
                       <i class="glyphicon glyphicon-ok"></i>
                     </span>
                   </button>
@@ -65,6 +67,7 @@
                     {{" "+lead.sourceName}}
                   </span>
                   <span ng-hide="editSource">
+                    <h4 style="font-weight: bold;">Source Name :</h4>
                     <input type="text" value="{{lead.sourceName}}" autofocus onfocus="this.value = this.value;">
                   </span>
                   <button type="button" class="btn btn-default   editBtn" ng-click="editSource=!editSource" ng-show="visible3">
@@ -72,6 +75,7 @@
                       <i class="glyphicon glyphicon-pencil"></i>
                     </span>
                     <span ng-hide="editSource">
+                    
                       <i class="glyphicon glyphicon-ok"></i>
                     </span>
                   </button>
@@ -83,6 +87,7 @@
                     <br> {{" "+lead.description}}
                   </span>
                   <span ng-hide="editDescription">
+                    <h4 style="font-weight: bold;">Description :</h4>
                     <input type="text" value="{{lead.description}}" autofocus onfocus="this.value = this.value;">
                   </span>
                   <button type="button" class="btn btn-default   editBtn" ng-click="editDescription=!editDescription" ng-show="visible4">
@@ -90,6 +95,7 @@
                       <i class="glyphicon glyphicon-pencil"></i>
                     </span>
                     <span ng-hide="editDescription">
+                    
                       <i class="glyphicon glyphicon-ok"></i>
                     </span>
                   </button>
@@ -102,6 +108,7 @@
                     {{lead.phoneNo}}
                   </span>
                   <span ng-hide="editPhone">
+                    <i class="glyphicon glyphicon-earphone"></i>
                     <input type="text" value="{{lead.phoneNo}}" autofocus onfocus="this.value = this.value;">
                   </span>
                   <button type="button" class="btn btn-default   editBtn" ng-click="editPhone=!editPhone" ng-show="visible5">
@@ -109,6 +116,7 @@
                       <i class="glyphicon glyphicon-pencil"></i>
                     </span>
                     <span ng-hide="editPhone">
+                    
                       <i class="glyphicon glyphicon-ok"></i>
                     </span>
                   </button>
@@ -120,6 +128,7 @@
                     {{" "+lead.email}}
                   </span>
                   <span ng-hide="editEmail">
+                    <i class="glyphicon glyphicon-envelope"></i>
                     <input type="text" value="{{lead.email}}" autofocus onfocus="this.value = this.value;">
                   </span>
                   <button type="button" class="btn btn-default   editBtn" ng-click="editEmail=!editEmail" ng-show="visible6">
@@ -127,6 +136,7 @@
                       <i class="glyphicon glyphicon-pencil"></i>
                     </span>
                     <span ng-hide="editEmail">
+                      
                       <i class="glyphicon glyphicon-ok"></i>
                     </span>
                   </button>
@@ -138,6 +148,7 @@
                     {{lead.company}}
                   </span>
                   <span ng-hide="editCompany">
+                    <h4 style="font-weight: bold;">Company :</h4>
                     <input type="text" value="{{lead.company}}" autofocus onfocus="this.value = this.value;">
                   </span>
                   <button type="button" class="btn btn-default   editBtn" ng-click="editCompany=!editCompany" ng-show="visible9">
@@ -145,6 +156,7 @@
                       <i class="glyphicon glyphicon-pencil"></i>
                     </span>
                     <span ng-hide="editCompany">
+                    
                       <i class="glyphicon glyphicon-ok"></i>
                     </span>
                   </button>
@@ -156,7 +168,9 @@
                     {{lead.addressLine1}},{{lead.addressLine2}}
                   </span>
                   <span ng-hide="editAddress">
+                  <h4 style="font-weight: bold;">Address Line1 :</h4>
                     <input type="text" value="{{lead.addressLine1}}" autofocus onfocus="this.value = this.value;">
+                    <h4 style="font-weight: bold;">Address Line2 :</h4>
                     <input type="text" value="{{lead.addressLine2}}">
                   </span>
                   <button type="button" class="btn btn-default   editBtn" ng-click="editAddress=!editAddress" ng-show="visible7">
@@ -175,7 +189,9 @@
                     {{lead.country+" "}}({{lead.state}})
                   </span>
                   <span ng-hide="editCountry">
+                  <h4 style="font-weight: bold;">Country :</h4>
                     <input type="text" value="{{lead.country}}" autofocus onfocus="this.value = this.value;">
+                    <h4 style="font-weight: bold;">State :</h4>
                     <input type="text" value="{{lead.state}}">
                   </span>
                   <button type="button" class="btn btn-default   editBtn" ng-click="editCountry=!editCountry" ng-show="visible8">

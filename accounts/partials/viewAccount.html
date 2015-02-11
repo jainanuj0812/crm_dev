@@ -46,6 +46,7 @@
                     {{" "+account.responsiblePerson}}
                   </span>
                   <span ng-hide="editPerson">
+                  <h4 style="font-weight: bold;">Responsible Person</h4>
                     <input type="text" value="{{account.responsiblePerson}}" autofocus onfocus="this.value = this.value;" class="form-control" style="width: 40%">
                   </span>
                   <button type="button" class="btn btn-sm btn-default editBtn" ng-click="editPerson=!editPerson" ng-show="visible1">
@@ -54,7 +55,7 @@
                     </span>
 
                     <span ng-hide="editPerson">
-                      <h4 style="font-weight: bold;">Responsible Person</h4>
+                      
                       <i class="glyphicon glyphicon-ok"></i>
                     </span>
                   </button>
@@ -66,6 +67,7 @@
                     {{" "+account.phoneNo}}
                   </span>
                   <span ng-hide="editPhone">
+                  <i class="glyphicon glyphicon-earphone"></i>
                     <input type="text" value="{{account.phoneNo}}" autofocus onfocus="this.value = this.value;" class="form-control" style="width: 40%">
                   </span>
                   <button type="button" class="btn btn-sm btn-default editBtn" ng-click="editPhone=!editPhone" ng-show="visible2">
@@ -74,7 +76,7 @@
                     </span>
 
                     <span ng-hide="editPhone">
-                      <i class="glyphicon glyphicon-earphone"></i>
+                      
                       <i class="glyphicon glyphicon-ok"></i>
                     </span>
                   </button>
@@ -86,6 +88,7 @@
                     {{" "+account.email}}
                   </span>
                   <span ng-hide="editEmail">
+                  <i class="glyphicon glyphicon-envelope"></i>
                     <input type="text" value="{{account.email}}" autofocus onfocus="this.value = this.value;" class="form-control" style="width: 40%">
                   </span>
                   <button type="button" class="btn btn-sm btn-default editBtn" ng-click="editEmail=!editEmail" ng-show="visible3">
@@ -94,7 +97,7 @@
                     </span>
 
                     <span ng-hide="editPhone">
-                      <i class="glyphicon glyphicon-envelope"></i>
+                      
                       <i class="glyphicon glyphicon-ok"></i>
                     </span>
                   </button>
@@ -106,6 +109,7 @@
                     {{" "+account.industry}}
                   </span>
                   <span ng-hide="editInd">
+                  <h4 style="font-weight: bold;">Industry</h4>
                     <input type="text" value="{{account.industry}}" autofocus onfocus="this.value = this.value;" class="form-control" style="width: 40%">
                   </span>
                   <button type="button" class="btn btn-sm btn-default editBtn" ng-click="editInd=!editInd" ng-show="visible5">
@@ -114,7 +118,7 @@
                     </span>
 
                     <span ng-hide="editInd">
-                      <h4 style="font-weight: bold;">Industry</h4>
+                      
                       <i class="glyphicon glyphicon-ok"></i>
                     </span>
                   </button>
@@ -126,6 +130,7 @@
                     {{" "+account.annualIncome}}{{" "+account.currency}}
                   </span>
                   <span ng-hide="editInc">
+                  <h4 style="font-weight: bold;">Annual Income</h4>
                     <input type="text" value="{{account.annualIncome}}" autofocus onfocus="this.value = this.value;" class="form-control" style="width: 40%">
                     <input type="text" value="{{account.currency}}" class="form-control" style="width: 40%">
                   </span>
@@ -135,7 +140,7 @@
                     </span>
 
                     <span ng-hide="editInc">
-                      <h4 style="font-weight: bold;">Annual Income</h4>
+                      
                       <i class="glyphicon glyphicon-ok"></i>
                     </span>
                   </button>
