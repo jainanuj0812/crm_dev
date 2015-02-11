@@ -39,6 +39,7 @@
                     <b>{{opportunity.leadName}}</b>
                   </span>
                   <span ng-hide="leadName">
+                  <h4 style="font-weight: bold;">Lead Name :</h4>
                     <input type="text" value="{{opportunity.opportunityName}}" autofocus onfocus="this.value = this.value;">
                   </span>
                   <button type="button" class="btn btn-sm btn-default editBtn" ng-click="leadName=!leadName" ng-show="visible8">
@@ -56,6 +57,7 @@
                     {{" "+opportunity.assignedTo}}
                   </span>
                   <span ng-hide="editAssigned">
+                    <h4 style="font-weight: bold;">Assigned to :</h4>
                     <input type="text" value="{{opportunity.assignedTo}}" autofocus onfocus="this.value = this.value;">
                   </span>
                   <button type="button" class="btn btn-default   editBtn" ng-click="editAssigned=!editAssigned" ng-show="visible2">
@@ -73,6 +75,7 @@
                     {{" "+opportunity.nextStep}}
                   </span>
                   <span ng-hide="editNext">
+                  <h4 style="font-weight: bold;">Next Step :</h4>
                     <input type="text" value="{{opportunity.nextStep}}" autofocus onfocus="this.value = this.value;">
                   </span>
                   <button type="button" class="btn btn-default   editBtn" ng-click="editNext=!editNext" ng-show="visible3">
@@ -90,6 +93,7 @@
                     {{" "+opportunity.source}}
                   </span>
                   <span ng-hide="editSource">
+                  <h4 style="font-weight: bold;">Source :</h4>
                     <input type="text" value="{{opportunity.source}}" autofocus onfocus="this.value = this.value;">
                   </span>
                   <button type="button" class="btn btn-default   editBtn" ng-click="editSource=!editSource" ng-show="visible4">
@@ -107,6 +111,7 @@
                     {{" "+opportunity.team}}
                   </span>
                   <span ng-hide="editTeam">
+                  <h4 style="font-weight: bold;">Team :</h4>
                     <input type="text" value="{{opportunity.team}}" autofocus onfocus="this.value = this.value;">
                   </span>
                   <button type="button" class="btn btn-default   editBtn" ng-click="editTeam=!editTeam" ng-show="visible5">
@@ -125,6 +130,7 @@
                     {{opportunity.estimateAmount}}
                   </span>
                   <span ng-hide="editLikely">
+                  <h4 style="font-weight: bold;">Estimate Amount :</h4>
                     <input type="text" value="{{opportunity.estimateAmount}}" autofocus onfocus="this.value = this.value;">
                   </span>
                   <button type="button" class="btn btn-default   editBtn" ng-click="editLikely=!editLikely" ng-show="visible6">
@@ -146,6 +152,7 @@
                     {{opportunity.probability}}
                   </span>
                   <span ng-hide="editProbability">
+                  <h4 style="font-weight: bold;">Probability :</h4>
                     <input type="text" value="{{opportunity.probability}}" autofocus onfocus="this.value = this.value;">
                   </span>
                   <button type="button" class="btn btn-default   editBtn" ng-click="editProbability=!editProbability" ng-show="visible9">
@@ -164,6 +171,7 @@
                     {{opportunity.initialStage}}
                   </span>
                   <span ng-hide="editStage">
+                  <h4 style="font-weight: bold;">Initial Stage :</h4>
                     <input type="text" value="{{opportunity.initialStage}}" autofocus onfocus="this.value = this.value;">
                   </span>
                   <button type="button" class="btn btn-default   editBtn" ng-click="editStage=!editStage" ng-show="visible10">
@@ -182,6 +190,7 @@
                     {{opportunity.initialAmount}}
                   </span>
                   <span ng-hide="editAmount">
+                  <h4 style="font-weight: bold;">Amount :</h4>
                     <input type="text" value="{{opportunity.initialAmount}" autofocus onfocus="this.value = this.value;">
                   </span>
                   <button type="button" class="btn btn-default   editBtn" ng-click="editAmount=!editAmount" ng-show="visible11">
@@ -198,6 +207,7 @@
                 <div ng-init="editDescription=true;visible7=false" ng-mouseover="visible7=true" ng-mouseleave="visible7=false">
                   <span class="h4" ng-show="editDescription">{{opportunity.description}}</span>
                   <span ng-hide="editDescription">
+                  <h4 style="font-weight: bold;">Description :</h4>
                     <input type="text" value="{{opportunity.description}}" autofocus onfocus="this.value = this.value;">
                   </span>
                   <button type="button" class="btn btn-default   editBtn" ng-click="editDescription=!editDescription" ng-show="visible7">

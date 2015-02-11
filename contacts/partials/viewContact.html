@@ -28,7 +28,9 @@
                     <b>{{contact.firstName +" "+contact.lastName}}</b>
                   </span>
                   <span ng-hide="editName">
+                  <h4 style="font-weight: bold;">First Name :</h4>
                     <input type="text" value="{{contact.firstName}}" autofocus onfocus="this.value = this.value;" class="form-control" style="width:40%">
+                    <h4 style="font-weight: bold;">Last Name :</h4>
                     <input type="text" value="{{contact.lastName}}"  class="form-control" style="width:40%">
                   </span>
 
@@ -45,8 +47,10 @@
                 <div ng-init="editWork=true;visible2=false;" ng-mouseover="visible2=true" ng-mouseleave="visible2=false">
                   <span class="h3" ng-show="editWork">{{contact.position}} at {{contact.company}}</span>
                   <span ng-hide="editWork">
+                  <h4 style="font-weight: bold;">Position :</h4>
                     <input type="text" value="{{contact.position}}" autofocus onfocus="this.value = this.value;" class="form-control" style="width:40%">
                     at
+                    <h4 style="font-weight: bold;">Company :</h4>
                     <input type="text" value="{{contact.company}}" class="form-control" style="width:40%">
                   </span>
                   <button type="button" class="btn btn-default   editBtn" ng-click="editWork=!editWork" ng-show="visible2">
@@ -65,9 +69,13 @@
                     {{" "+contact.addressLine1}},{{" "+contact.addressLine2}},{{" "+contact.country}} ({{contact.state}})
                   </span>
                   <span ng-hide="editHome">
+                  <h4 style="font-weight: bold;">Address Line1 :</h4>
                     <input type="text" value="{{contact.addressLine1}}" autofocus onfocus="this.value = this.value;" class="form-control" style="width:40%">
+                    <h4 style="font-weight: bold;">Address Line2 :</h4>
                     <input type="text" value="{{contact.addressLine2}}" class="form-control" style="width:40%">
+                    <h4 style="font-weight: bold;">State :</h4>
                     <input type="text" value="{{contact.state}}" class="form-control" style="width:40%">
+                    <h4 style="font-weight: bold;">Country :</h4>
                     <input type="text" value="{{contact.country}}" class="form-control" style="width:40%">
                   </span>
                   <button type="button" class="btn btn-default   editBtn" ng-click="editHome=!editHome" ng-show="visible3">
@@ -86,6 +94,7 @@
                     {{contact.phoneNo}}
                   </span>
                   <span ng-hide="editPhone">
+                  <i class="glyphicon glyphicon-earphone"></i>
                     <input type="text" value="{{contact.phoneNo}}" autofocus onfocus="this.value = this.value;" class="form-control" style="width:40%">
                   </span>
                   <button type="button" class="btn btn-default   editBtn" ng-click="editPhone=!editPhone" ng-show="visible4">
@@ -104,6 +113,7 @@
                     {{contact.email}}
                   </span>
                   <span ng-hide="editEmail">
+                  <i class="glyphicon glyphicon-envelope"></i>
                     <input type="text" value="{{contact.email}}" autofocus onfocus="this.value = this.value;" class="form-control" style="width:40%">
                   </span>
                   <button type="button" class="btn btn-default   editBtn" ng-click="editEmail=!editEmail" ng-show="visible5">
@@ -122,6 +132,7 @@
                     {{contact.dob}}
                   </span>
                   <span ng-hide="editDob">
+                    <i class="glyphicon glyphicon-gift"></i>
                     <input type="date" value="{{contact.dob}}" autofocus onfocus="this.value = this.value;" class="form-control" style="width:40%">
                   </span>
                   <button type="button" class="btn btn-default   editBtn" ng-click="editDob=!editDob" ng-show="visible6">
