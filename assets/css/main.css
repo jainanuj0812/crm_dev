@@ -316,10 +316,24 @@ pre{
     height: 22px;
     line-height: 20px;
     text-align: center;
-    padding: 0;
+    padding: 1px;
     display: inline-block!important;
     opacity: .8;
     -webkit-transition: all .1s;
     transition: all .1s;
   }
   
+#profileButton .btn-outline{
+	border-color: #2e333b;
+color: white;
+	
+}
+
+.fa{
+	display: inline-block;
+font-family: FontAwesome;
+font-style: normal;
+font-weight: 400;
+line-height: 1;
+-webkit-font-smoothing: antialiased;
+}

@@ -47,7 +47,7 @@
         <div class="navbar-header" style="background: #F5F5F5; width: 100%;">
           <button data-toggle="collapse-side" data-target=".side-collapse" data-target-2=".side-collapse-container" type="button" class="navbar-toggle pull-left"><span class="glyphicon glyphicon-menu-hamburger" aria-hidden="true"></span></button>
             <a href="#/dashboard"><img src="assets/images/apacheLogo.png"  id="logo"></a>
-            <div class="pull-right" style="margin-top: 15px; margin-right: 5px;">
+            <div class="pull-right" style="margin-top: 15px;">
               <ul class="list-inline" style="max-height: 60px;">
                 <li style="">		
                   <form method="get" action="/search" id="search" style="border: none;">
@@ -85,12 +85,11 @@
                 <div class="text-bg" style="font-size:17px; margin-bottom: 20px; width: 100%;">
                   <span style="font-weight: 300 !important;">Welcome,</span> 
                   <span style="font-weight: 600 !important;">John</span>
-                  <img src="assets/images/demo.png" class="img-circle img-responsive" height="80px" width="80px">
-                  <div class="btn-group" id="profileButton">
-                    <a href="#" class="btn btn-xs btn-primary btn-outline dark"><i class="fa fa-envelope"></i></a>
-                    <a href="#" class="btn btn-xs btn-primary btn-outline dark"><i class="fa fa-user"></i></a>
-                    <a href="#" class="btn btn-xs btn-primary btn-outline dark"><i class="fa fa-cog"></i></a>
-                    <a href="#" class="btn btn-xs btn-danger btn-outline dark"><i class="fa fa-power-off"></i></a>
+                  <img src="assets/images/demo.png" class="img-circle img-responsive" style="height:80px; max-width:80px;">
+                  <div class="btn-group" id="profileButton" style="float: right; margin-top: -50px;">
+                    <a href="#" class="btn btn-xs btn-primary btn-outline dark"><i class="glyphicon glyphicon-user"></i></a>
+                    <a href="#" class="btn btn-xs btn-primary btn-outline dark"><i class="glyphicon glyphicon-cog"></i></a>
+                    <a href="http://localhost:8080/crm_dev/login.html" class="btn btn-xs btn-danger btn-outline dark"><i class="glyphicon glyphicon-off"></i></a>
                 </div>
                 </div><legend></legend>                
               </li>
