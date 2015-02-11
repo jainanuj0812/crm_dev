@@ -28,7 +28,7 @@ accountServiceModule.service('accountService', function() {
   }, {
     id : 2,
     accountName : 'Rahul Bhammarker',
-    responsiblePerson : 'Bhammarker',
+    responsiblePerson : 'Mridul Pathak',
     email : 'rahul@gmail.com',
     phoneNo : 9926587421,
     companyType : 'Private',
@@ -40,7 +40,7 @@ accountServiceModule.service('accountService', function() {
   }, {
     id : 3,
     accountName : 'Aman Agarawal',
-    responsiblePerson : 'agrawal',
+    responsiblePerson : 'Anil patel',
     email : 'aman@gmail.com',
     phoneNo : 8745521145,
     companyType : 'Goverment',
@@ -51,7 +51,7 @@ accountServiceModule.service('accountService', function() {
     img : 'assets/images/aman.jpg'
   }, {
     id : 4,
-    accountName : 'Anuj Jain',
+    accountName : 'Pranay Pandey',
     responsiblePerson : 'amuj',
     email : 'anuj@gmail.com',
     phoneNo : 96584571423,
