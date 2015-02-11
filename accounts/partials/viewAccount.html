@@ -23,7 +23,7 @@
             </div>
             <div class="col-xs-12 col-sm-12 col-md-8 ">
               <div>
-                <div ng-init="editName=true;visible=false;" ng-mouseover="visible=true" ng-mouseleave="visible=false">
+                <div ng-init="editName=true;visible=false;">
                   <span class="h2" ng-show="editName">
                     <b>{{account.accountName}}<b>
                   </span>
@@ -40,7 +40,7 @@
                   </button>
                 </div>
 
-                <div ng-init="editPerson=true;visible1=false;" ng-mouseover="visible1=true" ng-mouseleave="visible1=false">
+                <div ng-init="editPerson=true;visible1=false;">
                   <span class="h4" ng-show="editPerson">
                     <label>Responsible Person :</label>
                     {{" "+account.responsiblePerson}}
@@ -61,7 +61,7 @@
                   </button>
                 </div>
 
-                <div ng-init="editPhone=true;visible2=false;" ng-mouseover="visible2=true" ng-mouseleave="visible2=false">
+                <div ng-init="editPhone=true;visible2=false;">
                   <span class="h4" ng-show="editPhone">
                     <i class="glyphicon glyphicon-earphone"></i>
                     {{" "+account.phoneNo}}
@@ -82,7 +82,7 @@
                   </button>
                 </div>
 
-                <div ng-init="editEmail=true;visible3=false;" ng-mouseover="visible3=true" ng-mouseleave="visible3=false">
+                <div ng-init="editEmail=true;visible3=false;">
                   <span class="h4" ng-show="editEmail">
                     <i class="glyphicon glyphicon-envelope"></i>
                     {{" "+account.email}}
@@ -103,7 +103,7 @@
                   </button>
                 </div>
 
-                <div ng-init="editInd=true;visible5=false;" ng-mouseover="visible5=true" ng-mouseleave="visible5=false">
+                <div ng-init="editInd=true;visible5=false;" >
                   <span class="h4" ng-show="editInd">
                     <label>Industry :</label>
                     {{" "+account.industry}}
@@ -124,7 +124,7 @@
                   </button>
                 </div>
 
-                <div ng-init="editInc=true;visible6=false;" ng-mouseover="visible6=true" ng-mouseleave="visible6=false">
+                <div ng-init="editInc=true;visible6=false;">
                   <span class="h4" ng-show="editInc">
                     <label>Annual Income</label>
                     {{" "+account.annualIncome}}{{" "+account.currency}}
@@ -146,7 +146,7 @@
                   </button>
                 </div>
 
-                <div ng-init="editCom=true;visible7=false;" ng-mouseover="visible7=true" ng-mouseleave="visible7=false">
+                <div ng-init="editCom=true;visible7=false;">
                   <span class="h4" ng-show="editCom">
                     <label>Comments</label>
                     <br>{{" "+account.comment}}

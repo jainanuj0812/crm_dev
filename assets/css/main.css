@@ -31,6 +31,36 @@ input[type='checkbox']:checked {
 
 .myimg
 {
+ margin-top: 32%;
+ margin-left:20%;
+ margin-right:5%;
+ min-height:55px;
+ min-width:55px;
+
+ max-height:75px;
+ max-width:75px;
+ margin-bottom:20%;
+}
+
+@media (max-width: 320px)
+{   
+.myimg
+{
+ margin-top: 20%;
+ margin-left:10%;
+ margin-right:5%;
+ min-height:35px;
+ min-width:35px;
+
+ max-height:60px;
+ max-width:60px;
+}
+  
+}
+
+/* 
+.myimg
+{
  margin-top: 13%;
  margin-left:20%;
  margin-right:5%;
@@ -56,6 +86,8 @@ input[type='checkbox']:checked {
 }
   
 }
+
+*/
 .menuLink{
 	color: #0363C8 !important;	
 }

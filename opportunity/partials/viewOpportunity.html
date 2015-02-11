@@ -15,7 +15,7 @@
         <div class="panel-body">
           <div class="row">
             <div class="col-xs-12 col-sm-12 col-md-8 col-md-offset-1 col-lg-8 col-lg-offset-1">
-              <div ng-init="editName=true;visible=false;" ng-mouseover="visible=true" ng-mouseleave="visible=false">
+              <div ng-init="editName=true;visible=false;" >
                 <span class="h2" ng-show="editName">
                   <b>{{opportunity.opportunityName}}</b>
                 </span>
@@ -33,7 +33,7 @@
               </div>
               <div class="col-sm-12 col-md-4 col-md-offset-1">
                 <br>
-                <div ng-init="leadName=true;visible8=false;" ng-mouseover="visible8=true" ng-mouseleave="visible8=false">
+                <div ng-init="leadName=true;visible8=false;" >
                   <span class="h4" ng-show="leadName">
                     <label>Lead Name : </label>
                     <b>{{opportunity.leadName}}</b>
@@ -51,7 +51,7 @@
                     </span>
                   </button>
                 </div>
-                <div ng-init="editAssigned=true;visible2=false;" ng-mouseover="visible2=true" ng-mouseleave="visible2=false">
+                <div ng-init="editAssigned=true;visible2=false;">
                   <span class="h4" ng-show="editAssigned">
                     <label>Assigned to :</label>
                     {{" "+opportunity.assignedTo}}
@@ -69,7 +69,7 @@
                     </span>
                   </button>
                 </div>
-                <div ng-init="editNext=true;visible3=false;" ng-mouseover="visible3=true" ng-mouseleave="visible3=false">
+                <div ng-init="editNext=true;visible3=false;" >
                   <span class="h4" ng-show="editNext">
                     <label>Next Step :</label>
                     {{" "+opportunity.nextStep}}
@@ -87,7 +87,7 @@
                     </span>
                   </button>
                 </div>
-                <div ng-init="editSource=true;visible4=false;" ng-mouseover="visible4=true" ng-mouseleave="visible4=false">
+                <div ng-init="editSource=true;visible4=false;" >
                   <span class="h4" ng-show="editSource">
                     <label>Source</label>
                     {{" "+opportunity.source}}
@@ -105,7 +105,7 @@
                     </span>
                   </button>
                 </div>
-                <div ng-init="editTeam=true;visible5=false;" ng-mouseover="visible5=true" ng-mouseleave="visible5=false">
+                <div ng-init="editTeam=true;visible5=false;" >
                   <span class="h4" ng-show="editTeam">
                     <label>Team :</label>
                     {{" "+opportunity.team}}
@@ -124,7 +124,7 @@
                   </button>
                 </div>
 
-                <div ng-init="editLikely=true;visible6=false;" ng-mouseover="visible6=true" ng-mouseleave="visible6=false">
+                <div ng-init="editLikely=true;visible6=false;">
                   <span class="h4" ng-show="editLikely">
                     <label>Estimate Amount : </label>
                     {{opportunity.estimateAmount}}
@@ -146,7 +146,7 @@
               </div>
               <div class="col-md-4 col-md-offset-1">
                 <br>
-                <div ng-init="editProbability=true;visible9=false;" ng-mouseover="visible9=true" ng-mouseleave="visible9=false">
+                <div ng-init="editProbability=true;visible9=false;">
                   <span class="h4" ng-show="editProbability">
                     <label>Probability : </label>
                     {{opportunity.probability}}
@@ -165,7 +165,7 @@
                   </button>
                 </div>
 
-                <div ng-init="editStage=true;visible10=false;" ng-mouseover="visible10=true" ng-mouseleave="visible10=false">
+                <div ng-init="editStage=true;visible10=false;">
                   <span class="h4" ng-show="editStage">
                     <label>Initial Stage : </label>
                     {{opportunity.initialStage}}
@@ -184,7 +184,7 @@
                   </button>
                 </div>
 
-                <div ng-init="editAmount=true;visible11=false;" ng-mouseover="visible11=true" ng-mouseleave="visible11=false">
+                <div ng-init="editAmount=true;visible11=false;">
                   <span class="h4" ng-show="editAmount">
                     <label>Initial Amount : </label>
                     {{opportunity.initialAmount}}
@@ -204,7 +204,7 @@
                 </div>
 
                 <h4 style="font-weight: bold;">Description</h4>
-                <div ng-init="editDescription=true;visible7=false" ng-mouseover="visible7=true" ng-mouseleave="visible7=false">
+                <div ng-init="editDescription=true;visible7=false">
                   <span class="h4" ng-show="editDescription">{{opportunity.description}}</span>
                   <span ng-hide="editDescription">
                   <h4 style="font-weight: bold;">Description :</h4>
