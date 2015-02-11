@@ -32,7 +32,7 @@
          		<div ng-show="hide">
          		<h5><i class="glyphicon glyphicon-earphone"></i>{{" "+contact.phoneNo}}</h5>
          		<h5><i class="glyphicon glyphicon-pencil"></i>{{" "+contact.company}}</h5>
-         		<h5><i class="glyphicon glyphicon-pencil"></i>{{" "+contact.address}}</h5>
+         		<h5><i class="glyphicon glyphicon-pencil"></i>{{" "+contact.addressLine1}},{{contact.addressLine2}}</h5>
          		<h5><a href="#/viewContact/{{contact.id}}"><i class="glyphicon glyphicon-plus-sign">more..</i></a></h5>
          		</div>
          	</div>
@@ -43,7 +43,7 @@
          		<div ng-show="hide">
          		<h5><i class="glyphicon glyphicon-earphone"></i><input type="text" value="{{contact.phoneNo}}"/></h5>
          		<h5><i class="glyphicon glyphicon-pencil"></i><input type="text" value="{{contact.company}}"/></h5>
-         		<h5><i class="glyphicon glyphicon-pencil"></i><input type="text" value="{{contact.address}}"/></h5>
+         		<h5><i class="glyphicon glyphicon-pencil"></i><input type="text" value="{{contact.addressLine1}}"/><input type="text" value="{{contact.addressLine2}}"/></h5>
          		</div>
          	</div>
 			    
@@ -69,7 +69,7 @@
       <div class="modal-body">
         <form>
         <div class="form-group">
-        <label for="firstName">First name:</label>
+        <label for="firstName">First name</label>
 					<div class="inner-addon left-addon">
 						<i class="glyphicon glyphicon-user"></i>
 						<input id="firstName"  class="form-control  ">
@@ -78,7 +78,7 @@
 				</div>
 				
         <div class="form-group">
-        <label for="lastName">Last name:</label>
+        <label for="lastName">Last name</label>
 					<div class="inner-addon left-addon">
 						<i class="glyphicon glyphicon-user"></i>
 						<input id="lastName"  class="form-control  ">
@@ -86,7 +86,7 @@
 					</div>
 				</div>
 				<div class="form-group">
-				<label for="email">E-mail:</label>
+				<label for="email">E-mail</label>
 					<div class="inner-addon left-addon">
 						<i class="glyphicon glyphicon-envelope"></i>
 						<input id="email"  class="form-control  ">
@@ -95,7 +95,7 @@
 				</div>
 				
 				<div class="form-group">
-				<label for="phoneNo">Phone no:</label>
+				<label for="phoneNo">Phone No</label>
 					<div class="inner-addon left-addon">
 						<i class="glyphicon glyphicon-earphone"></i>
 						<input id="firstName"  class="form-control">
