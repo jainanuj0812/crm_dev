@@ -18,10 +18,10 @@
               <div>
                 <div ng-init="editName=true;visible=false;" ng-mouseover="visible=true" ng-mouseleave="visible=false">
                   <span class="h2" ng-show="editName">
-                    <b>{{opportunity.leadName}}</b>
+                    <b>{{opportunity.opportunityName}}</b>
                   </span>
                   <span ng-hide="editName">
-                    <input type="text" value="{{opportunity.leadName}}" autofocus onfocus="this.value = this.value;">
+                    <input type="text" value="{{opportunity.opportunityName}}" autofocus onfocus="this.value = this.value;">
                   </span>
                   <button type="button" class="btn btn-sm btn-default editBtn" ng-click="editName=!editName" ng-show="visible">
                     <span ng-show="editName">
@@ -32,9 +32,28 @@
                     </span>
                   </button>
                 </div>
+                <br>
+                <div ng-init="leadName=true;visible8=false;" ng-mouseover="visible8=true" ng-mouseleave="visible8=false">
+                  <span class="h4" ng-show="leadName">
+                    <label>Lead Name : </label>
+                    <b>{{opportunity.leadName}}</b>
+                  </span>
+                  <span ng-hide="leadName">
+                    <input type="text" value="{{opportunity.opportunityName}}" autofocus onfocus="this.value = this.value;">
+                  </span>
+                  <button type="button" class="btn btn-sm btn-default editBtn" ng-click="leadName=!leadName" ng-show="visible8">
+                    <span ng-show="leadName">
+                      <i class="glyphicon glyphicon-pencil"></i>
+                    </span>
+                    <span ng-hide="editName">
+                      <i class="glyphicon glyphicon-ok"></i>
+                    </span>
+                  </button>
+                </div>
                 <div ng-init="editAssigned=true;visible2=false;" ng-mouseover="visible2=true" ng-mouseleave="visible2=false">
                   <span class="h4" ng-show="editAssigned">
-                    <label>Assigned to :</label>{{" "+opportunity.assignedTo}}
+                    <label>Assigned to :</label>
+                    {{" "+opportunity.assignedTo}}
                   </span>
                   <span ng-hide="editAssigned">
                     <input type="text" value="{{opportunity.assignedTo}}" autofocus onfocus="this.value = this.value;">
@@ -50,7 +69,8 @@
                 </div>
                 <div ng-init="editNext=true;visible3=false;" ng-mouseover="visible3=true" ng-mouseleave="visible3=false">
                   <span class="h4" ng-show="editNext">
-                    <label>Next Step :</label>{{" "+opportunity.nextStep}}
+                    <label>Next Step :</label>
+                    {{" "+opportunity.nextStep}}
                   </span>
                   <span ng-hide="editNext">
                     <input type="text" value="{{opportunity.nextStep}}" autofocus onfocus="this.value = this.value;">
@@ -67,10 +87,11 @@
 
                 <div ng-init="editSource=true;visible4=false;" ng-mouseover="visible4=true" ng-mouseleave="visible4=false">
                   <span class="h4" ng-show="editSource">
-                    <label>Lead Source</label>{{" "+opportunity.leadSource}}
+                    <label>Source</label>
+                    {{" "+opportunity.source}}
                   </span>
                   <span ng-hide="editSource">
-                    <input type="text" value="{{opportunity.leadSource}}" autofocus onfocus="this.value = this.value;">
+                    <input type="text" value="{{opportunity.source}}" autofocus onfocus="this.value = this.value;">
                   </span>
                   <button type="button" class="btn btn-default   editBtn" ng-click="editSource=!editSource" ng-show="visible4">
                     <span ng-show="editSource">
@@ -84,7 +105,8 @@
 
                 <div ng-init="editTeam=true;visible5=false;" ng-mouseover="visible5=true" ng-mouseleave="visible5=false">
                   <span class="h4" ng-show="editTeam">
-                    <label>Team :</label>{{" "+opportunity.team}}
+                    <label>Team :</label>
+                    {{" "+opportunity.team}}
                   </span>
                   <span ng-hide="editTeam">
                     <input type="text" value="{{opportunity.team}}" autofocus onfocus="this.value = this.value;">
@@ -101,16 +123,71 @@
 
                 <div ng-init="editLikely=true;visible6=false;" ng-mouseover="visible6=true" ng-mouseleave="visible6=false">
                   <span class="h4" ng-show="editLikely">
-                    <i class="glyphicon glyphicon-usd"></i> {{opportunity.likely}}
+                    <label>Estimate Amount : </label>
+                    {{opportunity.estimateAmount}}
                   </span>
                   <span ng-hide="editLikely">
-                    <input type="text" value="{{opportunity.likely}}" autofocus onfocus="this.value = this.value;">
+                    <input type="text" value="{{opportunity.estimateAmount}}" autofocus onfocus="this.value = this.value;">
                   </span>
                   <button type="button" class="btn btn-default   editBtn" ng-click="editLikely=!editLikely" ng-show="visible6">
                     <span ng-show="editLikely">
                       <i class="glyphicon glyphicon-pencil"></i>
                     </span>
                     <span ng-hide="editLikely">
+                      <i class="glyphicon glyphicon-ok"></i>
+                    </span>
+                  </button>
+                </div>
+
+                <div ng-init="editProbability=true;visible9=false;" ng-mouseover="visible9=true" ng-mouseleave="visible9=false">
+                  <span class="h4" ng-show="editProbability">
+                    <label>Probability : </label>
+                    {{opportunity.probability}}
+                  </span>
+                  <span ng-hide="editProbability">
+                    <input type="text" value="{{opportunity.probability}}" autofocus onfocus="this.value = this.value;">
+                  </span>
+                  <button type="button" class="btn btn-default   editBtn" ng-click="editProbability=!editProbability" ng-show="visible9">
+                    <span ng-show="editProbability">
+                      <i class="glyphicon glyphicon-pencil"></i>
+                    </span>
+                    <span ng-hide="editLikely">
+                      <i class="glyphicon glyphicon-ok"></i>
+                    </span>
+                  </button>
+                </div>
+
+                <div ng-init="editStage=true;visible10=false;" ng-mouseover="visible10=true" ng-mouseleave="visible10=false">
+                  <span class="h4" ng-show="editStage">
+                    <label>Initial Stage : </label>
+                    {{opportunity.initialStage}}
+                  </span>
+                  <span ng-hide="editStage">
+                    <input type="text" value="{{opportunity.initialStage}}" autofocus onfocus="this.value = this.value;">
+                  </span>
+                  <button type="button" class="btn btn-default   editBtn" ng-click="editStage=!editStage" ng-show="visible10">
+                    <span ng-show="editStage">
+                      <i class="glyphicon glyphicon-pencil"></i>
+                    </span>
+                    <span ng-hide="editStage">
+                      <i class="glyphicon glyphicon-ok"></i>
+                    </span>
+                  </button>
+                </div>
+
+                <div ng-init="editAmount=true;visible11=false;" ng-mouseover="visible11=true" ng-mouseleave="visible11=false">
+                  <span class="h4" ng-show="editAmount">
+                    <label>Initial Amount : </label>
+                    {{opportunity.initialAmount}}
+                  </span>
+                  <span ng-hide="editAmount">
+                    <input type="text" value="{{opportunity.initialAmount}" autofocus onfocus="this.value = this.value;">
+                  </span>
+                  <button type="button" class="btn btn-default   editBtn" ng-click="editAmount=!editAmount" ng-show="visible11">
+                    <span ng-show="editAmount">
+                      <i class="glyphicon glyphicon-pencil"></i>
+                    </span>
+                    <span ng-hide="editAmount">
                       <i class="glyphicon glyphicon-ok"></i>
                     </span>
                   </button>
@@ -153,29 +230,29 @@
           <form>
             <div class="form-group">
               <label for="leadName">Lead Name</label>
-                <input id="leadName" class="form-control" value="{{opportunity.leadName}}">
+              <input id="leadName" class="form-control" value="{{opportunity.leadName}}">
             </div>
             <div class="form-group">
               <label for="assignedTo">Assigned To</label>
-                <input id="assignedTo" class="form-control" value="{{opportunity.assignedTo}}">
+              <input id="assignedTo" class="form-control" value="{{opportunity.assignedTo}}">
             </div>
             <div class="form-group">
               <label for="leadSource">Lead Source</label>
-                <select class="form-control" id="leadSource">
-                  <option selected="selected">{{opportunity.leadSource}}</option>
-                  <option>Cold call</option>
-                  <option>Conference</option>
-                  <option>Meeting</option>
-                </select>
+              <select class="form-control" id="leadSource">
+                <option selected="selected">{{opportunity.leadSource}}</option>
+                <option>Cold call</option>
+                <option>Conference</option>
+                <option>Meeting</option>
+              </select>
             </div>
             <div class="form-group">
               <label for="team">Team</label>
-                <select class="form-control" id="team">
-                  <option selected="selected">{{opportunity.team}}</option>
-                  <option>Hotwax Systems</option>
-                  <option>Apache</option>
-                  <option>Ofbiz</option>
-                </select>
+              <select class="form-control" id="team">
+                <option selected="selected">{{opportunity.team}}</option>
+                <option>Hotwax Systems</option>
+                <option>Apache</option>
+                <option>Ofbiz</option>
+              </select>
             </div>
             <div class="form-group">
               <label for="likely">Likely</label>
