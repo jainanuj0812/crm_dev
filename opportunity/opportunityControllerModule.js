@@ -1,8 +1,6 @@
 var opportunityControllerModule = angular
-    .module('crmApp.opportunityControllerModule',
-        [ 'crmApp.opportunityServiceModule' ]);
-opportunityControllerModule.controller('opportunityListController', function(
-    $scope, opportunityService) {
+    .module('crmApp.opportunityControllerModule',[ 'crmApp.opportunityServiceModule' ]);
+opportunityControllerModule.controller('opportunityListController', function($scope, opportunityService) {
   init();
   function init() {
     $scope.opportunities = opportunityService.getOpportunities();
@@ -13,8 +11,7 @@ opportunityControllerModule.controller('opportunityListController', function(
 
 );
 
-opportunityControllerModule.controller('viewOpportunityController', function(
-    $scope, $routeParams, opportunityService) {
+opportunityControllerModule.controller('viewOpportunityController', function($scope, $routeParams, opportunityService) {
   var opportunityId;
   $scope.opportunity = {};
   init();

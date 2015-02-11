@@ -1,6 +1,5 @@
 var opportunityServiceModule = angular
-    .module('crmApp.opportunityServiceModule',
-        [ 'crmApp.opportunityControllerModule' ]);
+    .module('crmApp.opportunityServiceModule',[ 'crmApp.opportunityControllerModule' ]);
 opportunityServiceModule.service('opportunityService', function() {
 
   this.getOpportunities = function() {
