@@ -4,7 +4,7 @@
 			<div class="row">
 				<div class="col-xs-12 col-sm-12 col-lg-12 col-md-12">
 					<div class="inner-addon right-addon col-xs-9 col-sm-9 col-md-9 col-lg-9 ">
-						<input id="contactSearch" type="text" placeholder="find contacts here!" class="img-rounded img-responsive">
+						<input id="contactSearch" type="text" placeholder="find contacts here!" class="img-rounded img-responsive" ng-model="searchContact">
 						<i class="glyphicon glyphicon-filter"></i>
 					</div>
 					<div class="dropdown col-xs-1 col-sm-1 col-md-1 col-lg-1">
@@ -25,7 +25,7 @@
 					</div>
 				</div>
 			</div>
-			<div ng-repeat="contact in contacts">
+			<div ng-repeat="contact in contacts | filter: searchContact">
 				<div class="row img-rounded" id="contactRow" style="margin-top: 7%;">
 					<div class="col-xs-3 col-sm-3 col-md-3 col-lg-3" id="imgdiv">
 						<img src="assets/images/demo.png" class="img-circle img-responsive ">
