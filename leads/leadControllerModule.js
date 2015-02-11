@@ -1,7 +1,5 @@
-var leadControllerModule = angular.module('crmApp.leadControllerModule',
-    [ 'crmApp.leadServiceModule' ]);
-leadControllerModule.controller('leadListController', function($scope,
-    leadService) {
+var leadControllerModule = angular.module('crmApp.leadControllerModule',[ 'crmApp.leadServiceModule' ]);
+leadControllerModule.controller('leadListController', function($scope,leadService) {
   init();
   function init() {
     $scope.leads = leadService.getLeads();
@@ -11,8 +9,7 @@ leadControllerModule.controller('leadListController', function($scope,
 
 );
 
-leadControllerModule.controller('viewLeadController', function($scope,
-    $routeParams, leadService) {
+leadControllerModule.controller('viewLeadController', function($scope,$routeParams, leadService) {
   var leadId;
   $scope.lead = {};
   init();
