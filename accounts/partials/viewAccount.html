@@ -42,7 +42,7 @@
 
                 <div ng-init="editPerson=true;visible1=false;" ng-mouseover="visible1=true" ng-mouseleave="visible1=false">
                   <span class="h4" ng-show="editPerson">
-                    <i class="glyphicon glyphicon-user"></i>
+                    <label>Responsible Person :</label>
                     {{" "+account.responsiblePerson}}
                   </span>
                   <span ng-hide="editPerson">
@@ -94,27 +94,9 @@
                   </button>
                 </div>
 
-                <div ng-init="editType=true;visible4=false;" ng-mouseover="visible4=true" ng-mouseleave="visible4=false">
-                  <span class="h4" ng-show="editType">
-                    <i class="glyphicon glyphicon-home"></i>
-                    {{" "+account.companyType}}
-                  </span>
-                  <span ng-hide="editType">
-                    <input type="text" value="{{account.companyType}}" autofocus onfocus="this.value = this.value;">
-                  </span>
-                  <button type="button" class="btn btn-sm btn-default editBtn" ng-click="editType=!editType" ng-show="visible4">
-                    <span ng-show="editType">
-                      <i class="glyphicon glyphicon-pencil"></i>
-                    </span>
-                    <span ng-hide="editType">
-                      <i class="glyphicon glyphicon-ok"></i>
-                    </span>
-                  </button>
-                </div>
-
                 <div ng-init="editInd=true;visible5=false;" ng-mouseover="visible5=true" ng-mouseleave="visible5=false">
                   <span class="h4" ng-show="editInd">
-                    <i class="glyphicon glyphicon-home"></i>
+                    <label>Industry :</label>
                     {{" "+account.industry}}
                   </span>
                   <span ng-hide="editInd">
@@ -133,7 +115,7 @@
                 <div ng-init="editInc=true;visible6=false;" ng-mouseover="visible6=true" ng-mouseleave="visible6=false">
                   <span class="h4" ng-show="editInc">
                     <i class="glyphicon glyphicon-usd"></i>
-                    {{" "+account.annualIncome}}{{account.currency}}
+                    {{" "+account.annualIncome}}{{" "+account.currency}}
                   </span>
                   <span ng-hide="editInc">
                     <input type="text" value="{{account.annualIncome}}" autofocus onfocus="this.value = this.value;">
@@ -156,7 +138,7 @@
                   </span>
                   <span ng-hide="editCom">
                     <input type="text" value="{{account.comment}}" autofocus onfocus="this.value = this.value;">
-                    <input type="text" value="{{account.currency}}">
+                    <input type="text" value="{{account.comment}}">
                   </span>
                   <button type="button" class="btn btn-sm btn-default editBtn" ng-click="editCom=!editCom" ng-show="visible7">
                     <span ng-show="editCom">
@@ -199,10 +181,7 @@
 
           <div class="form-group">
             <label for="responsiblePerson">Responsible Person</label>
-            <div class="inner-addon left-addon">
-              <i class="glyphicon glyphicon-user"></i>
-              <input id="responsiblePerson" class="form-control" value="{{account.responsiblePerson}}">
-            </div>
+            <input id="responsiblePerson" class="form-control" value="{{account.responsiblePerson}}">
           </div>
 
           <div class="form-group">
@@ -221,31 +200,13 @@
             </div>
           </div>
 
-
-          <div class="form-group">
-            <label for="companyType">Company Type</label>
-            <div class="inner-addon left-addon">
-              <i class="glyphicon glyphicon-home"></i>
-              <select class="form-control" id="companyType">
-                <option selected="selected">{{account.companyType}}</option>
-                <option>hotwax systems</option>
-                <option>hotwax media</option>
-                <option>Hotwax Family</option>
-                <option>Hotwax Systems</option>
-              </select>
-            </div>
-          </div>
-
           <div class="form-group">
             <label for="industry">Team</label>
-            <div class="inner-addon left-addon">
-              <i class="glyphicon glyphicon-user"></i>
-              <select class="form-control" id="industry">
-                <option selected="selected">{{account.industry}}</option>
-                <option>Engineer</option>
-                <option>Doctor</option>
-              </select>
-            </div>
+            <select class="form-control" id="industry">
+              <option selected="selected">{{account.industry}}</option>
+              <option>Engineer</option>
+              <option>Doctor</option>
+            </select>
           </div>
 
 
@@ -259,10 +220,7 @@
 
           <div class="form-group">
             <label for="currency">Currency</label>
-            <div class="inner-addon left-addon">
-              <i class="glyphicon glyphicon-usd"></i>
-              <input id="currency" class="form-control" value="{{account.currency}}">
-            </div>
+            <input id="currency" class="form-control" value="{{account.currency}}">
           </div>
 
           <div class="form-group">
