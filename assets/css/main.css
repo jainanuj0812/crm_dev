@@ -309,3 +309,17 @@ pre{
 		display: none;
 	}
 }
+
+/* css for profile button in mobile view */
+#profileButton .btn{
+    width: 26px!important;
+    height: 22px;
+    line-height: 20px;
+    text-align: center;
+    padding: 0;
+    display: inline-block!important;
+    opacity: .8;
+    -webkit-transition: all .1s;
+    transition: all .1s;
+  }
+  
