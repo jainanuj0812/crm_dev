@@ -41,7 +41,7 @@ crmApp.config(function($routeProvider) {
     controller : 'viewOpportunityController',
     templateUrl : 'opportunity/partials/viewOpportunity.html'
   }).when('/events', {
-    controller : 'eventsController',
+    controller : 'calendarController',
     templateUrl : 'events/createEvent.html'
   }).otherwise({
     redirectTo : '/dashboard'
@@ -57,13 +57,7 @@ crmApp.controller('calendarController', function($scope,$compile,uiCalendarConfi
   var m = date.getMonth();
   var y = date.getFullYear();
   
-  $scope.changeTo = 'Hungarian';
-  /* event source that pulls from google.com */
-  $scope.eventSource = {
-          url: "http://www.google.com/calendar/feeds/usa__en%40holiday.calendar.google.com/public/basic",
-          className: 'gcal-event',           // an option!
-          currentTimezone: 'America/Chicago' // an option!
-  };
+ 
   /* event source that contains custom events on the scope */
   $scope.events = [
     {title: 'All Day Event',start: new Date(y, m, 1)},
@@ -158,7 +152,33 @@ crmApp.controller('calendarController', function($scope,$compile,uiCalendarConfi
       eventClick: $scope.alertOnEventClick,
       eventDrop: $scope.alertOnDrop,
       eventResize: $scope.alertOnResize,
-      eventRender: $scope.eventRender
+      eventRender: $scope.eventRender,
+      editable: true,
+      selectable: true,
+      selectHelper: true,
+      select: function(start, end, allDay)
+      {
+          /*
+              after selection user will be promted for enter title for event.
+          */
+          var title = prompt('Event Title:');
+          /*
+              if title is enterd calendar will add title and event into fullCalendar.
+          */
+          if (title)
+          {
+              calendar.fullCalendar('renderEvent',
+                  {
+                      title: title,
+                      start: start,
+                      end: end,
+                      allDay: allDay
+                  },
+                  true // make the event "stick"
+              );
+          }
+          calendar.fullCalendar('unselect');
+      }
     }
   };
 
