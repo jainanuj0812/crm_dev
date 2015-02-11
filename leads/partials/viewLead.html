@@ -16,7 +16,7 @@
           <div class="row">
             <div class="col-xs-12 col-sm-12 col-md-2 col-md-offset-1 col-lg-2 col-lg-offset-1">
               <div class="fileinput fileinput-new" data-provides="fileinput">
-                <div class="fileinput-preview thumbnail" data-trigger="fileinput" style="max-width: 150px; max-height: 200px;">
+                <div class="fileinput-preview thumbnail" data-trigger="fileinput" style="max-width: 150px; max-height: 600px;">
                   <img src="assets/images/demo.png" class="img-responsive" style="padding-top: 20px;">
                 </div>
               </div>
@@ -43,7 +43,7 @@
 
                 <div ng-init="editStatus=true;visible2=false;" ng-mouseover="visible2=true" ng-mouseleave="visible2=false">
                   <span class="h4" ng-show="editStatus">
-                    <i class="glyphicon glyphicon-info-sign"></i>
+                    <label>Status :</label>
                     {{" "+lead.status}}
                   </span>
                   <span ng-hide="editStatus">
@@ -61,7 +61,7 @@
 
                 <div ng-init="editSource=true;visible3=false;" ng-mouseover="visible3=true" ng-mouseleave="visible3=false">
                   <span class="h4" ng-show="editSource">
-                    <i class="glyphicon glyphicon-info-sign"></i>
+                    <label>Source Name :</label>
                     {{" "+lead.sourceName}}
                   </span>
                   <span ng-hide="editSource">
@@ -79,8 +79,8 @@
 
                 <div ng-init="editDescription=true;visible4=false;" ng-mouseover="visible4=true" ng-mouseleave="visible4=false">
                   <span class="h4" ng-show="editDescription">
-                    <i class="glyphicon glyphicon-info-sign"></i>
-                    {{" "+lead.description}}
+                    <label>Description :</label>
+                    <br> {{" "+lead.description}}
                   </span>
                   <span ng-hide="editDescription">
                     <input type="text" value="{{lead.description}}" autofocus onfocus="this.value = this.value;">
@@ -117,7 +117,7 @@
                 <div ng-init="editEmail=true;visible6=false;" ng-mouseover="visible6=true" ng-mouseleave="visible6=false">
                   <span class="h4" ng-show="editEmail">
                     <i class="glyphicon glyphicon-envelope"></i>
-                    {{lead.email}}
+                    {{" "+lead.email}}
                   </span>
                   <span ng-hide="editEmail">
                     <input type="text" value="{{lead.email}}" autofocus onfocus="this.value = this.value;">
@@ -127,6 +127,24 @@
                       <i class="glyphicon glyphicon-pencil"></i>
                     </span>
                     <span ng-hide="editEmail">
+                      <i class="glyphicon glyphicon-ok"></i>
+                    </span>
+                  </button>
+                </div>
+
+                <div ng-init="editCompany=true;visible9=false;" ng-mouseover="visible9=true" ng-mouseleave="visible9=false">
+                  <span class="h4" ng-show="editCompany">
+                    <label>Company :</label>
+                    {{lead.company}}
+                  </span>
+                  <span ng-hide="editCompany">
+                    <input type="text" value="{{lead.company}}" autofocus onfocus="this.value = this.value;">
+                  </span>
+                  <button type="button" class="btn btn-default   editBtn" ng-click="editCompany=!editCompany" ng-show="visible9">
+                    <span ng-show="editCompany">
+                      <i class="glyphicon glyphicon-pencil"></i>
+                    </span>
+                    <span ng-hide="editCompany">
                       <i class="glyphicon glyphicon-ok"></i>
                     </span>
                   </button>
@@ -194,26 +212,23 @@
           <form>
             <div class="form-group">
               <label for="leadName">Lead Name</label>
-              <div class="inner-addon left-addon">
-                <i class="glyphicon glyphicon-user"></i>
-                <input id="leadName" class="form-control" value="{{lead.leadName}}">
-
-              </div>
+              <input id="leadName" class="form-control" value="{{lead.leadName}}">
             </div>
 
             <div class="form-group">
               <label for="status">Status</label>
-              <div class="inner-addon left-addon">
-                <i class="glyphicon glyphicon-info-sign"></i>
-                <select class="form-control" id="status">
-                  <option selected="selected">{{lead.status}}</option>
-                  <option>Assigned to</option>
-                  <option>Future</option>
-                  <option>In progress</option>
-                  <option>Dead</option>
-                </select>
+              <select class="form-control" id="status">
+                <option selected="selected">{{lead.status}}</option>
+                <option>Assigned to</option>
+                <option>Future</option>
+                <option>In progress</option>
+                <option>Dead</option>
+              </select>
+            </div>
 
-              </div>
+            <div class="form-group">
+              <label for="sourceName">Source Name</label>
+              <input id="sourceName" class="form-control" value="{{lead.sourceName}}">
             </div>
 
             <div class="form-group">
@@ -245,11 +260,7 @@
 
             <div class="form-group">
               <label for="company">Company</label>
-              <div class="inner-addon left-addon">
-                <i class="glyphicon glyphicon-home"></i>
-                <input id="company" class="form-control" value="{{lead.company}}">
-
-              </div>
+              <input id="company" class="form-control" value="{{lead.company}}">
             </div>
 
             <div class="form-group">
@@ -273,7 +284,7 @@
             <div class="form-group">
               <label for="country">Country</label>
               <div class="inner-addon left-addon">
-                <i class="glyphicon glyphicon-map-marker"></i>
+                <i class="glyphicon glyphicon-globe"></i>
                 <input id="country" class="form-control" value="{{lead.country}}">
 
               </div>
@@ -281,20 +292,16 @@
 
             <div class="form-group">
               <label for="state">State</label>
-              <div class="inner-addon left-addon">
-                <i class="glyphicon glyphicon-map-marker"></i>
-                <input id="state" class="form-control" value="{{lead.state}}">
-
-              </div>
+              <input id="state" class="form-control" value="{{lead.state}}">
             </div>
-
-
-          </form>
         </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-          <button type="button" class="btn btn-primary">Save</button>
-        </div>
+
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save</button>
       </div>
     </div>
   </div>
+</div>
