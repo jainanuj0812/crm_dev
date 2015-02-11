@@ -1,7 +1,5 @@
-var contactControllerModule = angular.module('crmApp.contactControllerModule',
-    [ 'crmApp.contactServiceModule' ]);
-contactControllerModule.controller('contactListController', function($scope,
-    contactService) {
+var contactControllerModule = angular.module('crmApp.contactControllerModule',[ 'crmApp.contactServiceModule' ]);
+contactControllerModule.controller('contactListController', function($scope, contactService) {
   init();
   function init() {
     $scope.contacts = contactService.getContacts();
@@ -12,8 +10,7 @@ contactControllerModule.controller('contactListController', function($scope,
 
 );
 
-contactControllerModule.controller('viewContactController', function($scope,
-    $routeParams, contactService) {
+contactControllerModule.controller('viewContactController', function($scope, $routeParams, contactService) {
   var contactId;
   $scope.contact = {};
   init();
