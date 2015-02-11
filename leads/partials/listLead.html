@@ -54,20 +54,23 @@
 
           <div class="col-xs-7 col-sm-7 col-md-6 col-lg-6" ng-hide="edit">
             <h5>
-              <i class="glyphsicon glyphicon-user"></i>
-              <b><input type="text" value="{{lead.leadName}}" /></b>
+              <input type="text" value="{{lead.leadName}}" autofocus onfocus="this.value = this.value;" class="form-control"/>
             </h5>
             <h5>
-              <i class="glyphicon glyphicon-envelope"></i>
-              <input type="text" value="{{lead.email}}" />
+              <input type="text" value="{{lead.email}}" class="form-control"/>
             </h5>
             <h5>
-              <i class="glyphicon glyphicon-earphone"></i>
-              <input type="text" value="{{lead.phoneNo}}" />
+              <input type="text" value="{{lead.phoneNo}}" class="form-control"/>
             </h5>
             <h5>
-              <label>Status :</label>
-              <input type="text" value="{{lead.status}}" />
+              <label>Status :</label><br>
+              <select  id="status" class="form-control">
+              	<option disabled selected>--select--</option>
+                <option>Assigned</option>
+                <option>In progress</option>
+                <option>Future</option>
+                <option>Dead</option>
+              </select>
             </h5>
 
           </div>

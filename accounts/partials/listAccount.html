@@ -49,27 +49,24 @@
               {{" "+account.responsiblePerson}}
             </h5>
             <h5>
-              <a href="#/viewAccount/{{account.id}}"><i class="glyphicon glyphicon-plus-sign">more..</i></a>
+              <a href="#/viewAccount/{{account.id}}"><i class="glyphicon glyphicon-plus-sign"> more..</i></a>
             </h5>
           </div>
 
 
           <div class="col-xs-7 col-sm-7 col-md-6 col-lg-6" ng-hide="edit">
             <h4>
-              <i class="glyphsicon glyphicon-user"></i>
-              <b> <input type="text" value="{{account.accountName}}" /></b>
+              <input type="text" value="{{account.accountName}}" autofocus onfocus="this.value = this.value;" class="form-control"/>
             </h4>
             <h5>
-              <i class="glyphicon glyphicon-envelope"></i>
-              <input type="text" value="{{account.email}}" />
+              <input type="text" value="{{account.email}}" class="form-control"/>
             </h5>
             <h5>
-              <i class="glyphicon glyphicon-earphone"></i>
-              <input type="text" value="{{account.phoneNo}}" />
+              <input type="text" value="{{account.phoneNo}}" class="form-control"/>
             </h5>
             <h5>
-              <label>Responsible Person :</label>
-              <input type="text" value="{{account.responsiblePerson}}" />
+              <label>Responsible Person :</label><br>
+              <input type="text" value="{{account.responsiblePerson}}" class="form-control"/>
             </h5>
           </div>
 

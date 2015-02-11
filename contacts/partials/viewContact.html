@@ -28,7 +28,7 @@
                     <b>{{contact.firstName +" "+contact.lastName}}</b>
                   </span>
                   <span ng-hide="editName">
-                    <input type="text" value="{{contact.firstName}} {{contact.lastName}}" autofocus onfocus="this.value = this.value;">
+                    <input type="text" value="{{contact.firstName}}" autofocus onfocus="this.value = this.value;"><input type="text" value="{{contact.lastName}}" autofocus onfocus="this.value = this.value;">
                   </span>
 
                   <button type="button" class="btn btn-sm btn-default editBtn" ng-click="editName=!editName" ng-show="visible">

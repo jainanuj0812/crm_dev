@@ -52,20 +52,23 @@
 
           <div class="col-xs-7 col-sm-7 col-md-6 col-lg-6" ng-hide="edit">
             <h4>
-              <i class="glyphsicon glyphicon-user"></i>
-              <b> <input type="text" value="{{opportunity.leadName}}" /></b>
+              <input type="text" value="{{opportunity.leadName}}" class="form-control" autofocus onfocus="this.value = this.value;"/>
             </h4>
             <h5>
-              <label>Assigned to :</label>
-              <input type="text" value="{{opportunity.assignedTo}}" />
+              <label>Assigned to :</label><br>
+              <input type="text" value="{{opportunity.assignedTo}}" class="form-control"/>
             </h5>
             <h5>
-              <label>Lead Source :</label>
-              <input type="text" value="{{opportunity.leadSource}}" />
+              <label>Lead Source :</label><br>
+              <select class="form-control">
+                <option disabled selected>--select--</option>
+                  <option>Cold call</option>
+                  <option>Meeting</option>
+                  <option>Conference</option>
+                </select>
             </h5>
             <h5>
-              <i class="glyphicon glyphicon-usd"></i>
-              <input type="text" value="{{opportunity.likely}}" />
+              <input type="text" value="{{opportunity.likely}}" class="form-control"/>
             </h5>
           </div>
 

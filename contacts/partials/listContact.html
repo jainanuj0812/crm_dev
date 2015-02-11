@@ -60,39 +60,42 @@
           </div>
           <div class="col-xs-7 col-sm-7 col-md-6 col-lg-6" ng-hide="edit">
             <h4>
-              <i class="glyphicon glyphicon-user"></i>
-              <input type="text" value="{{contact.firstName}}" />
-              <input type="text" value="{{contact.lastName}}" />
+              <span>
+	             <input type="text" value="{{contact.firstName}}" autofocus onfocus="this.value = this.value;" class="form-control"/><br>
+	             <input type="text" value="{{contact.lastName}}" class="form-control"/>
+              </span>
             </h4>
             <h5>
-              <i class="glyphicon glyphicon-envelope"></i>
-              <input type="text" value="{{contact.email}}" />
+              <input type="text" value="{{contact.email}}" class="form-control"/>
             </h5>
             <div ng-show="hide">
               <h5>
-                <i class="glyphicon glyphicon-earphone"></i>
-                <input type="text" value="{{contact.phoneNo}}" />
+                <input type="text" value="{{contact.phoneNo}}" class="form-control"/>
               </h5>
               <h5>
-                <label>Company :</label>
-                <input type="text" value="{{contact.company}}" />
+                <label>Company :</label><br>
+                <input type="text" value="{{contact.company}}" class="form-control"/>
               </h5>
               <h5>
-                <i class="glyphicon glyphicon-pencil"></i>
-                <input type="text" value="{{contact.addressLine1}}" />
-                <input type="text" value="{{contact.addressLine2}}" />
+                <span>
+	                <input type="text" value="{{contact.addressLine1}}" class="form-control"/>
+	                <input type="text" value="{{contact.addressLine2}}" class="form-control"/>
+              	</span>
               </h5>
             </div>
           </div>
           <div class="btn-group" style="float: right;">
-            <button id="cal" class="btn btn-default btn-lg btn-lg" style="color: black; border: 0;" title="meeting" ng-click="#" data-toggle="modal" data-target="#event">
-              <i class="glyphicon glyphicon-phone-alt" ng-show="edit"></i>
+            <button id="mail" class="btn btn-default btn-lg btn-lg editBtn"  title="meeting" ng-click="#" data-toggle="modal" data-target="#">
+              <i class="glyphicon glyphicon-envelope" ng-show="edit"></i>
             </button>
-            <button id="edit" class="btn btn-default btn-lg btn-lg" style="color: blue; border: 0;" title="edit" ng-click="edit=!edit">
+            <button id="eventbox" class="btn btn-default btn-lg btn-lg editBtn"  title="meeting" ng-click="#" data-toggle="modal" data-target="#event">
+              <i class="glyphicon glyphicon-calendar" ng-show="edit"></i>
+            </button>
+            <button id="edit" class="btn btn-default btn-lg btn-lg editBtn"  title="edit" ng-click="edit=!edit">
               <i class="glyphicon glyphicon-pencil" ng-show="edit"></i>
               <i class="glyphicon glyphicon-ok" ng-hide="edit"></i>
             </button>
-            <button id="delete" class="btn btn-default btn-lg btn-lg" style="color: red; border: 0;" onclick="#" title="delete">
+            <button id="delete" class="btn btn-default btn-lg btn-lg deleteBtn"  onclick="#" title="delete">
               <i class="glyphicon glyphicon-trash" ng-show="edit"></i>
               <i class="glyphicon glyphicon-remove" ng-click="edit=!edit" ng-hide="edit"></i>
             </button>
