@@ -1,7 +1,5 @@
-var leadServiceModule = angular.module('crmApp.leadServiceModule',
-    [ 'crmApp.leadControllerModule' ]);
+var leadServiceModule = angular.module('crmApp.leadServiceModule',[ 'crmApp.leadControllerModule' ]);
 leadServiceModule.service('leadService', function() {
-
   this.getLeads = function() {
     return leads;
   };
