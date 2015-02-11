@@ -8,7 +8,7 @@
             <i class="glyphicon glyphicon-filter"></i>
           </div>
           <div class="dropdown col-xs-1 col-sm-1 col-md-1 col-lg-1">
-            <button class="btn btn-default btn-lg dropdown-toggle" type="button" id="menu1" data-toggle="modal" data-target="#quickAdd">
+            <button class="btn btn-default btn-lg dropdown-toggle" type="button" type="button" id="menu1" data-toggle="dropdown">
               <i class="glyphicon glyphicon-align-justify"></i>
               <span class="caret"></span>
             </button>
@@ -80,9 +80,9 @@
               <i class="glyphicon glyphicon-pencil" ng-show="edit"></i>
               <i class="glyphicon glyphicon-ok" ng-hide="edit"></i>
             </button>
-            <button id="delete" class="btn btn-default btn-lg btn-lg" style="color: red; border: 0;" onclick="#" title="delete" ng-click="del=!del">
-              <i class="glyphicon glyphicon-trash" ng-show="del"></i>
-              <i class="glyphicon glyphicon-remove" ng-hide="del"></i>
+            <button id="delete" class="btn btn-default btn-lg btn-lg" style="color: red; border: 0;" onclick="#" title="delete" ng-click="edit=!edit">
+              <i class="glyphicon glyphicon-trash" ng-show="edit"></i>
+              <i class="glyphicon glyphicon-remove" ng-hide="edit"></i>
             </button>
           </div>
         </div>
