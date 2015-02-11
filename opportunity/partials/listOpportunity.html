@@ -1,127 +1,124 @@
 <div class="container-fluid">
-	<div class="row">
-		<div class="col-xs-10 col-xs-offset-1 col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2 col-lg-8 col-lg-offset-2">
-			<div class="row">
-				<div class="col-xs-12 col-sm-12 col-lg-12 col-md-12">
-					<div class="inner-addon right-addon col-xs-9 col-sm-9 col-md-9 col-lg-9 ">
+  <div class="row">
+    <div class="col-xs-10 col-xs-offset-1 col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2 col-lg-8 col-lg-offset-2">
+      <div class="row">
+        <div class="col-xs-12 col-sm-12 col-lg-12 col-md-12">
+          <div class="inner-addon right-addon col-xs-9 col-sm-9 col-md-9 col-lg-9 ">
 
-						<input id="opportunitySearch" type="text" placeholder="find opportunities here!" class="img-rounded img-responsive">
-						<i class="glyphicon glyphicon-filter"></i>
-					</div>
-					<div class="dropdown col-xs-1 col-sm-1 col-md-1 col-lg-1">
-						<button class="btn btn-default btn-lg dropdown-toggle"  type="button" id="menu1" data-toggle="dropdown">
-							<i class="glyphicon glyphicon-align-justify"></i> 
-							<span class="caret"></span>
-						</button>
-						<ul class="dropdown-menu" role="menu" aria-labelledby="menu1">
-							<li><a href="#">Alphabatically</a></li>
-							<li><a href="#">Recently added</a></li>
-							<li><a href="#">Recently viewed</a></li>
-						</ul>
-					</div>
-					<div class="col-xs-1 col-sm-1 col-md- col-lg-1 visible-md visible-lg" style="margin-left: 5px;">
-						<button class="btn btn-info btn-lg img-rounded" type="button" id="#" data-toggle="modal" data-target="#quickAdd">
-							<i class="glyphicon glyphicon-plus"></i>
-						</button>
-					</div>
-				</div>
-			</div>
-			<div ng-repeat="opportunity in opportunities">
-				<div class="row img-rounded" id="opportunityRow" style="margin-top: 6%;">
-					<div class="col-xs-3 col-sm-3 col-md-3 col-lg-3" id="imgdiv">
-						<img src="assets/images/demo.png" class="img-circle img-responsive ">
-					</div>
-					<div class="col-xs-7 col-sm-7 col-md-6 col-lg-6" ng-model="hide" ng-click="hide=!hide" ng-init="edit=true" ng-show="edit">
-						<h4>
-							<i class="glyphsicon glyphicon-user"></i><b>{{" "+opportunity.leadName}}</b>
-						</h4>
-						<h5>
-							<i class="glyphicon glyphicon-envelope"></i>{{" "+opportunity.assignedTo}}
-						</h5>
-						<h5>
-							<i class="glyphicon glyphicon-user"></i>{{" "+opportunity.leadSource}}
-						</h5>
-						<h5>
-							<i class="glyphicon glyphicon-usd"></i>{{" "+opportunity.likely}}
-						</h5>
-						<h5>
-							<a href="#/viewOpportunity/{{opportunity.id}}"><i class="glyphicon glyphicon-plus-sign">more..</i></a>
-						</h5>
-					</div>
+            <input id="opportunitySearch" type="text" placeholder="find opportunities here!" class="img-rounded img-responsive">
+            <i class="glyphicon glyphicon-filter"></i>
+          </div>
+          <div class="dropdown col-xs-1 col-sm-1 col-md-1 col-lg-1">
+            <button class="btn btn-default btn-lg dropdown-toggle" type="button" id="menu1" data-toggle="dropdown">
+              <i class="glyphicon glyphicon-align-justify"></i>
+              <span class="caret"></span>
+            </button>
+            <ul class="dropdown-menu" role="menu" aria-labelledby="menu1">
+              <li><a href="#">Alphabatically</a></li>
+              <li><a href="#">Recently added</a></li>
+              <li><a href="#">Recently viewed</a></li>
+            </ul>
+          </div>
+          <div class="col-xs-1 col-sm-1 col-md- col-lg-1 visible-md visible-lg" style="margin-left: 5px;">
+            <button class="btn btn-info btn-lg img-rounded" type="button" id="#" data-toggle="modal" data-target="#quickAdd">
+              <i class="glyphicon glyphicon-plus"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+      <div ng-repeat="opportunity in opportunities">
+        <div class="row img-rounded" id="opportunityRow" style="margin-top: 6%;">
+          <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3" id="imgdiv">
+            <img src="assets/images/demo.png" class="img-circle img-responsive ">
+          </div>
+          <div class="col-xs-7 col-sm-7 col-md-6 col-lg-6" ng-model="hide" ng-click="hide=!hide" ng-init="edit=true" ng-show="edit">
+            <h4>
+              <i class="glyphsicon glyphicon-user"></i><b>{{" "+opportunity.leadName}}</b>
+            </h4>
+            <h5>
+              <i class="glyphicon glyphicon-envelope"></i>{{" "+opportunity.assignedTo}}
+            </h5>
+            <h5>
+              <i class="glyphicon glyphicon-user"></i>{{" "+opportunity.leadSource}}
+            </h5>
+            <h5>
+              <i class="glyphicon glyphicon-usd"></i>{{" "+opportunity.likely}}
+            </h5>
+            <h5>
+              <a href="#/viewOpportunity/{{opportunity.id}}"><i class="glyphicon glyphicon-plus-sign">more..</i></a>
+            </h5>
+          </div>
 
-					<div class="col-xs-7 col-sm-7 col-md-6 col-lg-6" ng-hide="edit">
-						<h4>
-							<i class="glyphsicon glyphicon-user"></i><b>
-							<input type="text" value="{{opportunity.leadName}}" /></b>
-						</h4>
-						<h5>
-							<i class="glyphicon glyphicon-envelope"></i>
-							<input type="text" value="{{opportunity.assignedTo}}" />
-						</h5>
-						<h5>
-							<i class="glyphicon glyphicon-earphone"></i>
-							<input type="text" value="{{opportunity.leadSource}}" />
-						</h5>
-						<h5>
-							<i class="glyphicon glyphicon-user"></i>
-							<input type="text" value="{{opportunity.likely}}" />
-						</h5>
-					</div>
+          <div class="col-xs-7 col-sm-7 col-md-6 col-lg-6" ng-hide="edit">
+            <h4>
+              <i class="glyphsicon glyphicon-user"></i><b> <input type="text" value="{{opportunity.leadName}}" /></b>
+            </h4>
+            <h5>
+              <i class="glyphicon glyphicon-envelope"></i>
+              <input type="text" value="{{opportunity.assignedTo}}" />
+            </h5>
+            <h5>
+              <i class="glyphicon glyphicon-earphone"></i>
+              <input type="text" value="{{opportunity.leadSource}}" />
+            </h5>
+            <h5>
+              <i class="glyphicon glyphicon-user"></i>
+              <input type="text" value="{{opportunity.likely}}" />
+            </h5>
+          </div>
 
-					<div class="btn-group" style="float: right;">
-						<button id="edit" class="btn btn-default btn-lg btn-lg" style="color: blue; border: 0;" title="edit" ng-click="edit=!edit">
-							<i class="glyphicon glyphicon-pencil" ng-show="edit"></i>
-							<i class="glyphicon glyphicon-ok" ng-hide="edit"></i>
-						</button>
-						<button id="delete" class="btn btn-default btn-lg btn-lg" style="color: red; border: 0;" onclick="#" title="delete" ng-click="edit=!edit">
-							<i class="glyphicon glyphicon-trash" ng-show="edit"></i>
-							<i class="glyphicon glyphicon-remove" ng-hide="edit"></i>
-						</button>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
+          <div class="btn-group" style="float: right;">
+            <button id="edit" class="btn btn-default btn-lg btn-lg" style="color: blue; border: 0;" title="edit" ng-click="edit=!edit">
+              <i class="glyphicon glyphicon-pencil" ng-show="edit"></i> <i class="glyphicon glyphicon-ok" ng-hide="edit"></i>
+            </button>
+            <button id="delete" class="btn btn-default btn-lg btn-lg" style="color: red; border: 0;" onclick="#" title="delete" ng-click="edit=!edit">
+              <i class="glyphicon glyphicon-trash" ng-show="edit"></i> <i class="glyphicon glyphicon-remove" ng-hide="edit"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
 <!-- Modal -->
 <div class="modal fade" id="quickAdd" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-	<div class="modal-dialog">
-		<div class="modal-content">
-			<div class="modal-header">
-				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
-					<span aria-hidden="true">&times;</span>
-				</button>
-				<h4 class="modal-title" id="myModalLabel">opportunity add</h4>
-			</div>
-			<div class="modal-body">
-				<form>
-					<div class="form-group">
-						<label for="leadName">Lead Name</label>
-						<div class="inner-addon left-addon">
-							<i class="glyphicon glyphicon-user"></i> 
-							<input id="leadName" class="form-control">
-						</div>
-					</div>
-					<div class="form-group">
-						<label for="assignedTo">Assigned To</label>
-						<div class="inner-addon left-addon">
-							<i class="glyphicon glyphicon-user"></i> 
-							<input id="assignedTo" class="form-control">
-						</div>
-					</div>
-					<div class="form-group">
-						<label for="nextStep">Next Step</label>
-						<div class="inner-addon left-addon">
-							<i class="glyphicon glyphicon-user"></i> 
-							<input id="nextStep" class="form-control">
-						</div>
-					</div>
-				</form>
-			</div>
-			<div class="modal-footer">
-				<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-				<button type="button" class="btn btn-primary">Add</button>
-			</div>
-		</div>
-	</div>
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+        <h4 class="modal-title" id="myModalLabel">opportunity add</h4>
+      </div>
+      <div class="modal-body">
+        <form>
+          <div class="form-group">
+            <label for="leadName">Lead Name</label>
+            <div class="inner-addon left-addon">
+              <i class="glyphicon glyphicon-user"></i>
+              <input id="leadName" class="form-control">
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="assignedTo">Assigned To</label>
+            <div class="inner-addon left-addon">
+              <i class="glyphicon glyphicon-user"></i>
+              <input id="assignedTo" class="form-control">
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="nextStep">Next Step</label>
+            <div class="inner-addon left-addon">
+              <i class="glyphicon glyphicon-user"></i>
+              <input id="nextStep" class="form-control">
+            </div>
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Add</button>
+      </div>
+    </div>
+  </div>
 </div>
