@@ -1,61 +1,105 @@
 <div class="container-fluid">
-	<div class="row">
-		<div class="col-xs-10 col-xs-offset-1 col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2 col-lg-8 col-lg-offset-2">
-			<div class="row">
-				<div class="col-xs-12 col-sm-12 col-lg-12 col-md-12" >
-					<div class="inner-addon right-addon col-xs-9 col-sm-9 col-md-9 col-lg-9 ">
-						<input id="contactSearch" type="text" placeholder="find contacts here!" class="img-rounded img-responsive"><i class="glyphicon glyphicon-filter"></i>
-					</div>
-				<div class="dropdown col-xs-1 col-sm-1 col-md-1 col-lg-1" >
-		   		<button class="btn btn-default btn-lg dropdown-toggle" type="button" id="menu1" data-toggle="dropdown"><i class="glyphicon glyphicon-align-justify"></i>
-		   			<span class="caret"></span>
-		   		</button>
-		     		<ul class="dropdown-menu" role="menu" aria-labelledby="menu1">
-		       			<li><a href="#">Alphabatically</a></li>
-					    	<li><a href="#">Recently added</a></li>
-					    	<li><a href="#">Recently viewed</a></li>
-		     		</ul>
-		     </div>
-		  		<div class="col-xs-1 col-sm-1 col-md- col-lg-1 visible-md visible-lg" style="margin-left:5px;">
-		  			<button class="btn btn-info btn-lg img-rounded" type="button" id="#" data-toggle="modal" data-target="#quickAdd"><i class="glyphicon glyphicon-plus"></i></button>
-		     </div>
-		     </div>
-			</div>
-			<div ng-repeat="contact in contacts">
-				<div class="row img-rounded" id="contactRow" style="margin-top: 7%;">
-					<div class="col-xs-3 col-sm-3 col-md-3 col-lg-3" id="imgdiv">
-			   		<img src="assets/images/demo.png" class="img-circle img-responsive " >
-     			</div>
-     			<div class="col-xs-7 col-sm-7 col-md-6 col-lg-6"  ng-model="hide" ng-click="hide=!hide" ng-init="edit=true" ng-show="edit">
-       			<h4><i class="glyphicon glyphicon-user"></i><b>{{" "+contact.firstName +" "+ contact.lastName}}</b></h4>
-         		<h5><i class="glyphicon glyphicon-envelope"></i>{{" "+contact.email}}</h5>
-         		<div ng-show="hide">
-         		<h5><i class="glyphicon glyphicon-earphone"></i>{{" "+contact.phoneNo}}</h5>
-         		<h5><i class="glyphicon glyphicon-pencil"></i>{{" "+contact.company}}</h5>
-         		<h5><i class="glyphicon glyphicon-pencil"></i>{{" "+contact.addressLine1}},{{contact.addressLine2}}</h5>
-         		<h5><a href="#/viewContact/{{contact.id}}"><i class="glyphicon glyphicon-plus-sign">more..</i></a></h5>
-         		</div>
-         	</div>
-         	
-         	<div class="col-xs-7 col-sm-7 col-md-6 col-lg-6"    ng-hide="edit">
-       			<h4><i class="glyphicon glyphicon-user"></i><input type="text" value="{{contact.firstName}}"/><input type="text" value="{{contact.lastName}}"/></h4>
-         		<h5><i class="glyphicon glyphicon-envelope"></i><input type="text" value="{{contact.email}}"/></h5>
-         		<div ng-show="hide">
-         		<h5><i class="glyphicon glyphicon-earphone"></i><input type="text" value="{{contact.phoneNo}}"/></h5>
-         		<h5><i class="glyphicon glyphicon-pencil"></i><input type="text" value="{{contact.company}}"/></h5>
-         		<h5><i class="glyphicon glyphicon-pencil"></i><input type="text" value="{{contact.addressLine1}}"/><input type="text" value="{{contact.addressLine2}}"/></h5>
-         		</div>
-         	</div>
-			    
-     				<div class="btn-group" style="float:right;">
-	     				<button id="edit" class="btn btn-default btn-lg btn-lg"  style="color: blue; border: 0;" title="edit" ng-click="edit=!edit"><i class="glyphicon glyphicon-pencil" ng-show="edit"></i><i class="glyphicon glyphicon-ok" ng-hide="edit"></i></button>
-	     				<button id="delete" class="btn btn-default btn-lg btn-lg"  style="color: red; border: 0;"  onclick="#" title="delete"><i class="glyphicon glyphicon-trash" ng-show="edit"></i><i class="glyphicon glyphicon-remove" ng-click="edit=!edit" ng-hide="edit"></i></button>
-     				</div>
-   				
-	    	</div>
-			</div>
-		</div>
-	</div>
+  <div class="row">
+    <div class="col-xs-10 col-xs-offset-1 col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2 col-lg-8 col-lg-offset-2">
+      <div class="row">
+        <div class="col-xs-12 col-sm-12 col-lg-12 col-md-12">
+          <div class="inner-addon right-addon col-xs-9 col-sm-9 col-md-9 col-lg-9 ">
+            <input id="contactSearch" type="text" placeholder="find contacts here!" class="img-rounded img-responsive">
+            <i class="glyphicon glyphicon-filter"></i>
+          </div>
+          <div class="dropdown col-xs-1 col-sm-1 col-md-1 col-lg-1">
+            <button class="btn btn-default btn-lg dropdown-toggle" type="button" id="menu1" data-toggle="dropdown">
+              <i class="glyphicon glyphicon-align-justify"></i>
+              <span class="caret"></span>
+            </button>
+            <ul class="dropdown-menu" role="menu" aria-labelledby="menu1">
+              <li><a href="#">Alphabatically</a></li>
+              <li><a href="#">Recently added</a></li>
+              <li><a href="#">Recently viewed</a></li>
+            </ul>
+          </div>
+          <div class="col-xs-1 col-sm-1 col-md- col-lg-1 visible-md visible-lg" style="margin-left: 5px;">
+            <button class="btn btn-info btn-lg img-rounded" type="button" id="#" data-toggle="modal" data-target="#quickAdd">
+              <i class="glyphicon glyphicon-plus"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+      <div ng-repeat="contact in contacts">
+        <div class="row img-rounded" id="contactRow" style="margin-top: 7%;">
+          <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3" id="imgdiv">
+            <img src="assets/images/demo.png" class="img-circle img-responsive ">
+          </div>
+          <div class="col-xs-7 col-sm-7 col-md-6 col-lg-6" ng-model="hide" ng-click="hide=!hide" ng-init="edit=true" ng-show="edit">
+            <h4>
+              <i class="glyphicon glyphicon-user"></i>
+              <b>{{" "+contact.firstName +" "+ contact.lastName}}</b>
+            </h4>
+            <h5>
+              <i class="glyphicon glyphicon-envelope"></i>
+              {{" "+contact.email}}
+            </h5>
+            <div ng-show="hide">
+              <h5>
+                <i class="glyphicon glyphicon-earphone"></i>
+                {{" "+contact.phoneNo}}
+              </h5>
+              <h5>
+                <i class="glyphicon glyphicon-pencil"></i>
+                {{" "+contact.company}}
+              </h5>
+              <h5>
+                <i class="glyphicon glyphicon-pencil"></i>
+                {{" "+contact.addressLine1}},{{contact.addressLine2}}
+              </h5>
+              <h5>
+                <a href="#/viewContact/{{contact.id}}"><i class="glyphicon glyphicon-plus-sign">more..</i></a>
+              </h5>
+            </div>
+          </div>
+
+          <div class="col-xs-7 col-sm-7 col-md-6 col-lg-6" ng-hide="edit">
+            <h4>
+              <i class="glyphicon glyphicon-user"></i>
+              <input type="text" value="{{contact.firstName}}" />
+              <input type="text" value="{{contact.lastName}}" />
+            </h4>
+            <h5>
+              <i class="glyphicon glyphicon-envelope"></i>
+              <input type="text" value="{{contact.email}}" />
+            </h5>
+            <div ng-show="hide">
+              <h5>
+                <i class="glyphicon glyphicon-earphone"></i>
+                <input type="text" value="{{contact.phoneNo}}" />
+              </h5>
+              <h5>
+                <i class="glyphicon glyphicon-pencil"></i>
+                <input type="text" value="{{contact.company}}" />
+              </h5>
+              <h5>
+                <i class="glyphicon glyphicon-pencil"></i>
+                <input type="text" value="{{contact.addressLine1}}" />
+                <input type="text" value="{{contact.addressLine2}}" />
+              </h5>
+            </div>
+          </div>
+
+          <div class="btn-group" style="float: right;">
+            <button id="edit" class="btn btn-default btn-lg btn-lg" style="color: blue; border: 0;" title="edit" ng-click="edit=!edit">
+              <i class="glyphicon glyphicon-pencil" ng-show="edit"></i>
+              <i class="glyphicon glyphicon-ok" ng-hide="edit"></i>
+            </button>
+            <button id="delete" class="btn btn-default btn-lg btn-lg" style="color: red; border: 0;" onclick="#" title="delete">
+              <i class="glyphicon glyphicon-trash" ng-show="edit"></i>
+              <i class="glyphicon glyphicon-remove" ng-click="edit=!edit" ng-hide="edit"></i>
+            </button>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
 
 <!-- Modal -->
@@ -63,45 +107,47 @@
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
         <h4 class="modal-title" id="myModalLabel">contact add</h4>
       </div>
       <div class="modal-body">
         <form>
-        <div class="form-group">
-        <label for="firstName">First name</label>
-					<div class="inner-addon left-addon">
-						<i class="glyphicon glyphicon-user"></i>
-						<input id="firstName"  class="form-control  ">
-						 
-					</div>
-				</div>
-				
-        <div class="form-group">
-        <label for="lastName">Last name</label>
-					<div class="inner-addon left-addon">
-						<i class="glyphicon glyphicon-user"></i>
-						<input id="lastName"  class="form-control  ">
-						 
-					</div>
-				</div>
-				<div class="form-group">
-				<label for="email">E-mail</label>
-					<div class="inner-addon left-addon">
-						<i class="glyphicon glyphicon-envelope"></i>
-						<input id="email"  class="form-control  ">
-						 
-					</div>
-				</div>
-				
-				<div class="form-group">
-				<label for="phoneNo">Phone No</label>
-					<div class="inner-addon left-addon">
-						<i class="glyphicon glyphicon-earphone"></i>
-						<input id="firstName"  class="form-control">
-						 
-					</div>
-				</div>
+          <div class="form-group">
+            <label for="firstName">First name</label>
+            <div class="inner-addon left-addon">
+              <i class="glyphicon glyphicon-user"></i>
+              <input id="firstName" class="form-control  ">
+
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="lastName">Last name</label>
+            <div class="inner-addon left-addon">
+              <i class="glyphicon glyphicon-user"></i>
+              <input id="lastName" class="form-control  ">
+
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="email">E-mail</label>
+            <div class="inner-addon left-addon">
+              <i class="glyphicon glyphicon-envelope"></i>
+              <input id="email" class="form-control  ">
+
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="phoneNo">Phone No</label>
+            <div class="inner-addon left-addon">
+              <i class="glyphicon glyphicon-earphone"></i>
+              <input id="firstName" class="form-control">
+
+            </div>
+          </div>
         </form>
       </div>
       <div class="modal-footer">

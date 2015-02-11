@@ -1,201 +1,264 @@
 <div class="container-fluid">
-	<div class="row">
-    	<div class="col-xs-12  col-sm-12  col-md-10 col-md-offset-1 col-lg-10 col-lg-offset-1">
-    		<div class="panel panel-default img-responsive">
-  				<div class="panel-heading">
-	  				<div id="heading"><b>Contact</b></div>
-	  				<div style="float:right">
-	        		<button id="" class="btn btn-default btn-lg " data-toggle="modal" data-target="#editContact"  title="edit">
-	        			<i class="glyphicon glyphicon-pencil"></i>
-	        			</button>
-	        		</div>
-  				</div>
-				<div class="panel-body">
-                    <div class="row">
-                    	<div class="col-xs-12 col-sm-12 col-md-2 col-md-offset-1 col-lg-2 col-lg-offset-1">
-                      		<div class="fileinput fileinput-new" data-provides="fileinput">
-								<div class="fileinput-preview thumbnail" data-trigger="fileinput" style="max-width: 150px; max-height: 200px;">
-								<img src="assets/images/demo.png" class="img-responsive" style="padding-top:20px;">
-								</div>
-							</div>
-             </div>
-             <div class="col-xs-12 col-sm-12 col-md-8 col-md-offset-1 col-lg-8 col-lg-offset-1">
-             		<div>
-             		<div ng-init="editName=true;visible=false;" ng-mouseover="visible=true" ng-mouseleave="visible=false">
-             		<span class="h2" ng-show="editName"><b>{{contact.firstName +" "+contact.lastName}}</b></span> 
-             		<span ng-hide="editName"><input type="text" value="{{contact.firstName}} {{contact.lastName}}" autofocus onfocus="this.value = this.value;"></span>
-             		
-             		<button type="button" class="btn btn-sm btn-default editBtn" ng-click="editName=!editName" ng-show="visible">
-             		  <span ng-show="editName"><i class="glyphicon glyphicon-pencil"></i></span>
-             		  <span ng-hide="editName"><i class="glyphicon glyphicon-ok"></i></span>
-             		 </button>
-             		 </div>
-             		
-             		<div ng-init="editWork=true;visible2=false;" ng-mouseover="visible2=true" ng-mouseleave="visible2=false">
-             		<span class="h3"  ng-show="editWork">{{contact.position}} at {{contact.company}}</span>
-             		<span ng-hide="editWork"><input type="text" value="{{contact.position}}" autofocus onfocus="this.value = this.value;"> at <input type="text" value="{{contact.company}}"></span>
-                    <button type="button" class="btn btn-default   editBtn" ng-click="editWork=!editWork" ng-show="visible2">
-             		  <span ng-show="editWork"><i class="glyphicon glyphicon-pencil"></i></span>
-             		  <span ng-hide="editWork"><i class="glyphicon glyphicon-ok"></i></span>
-             		 </button>
-             		 </div>
-                
+  <div class="row">
+    <div class="col-xs-12  col-sm-12  col-md-10 col-md-offset-1 col-lg-10 col-lg-offset-1">
+      <div class="panel panel-default img-responsive">
+        <div class="panel-heading">
+          <div id="heading">
+            <b>Contact</b>
+          </div>
+          <div style="float: right">
+            <button id="" class="btn btn-default btn-lg " data-toggle="modal" data-target="#editContact" title="edit">
+              <i class="glyphicon glyphicon-pencil"></i>
+            </button>
+          </div>
+        </div>
+        <div class="panel-body">
+          <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-2 col-md-offset-1 col-lg-2 col-lg-offset-1">
+              <div class="fileinput fileinput-new" data-provides="fileinput">
+                <div class="fileinput-preview thumbnail" data-trigger="fileinput" style="max-width: 150px; max-height: 200px;">
+                  <img src="assets/images/demo.png" class="img-responsive" style="padding-top: 20px;">
+                </div>
+              </div>
+            </div>
+            <div class="col-xs-12 col-sm-12 col-md-8 col-md-offset-1 col-lg-8 col-lg-offset-1">
+              <div>
+                <div ng-init="editName=true;visible=false;" ng-mouseover="visible=true" ng-mouseleave="visible=false">
+                  <span class="h2" ng-show="editName">
+                    <b>{{contact.firstName +" "+contact.lastName}}</b>
+                  </span>
+                  <span ng-hide="editName">
+                    <input type="text" value="{{contact.firstName}} {{contact.lastName}}" autofocus onfocus="this.value = this.value;">
+                  </span>
+
+                  <button type="button" class="btn btn-sm btn-default editBtn" ng-click="editName=!editName" ng-show="visible">
+                    <span ng-show="editName">
+                      <i class="glyphicon glyphicon-pencil"></i>
+                    </span>
+                    <span ng-hide="editName">
+                      <i class="glyphicon glyphicon-ok"></i>
+                    </span>
+                  </button>
+                </div>
+
+                <div ng-init="editWork=true;visible2=false;" ng-mouseover="visible2=true" ng-mouseleave="visible2=false">
+                  <span class="h3" ng-show="editWork">{{contact.position}} at {{contact.company}}</span>
+                  <span ng-hide="editWork">
+                    <input type="text" value="{{contact.position}}" autofocus onfocus="this.value = this.value;">
+                    at
+                    <input type="text" value="{{contact.company}}">
+                  </span>
+                  <button type="button" class="btn btn-default   editBtn" ng-click="editWork=!editWork" ng-show="visible2">
+                    <span ng-show="editWork">
+                      <i class="glyphicon glyphicon-pencil"></i>
+                    </span>
+                    <span ng-hide="editWork">
+                      <i class="glyphicon glyphicon-ok"></i>
+                    </span>
+                  </button>
+                </div>
+
                 <div ng-init="editHome=true;visible3=false;" ng-mouseover="visible3=true" ng-mouseleave="visible3=false">
-                <span class="h4"  ng-show="editHome"><i class="glyphicon glyphicon-map-marker"></i>{{" "+contact.addressLine1}},{{" "+contact.addressLine2}},{{" "+contact.country}} ({{contact.state}})</span>
-             		<span ng-hide="editHome"><input type="text" value="{{contact.addressLine1}}" autofocus onfocus="this.value = this.value;"><input type="text" value="{{contact.addressLine2}}"><input type="text" value="{{contact.state}}"><input type="text" value="{{contact.country}}"></span>
-             		<button type="button" class="btn btn-default   editBtn" ng-click="editHome=!editHome" ng-show="visible3">
-             		  <span ng-show="editHome"><i class="glyphicon glyphicon-pencil"></i></span>
-             		  <span ng-hide="editHome"><i class="glyphicon glyphicon-ok"></i></span>
-             		 </button></div>
-             		
-             		<div ng-init="editPhone=true;visible4=false;" ng-mouseover="visible4=true" ng-mouseleave="visible4=false">
-             	<span class="h4"   ng-show="editPhone"><i class="glyphicon glyphicon-earphone"></i> {{contact.phoneNo}}</span>
-             		<span ng-hide="editPhone"><input type="text" value="{{contact.phoneNo}}" autofocus onfocus="this.value = this.value;"></span>
-             		<button type="button" class="btn btn-default   editBtn" ng-click="editPhone=!editPhone" ng-show="visible4">
-             		  <span ng-show="editPhone"><i class="glyphicon glyphicon-pencil"></i></span>
-             		  <span ng-hide="editPhone"><i class="glyphicon glyphicon-ok"></i></span>
-             		 </button></div>
-             		
-             		<div ng-init="editEmail=true;visible5=false;" ng-mouseover="visible5=true" ng-mouseleave="visible5=false">
-             	<span class="h4"  ng-show="editEmail"><i class="glyphicon glyphicon-envelope"></i> {{contact.email}}</span>
-             		<span ng-hide="editEmail"><input type="text" value="{{contact.email}}" autofocus onfocus="this.value = this.value;"></span>
-             		<button type="button" class="btn btn-default   editBtn" ng-click="editEmail=!editEmail" ng-show="visible5">
-             		  <span ng-show="editEmail"><i class="glyphicon glyphicon-pencil"></i></span>
-             		  <span ng-hide="editEmail"><i class="glyphicon glyphicon-ok"></i></span>
-             		 </button></div>                     		
-             		
-             		<div ng-init="editDob=true;visible6=false" ng-mouseover="visible6=true" ng-mouseleave="visible6=false">
-             	<span class="h4"  ng-show="editDob"><i class="glyphicon glyphicon-earphone"></i> {{contact.dob}}</span>
-             		<span ng-hide="editDob"><input type="text" value="{{contact.dob}}" autofocus onfocus="this.value = this.value;"></span>
-             		<button type="button" class="btn btn-default   editBtn" ng-click="editDob=!editDob" ng-show="visible6">
-             		  <span ng-show="editDob"><i class="glyphicon glyphicon-pencil"></i></span>
-             		  <span ng-hide="editDob"><i class="glyphicon glyphicon-ok"></i></span>
-             		 </button></div>
-             
-             	 	</div>
+                  <span class="h4" ng-show="editHome">
+                    <i class="glyphicon glyphicon-map-marker"></i>
+                    {{" "+contact.addressLine1}},{{" "+contact.addressLine2}},{{" "+contact.country}} ({{contact.state}})
+                  </span>
+                  <span ng-hide="editHome">
+                    <input type="text" value="{{contact.addressLine1}}" autofocus onfocus="this.value = this.value;">
+                    <input type="text" value="{{contact.addressLine2}}">
+                    <input type="text" value="{{contact.state}}">
+                    <input type="text" value="{{contact.country}}">
+                  </span>
+                  <button type="button" class="btn btn-default   editBtn" ng-click="editHome=!editHome" ng-show="visible3">
+                    <span ng-show="editHome">
+                      <i class="glyphicon glyphicon-pencil"></i>
+                    </span>
+                    <span ng-hide="editHome">
+                      <i class="glyphicon glyphicon-ok"></i>
+                    </span>
+                  </button>
+                </div>
 
-					</div>
-				</div>
-   			</div>
-   		</div>
-	</div>
+                <div ng-init="editPhone=true;visible4=false;" ng-mouseover="visible4=true" ng-mouseleave="visible4=false">
+                  <span class="h4" ng-show="editPhone">
+                    <i class="glyphicon glyphicon-earphone"></i>
+                    {{contact.phoneNo}}
+                  </span>
+                  <span ng-hide="editPhone">
+                    <input type="text" value="{{contact.phoneNo}}" autofocus onfocus="this.value = this.value;">
+                  </span>
+                  <button type="button" class="btn btn-default   editBtn" ng-click="editPhone=!editPhone" ng-show="visible4">
+                    <span ng-show="editPhone">
+                      <i class="glyphicon glyphicon-pencil"></i>
+                    </span>
+                    <span ng-hide="editPhone">
+                      <i class="glyphicon glyphicon-ok"></i>
+                    </span>
+                  </button>
+                </div>
 
-</div>
+                <div ng-init="editEmail=true;visible5=false;" ng-mouseover="visible5=true" ng-mouseleave="visible5=false">
+                  <span class="h4" ng-show="editEmail">
+                    <i class="glyphicon glyphicon-envelope"></i>
+                    {{contact.email}}
+                  </span>
+                  <span ng-hide="editEmail">
+                    <input type="text" value="{{contact.email}}" autofocus onfocus="this.value = this.value;">
+                  </span>
+                  <button type="button" class="btn btn-default   editBtn" ng-click="editEmail=!editEmail" ng-show="visible5">
+                    <span ng-show="editEmail">
+                      <i class="glyphicon glyphicon-pencil"></i>
+                    </span>
+                    <span ng-hide="editEmail">
+                      <i class="glyphicon glyphicon-ok"></i>
+                    </span>
+                  </button>
+                </div>
 
-<!-- Modal -->
-<div class="modal fade" id="editContact" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-        <h4 class="modal-title" id="myModalLabel">Edit contact</h4>
+                <div ng-init="editDob=true;visible6=false" ng-mouseover="visible6=true" ng-mouseleave="visible6=false">
+                  <span class="h4" ng-show="editDob">
+                    <i class="glyphicon glyphicon-earphone"></i>
+                    {{contact.dob}}
+                  </span>
+                  <span ng-hide="editDob">
+                    <input type="text" value="{{contact.dob}}" autofocus onfocus="this.value = this.value;">
+                  </span>
+                  <button type="button" class="btn btn-default   editBtn" ng-click="editDob=!editDob" ng-show="visible6">
+                    <span ng-show="editDob">
+                      <i class="glyphicon glyphicon-pencil"></i>
+                    </span>
+                    <span ng-hide="editDob">
+                      <i class="glyphicon glyphicon-ok"></i>
+                    </span>
+                  </button>
+                </div>
+
+              </div>
+
+            </div>
+          </div>
+        </div>
       </div>
-      <div class="modal-body">
-        <form>
-        <div class="form-group">
-        <label for="firstName">First name</label>
-					<div class="inner-addon left-addon">
-						<i class="glyphicon glyphicon-user"></i>
-						<input id="firstName"  class="form-control" value="{{contact.firstName}}">
-						 
-					</div>
-				</div>
-				
-        <div class="form-group">
-        <label for="lastName">Last name</label>
-					<div class="inner-addon left-addon">
-						<i class="glyphicon glyphicon-user"></i>
-						<input id="lastName" class="form-control" value="{{contact.lastName}}">
-						 
-					</div>
-				</div>
-				<div class="form-group">
-				<label for="email">Email ID</label>
-					<div class="inner-addon left-addon">
-						<i class="glyphicon glyphicon-envelope"></i>
-						<input id="email" class="form-control" value="{{contact.email}}">
-						 
-					</div>
-				</div>
-				
-				<div class="form-group">
-				<label for="phoneNo">Phone No</label>
-					<div class="inner-addon left-addon">
-						<i class="glyphicon glyphicon-earphone"></i>
-						<input id="firstName" class="form-control" value="{{contact.phoneNo}}">
-						 
-					</div>
-				</div>
-				
-				<div class="form-group">
-				<label for="company">Company</label>
-					<div class="inner-addon left-addon">
-						<i class="glyphicon glyphicon-earphone"></i>
-						<input id="company" class="form-control" value="{{contact.company}}">
-						 
-					</div>
-				</div>
-				
-				<div class="form-group">
-				<label for="position">Position</label>
-					<div class="inner-addon left-addon">
-						<i class="glyphicon glyphicon-earphone"></i>
-						<input id="position" class="form-control" value="{{contact.position}}">
-						 
-					</div>
-				</div>
-				
-				<div class="form-group">
-				<label for="dob">D.O.B.</label>
-					<div class="inner-addon left-addon">
-						<i class="glyphicon glyphicon-earphone"></i>
-						<input id="dob" class="form-control" value="{{contact.dob}}">
-						 
-					</div>
-				</div>
-				
-				<div class="form-group">
-				<label for="address">Address Line 1</label>
-					<div class="inner-addon left-addon">
-						<i class="glyphicon glyphicon-map-marker"></i>
-						<input id="addressLine1" class="form-control" value="{{contact.addressLine1}}">
-						 
-					</div>
-				</div>
-				
-				<div class="form-group">
-				<label for="address">Address Line 2</label>
-					<div class="inner-addon left-addon">
-						<i class="glyphicon glyphicon-map-marker"></i>
-						<input id="addressLine2" class="form-control" value="{{contact.addressLine2}}">
-						 
-					</div>
-				</div>
-				
-				<div class="form-group">
-				<label for="country">Country</label>
-					<div class="inner-addon left-addon">
-						<i class="glyphicon glyphicon-map-marker"></i>
-						<input id="country" class="form-control" value="{{contact.country}}">
-						 
-					</div>
-				</div>
-				
-				<div class="form-group">
-				<label for="state">State</label>
-					<div class="inner-addon left-addon">
-						<i class="glyphicon glyphicon-map-marker"></i>
-						<input id="state" class="form-control" value="{{contact.state}}">
-						 
-					</div>
-				</div>
-				
-        </form>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Save</button>
+    </div>
+
+  </div>
+
+  <!-- Modal -->
+  <div class="modal fade" id="editContact" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+          <h4 class="modal-title" id="myModalLabel">Edit contact</h4>
+        </div>
+        <div class="modal-body">
+          <form>
+            <div class="form-group">
+              <label for="firstName">First name</label>
+              <div class="inner-addon left-addon">
+                <i class="glyphicon glyphicon-user"></i>
+                <input id="firstName" class="form-control" value="{{contact.firstName}}">
+
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="lastName">Last name</label>
+              <div class="inner-addon left-addon">
+                <i class="glyphicon glyphicon-user"></i>
+                <input id="lastName" class="form-control" value="{{contact.lastName}}">
+
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="email">Email ID</label>
+              <div class="inner-addon left-addon">
+                <i class="glyphicon glyphicon-envelope"></i>
+                <input id="email" class="form-control" value="{{contact.email}}">
+
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="phoneNo">Phone No</label>
+              <div class="inner-addon left-addon">
+                <i class="glyphicon glyphicon-earphone"></i>
+                <input id="firstName" class="form-control" value="{{contact.phoneNo}}">
+
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="company">Company</label>
+              <div class="inner-addon left-addon">
+                <i class="glyphicon glyphicon-earphone"></i>
+                <input id="company" class="form-control" value="{{contact.company}}">
+
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="position">Position</label>
+              <div class="inner-addon left-addon">
+                <i class="glyphicon glyphicon-earphone"></i>
+                <input id="position" class="form-control" value="{{contact.position}}">
+
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="dob">D.O.B.</label>
+              <div class="inner-addon left-addon">
+                <i class="glyphicon glyphicon-earphone"></i>
+                <input id="dob" class="form-control" value="{{contact.dob}}">
+
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="address">Address Line 1</label>
+              <div class="inner-addon left-addon">
+                <i class="glyphicon glyphicon-map-marker"></i>
+                <input id="addressLine1" class="form-control" value="{{contact.addressLine1}}">
+
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="address">Address Line 2</label>
+              <div class="inner-addon left-addon">
+                <i class="glyphicon glyphicon-map-marker"></i>
+                <input id="addressLine2" class="form-control" value="{{contact.addressLine2}}">
+
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="country">Country</label>
+              <div class="inner-addon left-addon">
+                <i class="glyphicon glyphicon-map-marker"></i>
+                <input id="country" class="form-control" value="{{contact.country}}">
+
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="state">State</label>
+              <div class="inner-addon left-addon">
+                <i class="glyphicon glyphicon-map-marker"></i>
+                <input id="state" class="form-control" value="{{contact.state}}">
+
+              </div>
+            </div>
+
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary">Save</button>
+        </div>
       </div>
     </div>
   </div>
-</div>
